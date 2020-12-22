@@ -4,6 +4,7 @@
 ### Team name: Doctest Knights
 ### Team members (format: GitHub username, last name, first name):
 - vilnytskyy, Ilnytskyy, Vasyl
+- asllanalija, Alija, Asllan
 
 ### Group info (check all that apply - add an X in the [ ])
 - [X] We are a Daedalus Google Mentorship group
