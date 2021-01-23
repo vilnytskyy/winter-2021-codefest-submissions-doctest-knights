@@ -1,15 +1,24 @@
 <!DOCTYPE html>
 <html>
+
 <script>
-function initialize(){document.getElementById("demo").innerHTML = "Hello JavaScript!";}
+function getStudent(){
+   var student = document.getElementById("emplid").value;
+   document.getElementById("emplid").innerHTML = student;
+}
+
 </script>
+
+
 <head>
 <title>Degreeworks 2.0</title>
 </head>
-<body onload = "initialize()">
-
+<body onload = "getStudent()">
    <h1></h1>
-   <p id = "demo"></p>
+   <p id = "emplid"></p>
+   <form>
+     <label for="emplid">Please enter your id:</label><br>
+     <input type="text" id="emplid" name="emplid"><br>
+   </form>
 
-</body>
 </html>
