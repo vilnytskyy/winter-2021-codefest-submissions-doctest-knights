@@ -3,15 +3,9 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <!-- link to the css stylesheet -->
     <link rel="stylesheet" href="style.css">
-    <!-- <script>
-    function getStudent() {
-        var student = document.getElementById("emplid").value;
-        document.getElementById("emplid").innerHTML = student;
-    }
-    </script> -->
-
 
     <script>
         function openNav() {
@@ -31,21 +25,35 @@
             sidenav.style.width = sidenav.style.width === "250px" ? '0' : '250px';
             main.style.marginRight = main.style.marginRight === "250px" ? '0' : '250px';
         }
+
+        // functions courtsey of Hammad for getStudent and drop down menu
+        function getStudent() {
+            var student = document.getElementById("emplid").value;
+            document.getElementById("emplid").innerHTML = student;
+            document.querySelector("body > table.toplevel.table_default > tbody > tr:nth-child(3) > td.block_n2_and_content > table > tbody > tr:nth-child(2) > td.block_content_outer > table > tbody > tr > td > table:nth-child(10) > tbody > tr:nth-child(3) > td > a");
+        }
+
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
     </script>
 
 
     <title>DegreeWorks+</title>
-
-
-    <!-- How to comment in html -->
-    <!-- <body onload="getStudent()">
-    <h1></h1>
-    <p id="emplid"></p>
-    <form>
-        <label for="emplid">Please enter your id:</label><br>
-        <input type="text" id="emplid" name="emplid"><br>
-    </form>
-    </body> -->
 </head>
 
 <body>
@@ -80,7 +88,19 @@
 
     <div id="main">
         <!-- <button class="openbtn" onclick="toggleNav()">☰ Sidebar</button> -->
-        <h2>Collapsed Sidebar</h2>
+        <!-- <h2>Collapsed Sidebar</h2> -->
+
+        <!-- Dropdown Menu -->
+        <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">CSCI 135</button>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="#">CSCI 135 info blah blah blah blah blah blah blah blah blah
+                    <p> Reqs: blah blah</p>
+                    <p> Credits: 3</p>
+                </a>
+            </div>
+        </div>
+
         <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
             concludaturque
             et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
