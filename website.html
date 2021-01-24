@@ -1,24 +1,296 @@
 <!DOCTYPE html>
-<html>
-
-<script>
-function getStudent(){
-   var student = document.getElementById("emplid").value;
-   document.getElementById("emplid").innerHTML = student;
-}
-
-</script>
-
+<html lang="en-us">
 
 <head>
-<title>Degreeworks 2.0</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- link to the css stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- <script>
+    function getStudent() {
+        var student = document.getElementById("emplid").value;
+        document.getElementById("emplid").innerHTML = student;
+    }
+    </script> -->
+
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidebar").style.width = "250px";
+            document.getElementById("main").style.marginRight = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidebar").style.width = "0px";
+            document.getElementById("main").style.marginRight = "0px";
+        }
+
+        // Stack Overflow Answer
+        function toggleNav() {
+            var sidenav = document.getElementById("mySidebar");
+            var main = document.getElementById("main");
+            sidenav.style.width = sidenav.style.width === "250px" ? '0' : '250px';
+            main.style.marginRight = main.style.marginRight === "250px" ? '0' : '250px';
+        }
+    </script>
+
+
+    <title>DegreeWorks+</title>
+
+
+    <!-- How to comment in html -->
+    <!-- <body onload="getStudent()">
+    <h1></h1>
+    <p id="emplid"></p>
+    <form>
+        <label for="emplid">Please enter your id:</label><br>
+        <input type="text" id="emplid" name="emplid"><br>
+    </form>
+    </body> -->
 </head>
-<body onload = "getStudent()">
-   <h1></h1>
-   <p id = "emplid"></p>
-   <form>
-     <label for="emplid">Please enter your id:</label><br>
-     <input type="text" id="emplid" name="emplid"><br>
-   </form>
+
+<body>
+    <div class="header">
+        <h1>I Can't Believe It's Not DegreeWorks!</h1>
+        <midleft>Hunter|CUNY</midleft>
+        <midright>DegreeWorks+</midright>
+        <table>
+            <tr>
+                <th>CUNYfirst</th>
+                <th>Pathways</th>
+                <th>FAQ</th>
+                <th>Course Schedule</th>
+                <th>Print</th>
+                <th>Log Out</th>
+            </tr>
+        </table>
+    </div>
+
+    <div class="topnav">
+        <h1>Bar</h1>
+    </div>
+
+    <!-- Collapseable Sidebar courtsey of W3Schools -->
+    <div id="mySidebar" class="sidebar">
+        <!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a> -->
+    </div>
+
+    <div id="main">
+        <!-- <button class="openbtn" onclick="toggleNav()">☰ Sidebar</button> -->
+        <h2>Collapsed Sidebar</h2>
+        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
+            concludaturque
+            et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
+            repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
+            Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
+            concludaturque
+            et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
+            repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
+            Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
+            concludaturque
+            et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
+            repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
+            Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
+            concludaturque
+            et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
+            repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
+            Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
+            concludaturque
+            et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
+            repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
+            Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
+            concludaturque
+            et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
+            repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
+            Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
+            concludaturque
+            et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
+            repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
+            Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
+            concludaturque
+            et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
+            repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
+            Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
+            concludaturque
+            et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
+            repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
+            Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
+            concludaturque
+            et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
+            repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
+            Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
+            concludaturque
+            et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
+            repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
+            Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
+            concludaturque
+            et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
+            repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
+            Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
+            concludaturque et
+            eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
+            repudiandae
+            nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
+            Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
+            concludaturque et
+            eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
+            repudiandae
+            nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
+            Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
+            concludaturque et
+            eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
+            repudiandae
+            nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
+            Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
+            concludaturque et
+            eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
+            repudiandae
+            nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
+            Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
+            concludaturque
+            et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
+            repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
+            Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
+            concludaturque
+            et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
+            repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
+            Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
+            concludaturque
+            et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
+            repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
+            Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
+            concludaturque
+            et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
+            repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
+            Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
+            concludaturque
+            et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
+            repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
+            Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
+            concludaturque
+            et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
+            repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
+            Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
+            concludaturque
+            et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
+            repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
+            Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
+            concludaturque
+            et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
+            repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
+            Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
+            concludaturque
+            et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
+            repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
+            Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
+            concludaturque
+            et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
+            repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
+            Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
+            concludaturque
+            et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
+            repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
+            Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
+            concludaturque
+            et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
+            repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
+            Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
+            concludaturque et
+            eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
+            repudiandae
+            nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
+            Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
+            concludaturque et
+            eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
+            repudiandae
+            nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
+            Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
+            concludaturque et
+            eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
+            repudiandae
+            nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
+            Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
+            concludaturque et
+            eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
+            repudiandae
+            nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
+            Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
+            concludaturque
+            et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
+            repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
+            Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
+            concludaturque
+            et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
+            repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
+            Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
+            concludaturque
+            et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
+            repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
+            Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
+            concludaturque
+            et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
+            repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
+            Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
+            concludaturque
+            et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
+            repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
+            Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
+            concludaturque
+            et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
+            repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
+            Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
+            concludaturque
+            et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
+            repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
+            Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
+            concludaturque
+            et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
+            repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
+            Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
+            concludaturque
+            et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
+            repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
+            Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
+            concludaturque
+            et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
+            repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
+            Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
+            concludaturque
+            et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
+            repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
+            Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
+            concludaturque
+            et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
+            repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
+            Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
+            concludaturque et
+            eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
+            repudiandae
+            nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
+            Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
+            concludaturque et
+            eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
+            repudiandae
+            nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
+            Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
+            concludaturque et
+            eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
+            repudiandae
+            nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
+            Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
+            concludaturque et
+            eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
+            repudiandae
+            nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+    </div>
+
+    <div class="footer">
+        <p>Presented by: Hammad Siddiqui, Asllan Alija, and Vasyl Ilnytskyy</p>
+    </div>
+
+</body>
 
 </html>
