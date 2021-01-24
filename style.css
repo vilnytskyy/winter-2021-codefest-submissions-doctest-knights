@@ -1,0 +1,145 @@
+/* How to comment in css */
+
+/* Style the body */
+body {
+    background-color: rgb(187, 129, 146);
+    overflow-x: hidden;
+    margin: 0px;
+    /* display: flex;
+    justify-content: space-between; */
+}
+
+/* Style the header */
+.header {
+    clear: both;
+    background-color: rgb(29, 58, 131); /* Set background color of the header to the CUNY blue */
+    padding: 1px;
+    /* margin: top right bottom left */
+    /* margin: -10px -10px 0px -10px; */
+    text-align: center;
+    color: white;
+}
+
+.header h1 {
+    font-size: 31px;
+}
+
+.header table {
+    width: 100%;
+    background-color: white;
+    color:rgb(29, 58, 131);
+}
+
+.header tr {
+    background-color: #cac9c9;
+}
+
+midright {
+    position: absolute;
+    top: 21px;
+    right: 15px;
+    font-size: 30px;
+}
+
+midleft {
+    position: absolute;
+    top: 21px;
+    left: 15px;
+    font-size: 30px;
+}
+
+/* Style the top navigation bar */
+.topnav {
+    overflow: hidden;
+    /* clear: both; */
+    background-color: rgb(219, 163, 42); /* Set background color of the header to the CUNY blue */
+    padding: 0% 40% 0% 40%;
+    /* margin: top right bottom left */
+    /* margin: 0px -10px 0px -10px; */
+    text-align: center;
+    color: rgb(110, 145, 177);
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+    /* position: -webkit-sticky; */
+    /* top: 78px; */
+}
+
+/* Collapseable Sidebar courtsey of W3Schools */
+.sidebar {
+    height: 100%;
+    width: 0px;
+    position: fixed;
+    /* position: -webkit-sticky; */
+    right: 0px;
+    z-index: 1;
+    /* top: 0px; */
+    background-color: rgb(110, 145, 177);
+    overflow-x: hidden;
+    transition: 0.5s;
+    /* padding-top: 60px; */
+    /* margin: top right bottom left */
+    /* margin: 0px -10px 0px 0px; */
+}
+  
+.sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+  
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+  
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+  
+.openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+}
+  
+.openbtn:hover {
+    background-color: #444;
+}
+
+#main {
+    transition: margin-right .5s;
+    padding: 16px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+}
+
+/* Style the footer */
+.footer {
+    /* position: absolute; */
+    /* overflow: visible; */
+    background-color: rgb(110, 145, 177);
+    /* padding: 0px; */
+    margin: -10px;
+    text-align: center;
+    color: white;
+    /* bottom: 15px; */
+    font-size: 15px;
+}
+
+/* body {
+    background-color: rgb(29, 58, 131); Set background color to the CUNYfirst blue 
+} */
