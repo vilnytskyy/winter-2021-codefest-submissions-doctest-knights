@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- link to the css stylesheet -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/static/style.css">
 
     <script>
         function openNav() {
@@ -25,7 +25,23 @@
             sidenav.style.width = sidenav.style.width === "250px" ? '0' : '250px';
             main.style.marginRight = main.style.marginRight === "250px" ? '0' : '250px';
         }
-
+	function retrieveStudentData() {
+	    let Body = 23848083;
+	    console.log(Body);
+	    fetch("/transaction", {
+	        method: "POST",
+	        headers: {
+	            "Content-Type": "application/json",
+	        },
+	        body: JSON.stringify(Body),
+	    }).then((resp) => {
+	        resp.json().then((data) => {
+	            return data;
+	        })
+	    });
+	}
+	// how to use data ^^^^^
+	// data = {'student_id': 123124, 'name': asdasif, 'credits', } data.student_id, data.name, data.credits
         // functions courtsey of Hammad for getStudent and drop down menu
         function getStudent() {
             var student = document.getElementById("emplid").value;
@@ -56,7 +72,7 @@
     <title>DegreeWorks+</title>
 </head>
 
-<body>
+<body onload = "retrieveStudentData()">
     <div class="header">
         <h1>I Can't Believe It's Not DegreeWorks!</h1>
         <midleft>Hunter|CUNY</midleft>
