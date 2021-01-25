@@ -1,5 +1,12 @@
 # Hunter Codefest 2020-2021
 
+# Project Info
+## Project Name: DegreeWorks+
+## Project Description
+Do you ever go on DegreeWorks and wonder "Huh, I wish this site was more polished."?
+Look no further as the Doctest Knights bring you DegreeWorks+, an overhauled DegreeWorks experience 
+packed with features that help plan your college education with greater efficiency.
+
 # Team Info
 ### Team name: Doctest Knights
 ### Team members (format: GitHub username, last name, first name):
