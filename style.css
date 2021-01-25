@@ -5,6 +5,7 @@ body {
     background-color: rgb(187, 129, 146);
     overflow-x: hidden;
     margin: 0px;
+    font-family: 'Times New Roman', monospace;
     /* display: flex;
     justify-content: space-between; */
 }
@@ -22,16 +23,6 @@ body {
 
 .header h1 {
     font-size: 31px;
-}
-
-.header table {
-    width: 100%;
-    background-color: white;
-    color:rgb(29, 58, 131);
-}
-
-.header tr {
-    background-color: #cac9c9;
 }
 
 midright {
@@ -53,17 +44,87 @@ midleft {
     overflow: hidden;
     /* clear: both; */
     background-color: rgb(219, 163, 42); /* Set background color of the header to the CUNY blue */
-    padding: 0% 40% 0% 40%;
+    /* padding: 0% 40% 0% 40%; */
     /* margin: top right bottom left */
     /* margin: 0px -10px 0px -10px; */
     text-align: center;
     color: rgb(110, 145, 177);
+    position: -webkit-sticky;
     position: sticky;
     top: 0px;
     z-index: 1;
-    /* position: -webkit-sticky; */
     /* top: 78px; */
 }
+
+.topnav #links {
+    width: 100%;
+    background-color: white;
+    color: rgb(29, 58, 131);
+    font-size: 14px;
+}
+
+.topnav #links tr {
+    background-color: #cac9c9;
+}
+
+.topnav #studentInfo {
+    table-layout: fixed;
+    width: 100%;
+    background-color: white;
+    color: #696969;
+    font-size: 14px;
+}
+
+.topnav input{
+    text-align: center;
+}
+
+/* Stack Overflow code to center numbers
+https://stackoverflow.com/questions/23715881/center-text-in-html-number-input */
+input[type='number']::-webkit-inner-spin-button, 
+input[type='number']::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    display: none;
+}
+
+.topnav #ID input{
+    width: 75px;
+}
+
+.topnav #Name input{
+    width: 150px;
+}
+
+.topnav #Degree input{
+    width: 20px;
+}
+
+.topnav #Major input{
+    width: 150px;
+}
+
+.topnav #School input{
+    width: 10px;
+}
+
+.topnav #Year input{
+    width: 70px;
+}
+
+/* Stack Overflow code to center date
+https://stackoverflow.com/questions/46635238/center-date-in-input-field-with-date-type */
+input[type=date]::-webkit-inner-spin-button,
+input[type=date]::-webkit-calendar-picker-indicator {
+    -webkit-appearance: none;
+    display: none;
+}
+
+.topnav #Audit input{
+    width: 100px;
+}
+/* .topnav #studentInfo td {
+    background-color: #cac9c9;
+} */
 
 /* Style the drop down menu courtsey of Hammad */
 .dropbtn {
@@ -179,7 +240,3 @@ midleft {
     /* bottom: 15px; */
     font-size: 15px;
 }
-
-/* body {
-    background-color: rgb(29, 58, 131); Set background color to the CUNYfirst blue 
-} */
