@@ -25,24 +25,25 @@
             sidenav.style.width = sidenav.style.width === "250px" ? '0' : '250px';
             main.style.marginRight = main.style.marginRight === "250px" ? '0' : '250px';
         }
-	function retrieveStudentData() {
-	    let Body = 23848083;
-	    console.log(Body);
-	    fetch("/transaction", {
-	        method: "POST",
-	        headers: {
-	            "Content-Type": "application/json",
-	        },
-	        body: JSON.stringify(Body),
-	    }).then((resp) => {
-	        resp.json().then((data) => {
-	            return data;
-	        })
-	    });
-	}
-	// how to use data ^^^^^
-	// data = {'student_id': 123124, 'name': asdasif, 'credits', } data.student_id, data.name, data.credits
+        function retrieveStudentData() {
+            let Body = 23848083;
+            console.log(Body);
+            fetch("/transaction", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(Body),
+            }).then((resp) => {
+                resp.json().then((data) => {
+                    return data;
+                })
+            });
+        }
+        // how to use data ^^^^^
+        // data = {'student_id': 123124, 'name': asdasif, 'credits', } data.student_id, data.name, data.credits
         // functions courtsey of Hammad for getStudent and drop down menu
+
         function getStudent() {
             var student = document.getElementById("emplid").value;
             document.getElementById("emplid").innerHTML = student;
@@ -122,14 +123,16 @@
         <a href="#">Contact</a> -->
     </div>
 
-    <div id="main">
+    <div class="main">
         <!-- <button class="openbtn" onclick="toggleNav()">☰ Sidebar</button> -->
         <!-- <h2>Collapsed Sidebar</h2> -->
         
         <h1>Hunter College</h1>
-        <h2>Legend</h2>
-        <p>Complete, Not Complete, In Progress, etc.</p>
-        <table>
+        <table id="legend">
+            <tr><th>Legend</th></tr>
+            <tr><td>Complete, Not Complete, In Progress, etc.</td></tr>
+        </table>
+        <table id="studentView">
             <tr><th>Student View</th></tr>
             <tr><td>Preferred Name</td></tr>
             <tr><td>Legal Name</td></tr>
@@ -139,7 +142,7 @@
             <tr><td>Student Groups</td></tr>
             <tr><td>Cumulative GPA</td></tr>
         </table>
-        <table>
+        <table id="reqs">
             <tr><th>Degree in Bachelor of Arts</th></tr>
             <tr><td>A minimum of 120 credits is required.</td></tr>
             <tr><td>A minimum of 30 credits must be taken in residence.</td></tr>
