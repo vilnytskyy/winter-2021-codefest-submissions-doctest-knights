@@ -2,7 +2,7 @@
 
 /* Style the body */
 body {
-    background-color: rgb(187, 129, 146);
+    background-color: white;
     overflow-x: hidden;
     margin: 0px;
     font-family: 'Times New Roman', monospace;
@@ -43,7 +43,6 @@ midleft {
 .topnav {
     overflow: hidden;
     /* clear: both; */
-    background-color: rgb(219, 163, 42); /* Set background color of the header to the CUNY blue */
     /* padding: 0% 40% 0% 40%; */
     /* margin: top right bottom left */
     /* margin: 0px -10px 0px -10px; */
@@ -53,7 +52,6 @@ midleft {
     position: sticky;
     top: 0px;
     z-index: 1;
-    /* top: 78px; */
 }
 
 .topnav #links {
@@ -73,6 +71,7 @@ midleft {
     background-color: white;
     color: #696969;
     font-size: 14px;
+    border-bottom: 1px solid black;
 }
 
 .topnav input{
@@ -125,6 +124,60 @@ input[type=date]::-webkit-calendar-picker-indicator {
 /* .topnav #studentInfo td {
     background-color: #cac9c9;
 } */
+
+/* Style the main page */
+.main {
+    transition: margin-right .5s;
+    /* padding: 16px; */
+    overflow: hidden;
+    /* clear: both; */
+    background-color: white; /* Set background color of the header to the CUNY blue */
+    padding: 0px 16px 0px 16px;
+    /* margin: top right bottom left */
+    /* margin: 0px -10px 0px -10px; */
+    /* text-align: center; */
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+    z-index: 0;
+}
+
+.main h1 {
+    text-align: center;
+    /* top: -5px; */
+    font-size: 25px;
+    color: rgb(110, 145, 177);
+}
+
+#legend th{
+    border-top: 1px solid rgb(110, 145, 177);
+    border-bottom: 1px solid rgb(110, 145, 177);
+    /* border: 1px solid black; */
+    text-align: left;
+    width: auto;
+    color: rgb(110, 145, 177);
+}
+
+.main table#studentView {
+    table-layout: fixed;
+    display: block;
+}
+
+#studentView th {
+    background-color: rgb(91, 120, 145);
+    color: white;
+    /* text-align: left; */
+    /* padding: top right bottom left */
+    padding: 1px 0px 1px 0px;
+    /* width: 100%; */
+    table-layout: fixed;
+}
+
+#reqs th {
+    background-color: rgb(91, 120, 145);
+    color: white;
+    text-align: left;
+}
 
 /* Style the drop down menu courtsey of Hammad */
 .dropbtn {
@@ -217,11 +270,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
     background-color: #444;
 }
 
-#main {
-    transition: margin-right .5s;
-    padding: 16px;
-}
-
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
     .sidebar {padding-top: 15px;}
@@ -230,13 +278,17 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 /* Style the footer */
 .footer {
-    /* position: absolute; */
+    position: absolute;
     /* overflow: visible; */
     background-color: rgb(110, 145, 177);
-    /* padding: 0px; */
-    margin: -10px;
+    /* padding: -10px; */
+    /* margin: top right bottom left */
+    /* margin: -5px 0px -5px 0px; */
     text-align: center;
     color: white;
     /* bottom: 15px; */
     font-size: 15px;
+    /* z-index: 1; */
+    width: 100%;
+    /* height: 30px; */
 }
