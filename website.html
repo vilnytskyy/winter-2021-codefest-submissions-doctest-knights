@@ -14,7 +14,8 @@
     <title>DegreeWorks+</title>
 </head>
 
-<body onload = "retrieveStudentData()">
+<body onload="retrieveStudentData()">
+
     <div class="header">
         <h1>I Can't Believe It's Not DegreeWorks!</h1>
         <midleft>Hunter|CUNY</midleft>
@@ -50,7 +51,7 @@
                 <td id="School"><input type="text" readonly value="U"></td>
                 <td id="Year"><input type="text" readonly value="U-SOPH"></td>
                 <td id="Audit"><input type="date" readonly value="2021-01-24"></td>
-              </tr>
+            </tr>
         </table>
         <!-- <h1>Bar</h1> -->
     </div>
@@ -67,40 +68,254 @@
     <div class="main">
         <!-- <button class="openbtn" onclick="toggleNav()">☰ Sidebar</button> -->
         <!-- <h2>Collapsed Sidebar</h2> -->
-        
+
         <h1>Hunter College</h1>
         <table id="legend">
-            <tr><th>Legend</th></tr>
-            <tr><td>Complete, Not Complete, In Progress, etc.</td></tr>
+            <tr>
+                <th colspan="8">Legend</th>
+            </tr>
+            <tr>
+                <td id="img">X</td>
+                <td>Complete</td>
+                <td id="img">X</td>
+                <td>Complete except for classes in-progress</td>
+                <td id="img">TR/CR</td>
+                <td>Transfer Class</td>
+                <td id="img">IP</td>
+                <td>In Progress</td>
+            </tr>
+            <tr>
+                <td id="img">X</td>
+                <td>Not Complete</td>
+                <td id="img">X</td>
+                <td>Nearly complete - see advisor</td>
+                <td id="img">@</td>
+                <td colspan="3">Any course number</td>
+            </tr>
         </table>
         <table id="studentView">
-            <tr><th>Student View</th></tr>
-            <tr><td>Preferred Name</td></tr>
-            <tr><td>Legal Name</td></tr>
-            <tr><td>ID</td></tr>
-            <tr><td>Transfer Credits</td></tr>
-            <tr><td>Academic Standing</td></tr>
-            <tr><td>Student Groups</td></tr>
-            <tr><td>Cumulative GPA</td></tr>
+            <tr>
+                <th colspan="4">Student View</th>
+            </tr>
+            <tr>
+                <td id="label">Preferred Name</td>
+                <td id="obj"></td>
+                <td id="label"></td>
+                <td id="obj"></td>
+            </tr>
+            <tr>
+                <td id="label">Legal Name</td>
+                <td id="obj">Raboy, Nick</td>
+                <td id="label">Academic Standing</td>
+                <td id="obj">Good Academic Standing (GST)</td>
+            </tr>
+            <tr>
+                <td id="label">ID</td>
+                <td id="obj">23000001</td>
+                <td id="label">Student Groups</td>
+                <td id="obj">**Groups**</td>
+            </tr>
+            <tr>
+                <td id="label">Transfer Credits</td>
+                <td id="obj">10.00</td>
+                <td id="label">Cumulative GPA</td>
+                <td id="obj">3.21</td>
+            </tr>
         </table>
         <table id="reqs">
-            <tr><th>Degree in Bachelor of Arts</th></tr>
-            <tr><td>A minimum of 120 credits is required.</td></tr>
-            <tr><td>A minimum of 30 credits must be taken in residence.</td></tr>
-            <tr><td>Liberal Arts/Scrience Requirement</td></tr>
-            <tr><td>Overall GPA Requirement Met</td></tr>
-            <tr><td>CUNY Skills Assessment Tests</td></tr>
-            <tr><td>CUNY Common Core</td></tr>
-            <tr><td>Hunter Focus: 12 credits required</td></tr>
-            <tr><td>Writing Requirement</td></tr>
-            <tr><td>Pluralism & Diversity Requirement</td></tr>
-            <tr><td>Major Requirements</td></tr>
-            <tr><td>Minor Optional</td></tr>
-            <tr><td>APPLICATION FOR GRADUATION REMINDER</td></tr>
+            <!-- Degree in Bachelor of Arts -->
+            <tr>
+                <th colspan="3">Degree in Bachelor of Arts</th>
+            </tr>
+            <tr>
+                <td>A minimum of 120 credits is required.</td>
+                <td id="stillNeeded">Still Needed:</td>
+                <td>A minimum of 120 credits is required. You have 69 credits applied to your degree. You still need
+                    51
+                    additional credits.</td>
+            </tr>
+            <tr>
+                <td colspan="3">A minimum of 30 credits must be taken in residence.</td>
+                <!-- <td id="stillNeeded"></td>
+                <td></td> -->
+            </tr>
+            <tr>
+                <td>Liberal Arts/Scrience Requirement</td>
+                <td id="stillNeeded">Still Needed:</td>
+                <td>You still need 21 additional Liberal Arts/Science credits. Please see your advisor if you have
+                    any
+                    questions.</td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    NOTE: If you have an exemption, waiver or substitution on your official transcript that is not
+                    applying to your DegreeWorks worksheet, please email regweb@hunter.cuny.edu to confirm receipt
+                    and
+                    processing.
+                    A minimum of 90 credits in Liberal Arts/Science is required for this degree. You have taken 69
+                    credits.
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">Overall GPA Requirement Met</td>
+                <!-- <td id="stillNeeded"></td>
+                <td></td> -->
+            </tr>
+            <tr>
+                <td colspan="3">CUNY Skills Assessment Tests</td>
+                <!-- <td id="stillNeeded"></td>
+                <td></td> -->
+            </tr>
+            <tr>
+                <td>CUNY Common Core</td>
+                <td id="stillNeeded">Still Needed:</td>
+                <td><a href="#">See Hunter Core: CUNY Common Core section</a></td>
+            </tr>
+            <tr>
+                <td>Hunter Focus: 12 credits required</td>
+                <td id="stillNeeded">Still Needed:</td>
+                <td><a href="#">See Hunter Focus (12)-Foreign Lang./Concentrated Study section</a></td>
+            </tr>
+            <tr>
+                <td>Writing Requirement</td>
+                <td id="stillNeeded">Still Needed:</td>
+                <td><a href="#">See Writing Requirement section</a></td>
+            </tr>
+            <tr>
+                <td>Pluralism & Diversity Requirement</td>
+                <td id="stillNeeded">Still Needed:</td>
+                <td><a href="#">See Pluralism & Diversity Requirement section</a></td>
+            </tr>
+            <tr>
+                <td>Major Requirements</td>
+                <td id="stillNeeded">Still Needed:</td>
+                <td><a href="#">See Major in Computer Science section</a></td>
+            </tr>
+            <tr>
+                <td colspan="3">Minor Optional</td>
+                <!-- <td id="stillNeeded"></td>
+                <td></td> -->
+            </tr>
+            <tr>
+                <td colspan="3">
+                    NOTE: As of Spring 2009 the minor is optional for most B.A. students. Students wishing to
+                    declare a
+                    minor after Spring 2009 must contact the minor department for approval.
+                </td>
+            </tr>
+            <tr>
+                <td>APPLICATION FOR GRADUATION REMINDER</td>
+                <td id="stillNeeded">Still Needed:</td>
+                <td>You must officially apply to graduate by logging into CUNYfirst, via your Student Center. Keep
+                    in
+                    mind that this field will always remain unchecked. </td>
+            </tr>
+
+            <!-- CUNY Skills Assessment Tests -->
+            <tr>
+                <th colspan="3">CUNY Skills Assessment Tests</th>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    NOTE FROM TESTING CENTER: There are two math courses with no prerequisites that can be used
+                    towards
+                    the Common Core's Math & Quantitative Reasoning (MQR) WITHOUT taking the Mathematics Placement
+                    Test
+                    (MPT): MATH 100 and MATH 102. Math requirements can vary by major so, if you have any questions,
+                    see
+                    your academic advisor prior to registration.
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">CUNY Math Test Proficient</td>
+                <!-- <td id="stillNeeded"></td>
+                <td></td> -->
+            </tr>
+            <tr>
+                <td colspan="3">CUNY Reading Test Proficient</td>
+                <!-- <td id="stillNeeded"></td>
+                <td></td> -->
+            </tr>
+            <tr>
+                <td colspan="3">CUNY Writing Test Proficient</td>
+                <!-- <td id="stillNeeded"></td>
+                <td></td> -->
+            </tr>
+
+            <!-- Hunter Core: CUNY Common Core -->
+            <tr>
+                <th colspan="3">Hunter Core: CUNY Common Core</th>
+            </tr>
+            <tr>
+                <td>Unmet conditions for this set of requirements:</td>
+                <td colspan="2">
+                    30 credits are required for the CUNY Common Core. You currently have 21, you still need 9 more
+                    credits.
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    CHEM 120LC and CHEM 121LB must both be taken to apply towards Life & Physical Sciences or
+                    Scientific
+                    World.
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    For Individual and Society: This category will contain two areas and students must take one
+                    course
+                    from each area. The two areas are: Social Science and Humanities, Cultures & Ideas.
+                </td>
+            </tr>
+            <tr>
+                <td>Template</td>
+                <td id="stillNeeded"></td>
+                <td></td>
+            </tr>
+
+            <!-- Hunter Focus (12) - Foreign Language / Concentrated Study -->
+            <tr>
+                <th colspan="3">Hunter Focus (12) - Foreign Language / Concentrated Study</th>
+            </tr>
+            <tr>
+                <td>Template</td>
+                <td id="stillNeeded"></td>
+                <td></td>
+            </tr>
+
+            <!-- Writing Requirement -->
+            <tr>
+                <th colspan="3">Writing Requirement</th>
+            </tr>
+            <tr>
+                <td>Template</td>
+                <td id="stillNeeded"></td>
+                <td></td>
+            </tr>
+
+            <!-- Pluralism & Diversity Requirement -->
+            <tr>
+                <th colspan="3">Pluralism & Diversity Requirement</th>
+            </tr>
+            <tr>
+                <td>Template</td>
+                <td id="stillNeeded"></td>
+                <td></td>
+            </tr>
+
+            <!-- Major in Computer Science -->
+            <tr>
+                <th colspan="3">Major in Computer Science</th>
+            </tr>
+            <tr>
+                <td>Template</td>
+                <td id="stillNeeded"></td>
+                <td></td>
+            </tr>
         </table>
 
         <!-- Dropdown Menu -->
-        <div class="dropdown">
+        <!-- <div class="dropdown">
             <button onclick="myFunction()" class="dropbtn">CSCI 135</button>
             <div id="myDropdown" class="dropdown-content">
                 <a href="#">CSCI 135 info blah blah blah blah blah blah blah blah blah
@@ -108,217 +323,11 @@
                     <p> Credits: 3</p>
                 </a>
             </div>
-        </div>
-
-        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
-            concludaturque
-            et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
-            repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
-            Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
-            concludaturque
-            et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
-            repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
-            Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
-            concludaturque
-            et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
-            repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
-            Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
-            concludaturque
-            et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
-            repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
-            Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
-            concludaturque
-            et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
-            repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
-            Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
-            concludaturque
-            et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
-            repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
-            Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
-            concludaturque
-            et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
-            repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
-            Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
-            concludaturque
-            et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
-            repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
-            Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
-            concludaturque
-            et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
-            repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
-            Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
-            concludaturque
-            et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
-            repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
-            Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
-            concludaturque
-            et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
-            repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
-            Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
-            concludaturque
-            et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
-            repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
-            Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
-            concludaturque et
-            eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
-            repudiandae
-            nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
-            Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
-            concludaturque et
-            eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
-            repudiandae
-            nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
-            Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
-            concludaturque et
-            eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
-            repudiandae
-            nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
-            Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
-            concludaturque et
-            eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
-            repudiandae
-            nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
-            Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
-            concludaturque
-            et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
-            repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
-            Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
-            concludaturque
-            et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
-            repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
-            Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
-            concludaturque
-            et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
-            repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
-            Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
-            concludaturque
-            et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
-            repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
-            Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
-            concludaturque
-            et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
-            repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
-            Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
-            concludaturque
-            et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
-            repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
-            Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
-            concludaturque
-            et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
-            repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
-            Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
-            concludaturque
-            et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
-            repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
-            Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
-            concludaturque
-            et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
-            repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
-            Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
-            concludaturque
-            et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
-            repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
-            Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
-            concludaturque
-            et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
-            repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
-            Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
-            concludaturque
-            et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
-            repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
-            Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
-            concludaturque et
-            eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
-            repudiandae
-            nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
-            Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
-            concludaturque et
-            eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
-            repudiandae
-            nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
-            Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
-            concludaturque et
-            eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
-            repudiandae
-            nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
-            Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
-            concludaturque et
-            eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
-            repudiandae
-            nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
-            Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
-            concludaturque
-            et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
-            repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
-            Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
-            concludaturque
-            et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
-            repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
-            Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
-            concludaturque
-            et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
-            repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
-            Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
-            concludaturque
-            et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
-            repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
-            Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
-            concludaturque
-            et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
-            repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
-            Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
-            concludaturque
-            et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
-            repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
-            Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
-            concludaturque
-            et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
-            repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
-            Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
-            concludaturque
-            et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
-            repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
-            Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
-            concludaturque
-            et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
-            repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
-            Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
-            concludaturque
-            et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
-            repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
-            Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
-            concludaturque
-            et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
-            repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
-            Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
-            concludaturque
-            et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
-            repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
-            Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
-            concludaturque et
-            eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
-            repudiandae
-            nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
-            Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
-            concludaturque et
-            eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
-            repudiandae
-            nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
-            Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
-            concludaturque et
-            eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
-            repudiandae
-            nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
-            Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
-            concludaturque et
-            eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
-            repudiandae
-            nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+        </div> -->
     </div>
 
-    <div class="footer">
-        <p>Presented by: Hammad Siddiqui, Asllan Alija, and Vasyl Ilnytskyy</p>
-    </div>
+    <div id="thirty"><p>35px</p></div>
+    <footer class="footer">Presented by: Hammad Siddiqui, Asllan Alija, and Vasyl Ilnytskyy</footer>
 
 </body>
 
