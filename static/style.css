@@ -131,13 +131,13 @@ input[type=date]::-webkit-calendar-picker-indicator {
     /* padding: 16px; */
     overflow: hidden;
     /* clear: both; */
-    background-color: white; /* Set background color of the header to the CUNY blue */
+    background-color: white;
     padding: 0px 16px 0px 16px;
     /* margin: top right bottom left */
     /* margin: 0px -10px 0px -10px; */
     /* text-align: center; */
-    position: -webkit-sticky;
-    position: sticky;
+    /* position: -webkit-sticky;
+    position: sticky; */
     top: 0px;
     z-index: 0;
 }
@@ -149,34 +149,78 @@ input[type=date]::-webkit-calendar-picker-indicator {
     color: rgb(110, 145, 177);
 }
 
-#legend th{
+#legend {
+    border-collapse: collapse;
+}
+
+#legend th {
     border-top: 1px solid rgb(110, 145, 177);
     border-bottom: 1px solid rgb(110, 145, 177);
     /* border: 1px solid black; */
     text-align: left;
-    width: auto;
+    /* width: 100%; */
+    /* padding: top right bottom left */
+    padding: 5px 10px 5px 10px;
     color: rgb(110, 145, 177);
 }
 
-.main table#studentView {
-    table-layout: fixed;
-    display: block;
+#legend #img {
+    text-align: right;
+    padding-right: 10px;
+}
+
+#legend td {
+    background-color: rgba(172, 195, 214, 0.336);
+    /* padding: top right bottom left */
+    padding: 5px 120px 5px 10px;
+}
+
+#studentView td {
+    /* padding: top right bottom left */
+    padding: 5px 160px 5px 10px;
+}
+
+#studentView td#label {
+    background-color: #9fd6fab9;
+}
+
+#studentView td#obj {
+    background-color: #f1f0f0a6;
 }
 
 #studentView th {
     background-color: rgb(91, 120, 145);
     color: white;
-    /* text-align: left; */
+    text-align: left;
     /* padding: top right bottom left */
-    padding: 1px 0px 1px 0px;
+    padding: 5px 0px 5px 10px;
     /* width: 100%; */
-    table-layout: fixed;
+    /* table-layout: fixed; */
 }
 
 #reqs th {
     background-color: rgb(91, 120, 145);
     color: white;
     text-align: left;
+    /* padding: top right bottom left */
+    padding: 10px 10px 10px 10px;
+    /* width: 100%; */
+    /* table-layout: fixed; */
+}
+
+#reqs td {
+    background-color: rgba(172, 195, 214, 0.336);
+    color: rgb(117, 117, 117);
+    text-align: left;
+    /* padding: top right bottom left */
+    padding: 10px 10px 10px 10px;
+    /* width: 100%; */
+    /* table-layout: fixed; */
+    /* border-collapse: collapse; */
+}
+
+#reqs td#stillNeeded {
+    color: red;
 }
 
 /* Style the drop down menu courtsey of Hammad */
@@ -276,19 +320,22 @@ input[type=date]::-webkit-calendar-picker-indicator {
     .sidebar a {font-size: 18px;}
 }
 
+div#thirty {
+    font-size: 12px;
+    color: black;
+}
+
 /* Style the footer */
 .footer {
-    position: absolute;
-    /* overflow: visible; */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
     background-color: rgb(110, 145, 177);
-    /* padding: -10px; */
+    /* padding: top right bottom left */
+    padding: 10px 10px 10px 10px;
     /* margin: top right bottom left */
     /* margin: -5px 0px -5px 0px; */
     text-align: center;
     color: white;
-    /* bottom: 15px; */
     font-size: 15px;
-    /* z-index: 1; */
-    width: 100%;
-    /* height: 30px; */
 }
