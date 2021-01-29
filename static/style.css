@@ -12,30 +12,29 @@ body {
 
 /* Style the header */
 .header {
-    clear: both;
     background-color: rgb(29, 58, 131); /* Set background color of the header to the CUNY blue */
-    padding: 1px;
-    /* margin: top right bottom left */
-    /* margin: -10px -10px 0px -10px; */
     text-align: center;
     color: white;
+    padding: 1px;
 }
 
-.header h1 {
-    font-size: 31px;
+.header table {
+    width: 100%;
+    /* padding: top right bottom left */
+    /* padding: 5px 10px 5px 10px; */
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
-midright {
-    position: absolute;
-    top: 21px;
-    right: 15px;
+.header th#left {
     font-size: 30px;
 }
 
-midleft {
-    position: absolute;
-    top: 21px;
-    left: 15px;
+.header th#mid {
+    font-size: 40px;
+}
+
+.header th#right {
     font-size: 30px;
 }
 
@@ -121,9 +120,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
 .topnav #Audit input{
     width: 100px;
 }
-/* .topnav #studentInfo td {
-    background-color: #cac9c9;
-} */
 
 /* Style the main page */
 .main {
@@ -149,8 +145,14 @@ input[type=date]::-webkit-calendar-picker-indicator {
     color: rgb(110, 145, 177);
 }
 
+.label {
+    font-weight: bold;
+    color: rgb(117, 117, 117);
+}
+
 #legend {
     border-collapse: collapse;
+    width: 100%;
 }
 
 #legend th {
@@ -164,28 +166,41 @@ input[type=date]::-webkit-calendar-picker-indicator {
     color: rgb(110, 145, 177);
 }
 
-#legend #img {
+#legend td#img {
     text-align: right;
-    padding-right: 10px;
+    padding-right: 0px;
+    color: blue;
 }
 
 #legend td {
     background-color: rgba(172, 195, 214, 0.336);
     /* padding: top right bottom left */
-    padding: 5px 120px 5px 10px;
+    padding: 5px 10px 5px 5px;
+    font-size: 15px;
+}
+
+#studentView {
+    /* border-width: 20px;
+    border-color: red; */
+    width: 100%;
+    /* border: 1px solid black; */
 }
 
 #studentView td {
     /* padding: top right bottom left */
-    padding: 5px 160px 5px 10px;
+    padding: 2px 10px 2px 10px;
+    border: 1px solid white;
+    font-size: 15px;
 }
 
-#studentView td#label {
+#studentView td.label {
     background-color: #9fd6fab9;
+    /* For testing purposes */
+    /* color: red; */
 }
 
 #studentView td#obj {
-    background-color: #f1f0f0a6;
+    background-color: #f1f0f0bd;
 }
 
 #studentView th {
@@ -193,9 +208,13 @@ input[type=date]::-webkit-calendar-picker-indicator {
     color: white;
     text-align: left;
     /* padding: top right bottom left */
-    padding: 5px 0px 5px 10px;
+    padding: 5px 10px 5px 10px;
     /* width: 100%; */
     /* table-layout: fixed; */
+}
+
+#reqs {
+    width: 100%;
 }
 
 #reqs th {
@@ -213,7 +232,9 @@ input[type=date]::-webkit-calendar-picker-indicator {
     color: rgb(117, 117, 117);
     text-align: left;
     /* padding: top right bottom left */
-    padding: 10px 10px 10px 10px;
+    padding: 5px 10px 5px 10px;
+    font-size: 15px;
+    /* font-weight: bold; */
     /* width: 100%; */
     /* table-layout: fixed; */
     /* border-collapse: collapse; */
@@ -221,6 +242,16 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 #reqs td#stillNeeded {
     color: red;
+}
+
+#reqs td#notes {
+    /* padding: top right bottom left */
+    padding: 5px 20px 5px 20px;
+    background-color: #81b6da75;
+}
+
+#reqs td#underSub {
+    padding-left: 20px;
 }
 
 /* Style the drop down menu courtsey of Hammad */
@@ -338,4 +369,5 @@ div#thirty {
     text-align: center;
     color: white;
     font-size: 15px;
+    /* text-decoration: overline; */
 }
