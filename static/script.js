@@ -15,24 +15,41 @@ function toggleNav() {
     sidenav.style.width = sidenav.style.width === "250px" ? '0' : '250px';
     main.style.marginRight = main.style.marginRight === "250px" ? '0' : '250px';
 }
-function retrieveStudentData() {
-    let Body = 23848083;
-    console.log(Body);
-    fetch("/transaction", {
+async function retrieveStudentData(id) {
+    console.log(id);
+    const response = await fetch("/transaction", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
         },
-        body: JSON.stringify(Body),
-    }).then((resp) => {
-        resp.json().then((data) => {
-            return data;
-        })
-    });
-}
+        body: id,
+    })
+    return response.json()
+};
+
 // how to use data ^^^^^
 // data = {'student_id': 123124, 'name': asdasif, 'credits', } data.student_id, data.name, data.credits
 // functions courtsey of Hammad for getStudent and drop down menu
+
+async function retrieveCourseData(id) {
+    console.log(id);
+    var course;
+    const response = await fetch("/courses", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: id,
+    });
+    return response.json();
+};
+
+async function postTest() {
+    const s = await retrieveStudentData(23848083)
+    console.log(s);
+    const c = await retrieveCourseData(17);
+    console.log(c.credits);
+}
 
 function getStudent() {
     var student = document.getElementById("emplid").value;
