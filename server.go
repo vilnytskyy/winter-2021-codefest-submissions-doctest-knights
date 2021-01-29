@@ -79,6 +79,7 @@ func transactionHandler(w http.ResponseWriter, r *http.Request) {
 	decoder := json.NewDecoder(r.Body)
 	err := decoder.Decode(&id)
 	if err != nil {
+		fmt.Println("error here")
 		log.Fatal(err)
 	}
     s := retrieveStudentData(id)
