@@ -17,9 +17,13 @@
 <body onload="retrieveStudentData()">
 
     <div class="header">
-        <h1>I Can't Believe It's Not DegreeWorks!</h1>
-        <midleft>Hunter|CUNY</midleft>
-        <midright>DegreeWorks+</midright>
+        <table>
+            <tr>
+                <th id="left">Hunter|CUNY</th>
+                <th id="mid">I Can't Believe It's Not DegreeWorks!</th>
+                <th id="right">DegreeWorks+</th>
+            </tr>
+        </table>
     </div>
 
     <div class="topnav">
@@ -76,21 +80,21 @@
             </tr>
             <tr>
                 <td id="img">X</td>
-                <td>Complete</td>
+                <td class="label">Complete</td>
                 <td id="img">X</td>
-                <td>Complete except for classes in-progress</td>
+                <td class="label">Complete except for classes in-progress</td>
                 <td id="img">TR/CR</td>
-                <td>Transfer Class</td>
+                <td class="label">Transfer Class</td>
                 <td id="img">IP</td>
-                <td>In Progress</td>
+                <td class="label">In Progress</td>
             </tr>
             <tr>
                 <td id="img">X</td>
-                <td>Not Complete</td>
+                <td class="label">Not Complete</td>
                 <td id="img">X</td>
-                <td>Nearly complete - see advisor</td>
+                <td class="label">Nearly complete - see advisor</td>
                 <td id="img">@</td>
-                <td colspan="3">Any course number</td>
+                <td colspan="3" class="label">Any course number</td>
             </tr>
         </table>
         <table id="studentView">
@@ -98,27 +102,27 @@
                 <th colspan="4">Student View</th>
             </tr>
             <tr>
-                <td id="label">Preferred Name</td>
+                <td class="label">Preferred Name</td>
                 <td id="obj"></td>
-                <td id="label"></td>
+                <td class="label"></td>
                 <td id="obj"></td>
             </tr>
             <tr>
-                <td id="label">Legal Name</td>
+                <td class="label">Legal Name</td>
                 <td id="obj">Raboy, Nick</td>
-                <td id="label">Academic Standing</td>
+                <td class="label">Academic Standing</td>
                 <td id="obj">Good Academic Standing (GST)</td>
             </tr>
             <tr>
-                <td id="label">ID</td>
+                <td class="label">ID</td>
                 <td id="obj">23000001</td>
-                <td id="label">Student Groups</td>
+                <td class="label">Student Groups</td>
                 <td id="obj">**Groups**</td>
             </tr>
             <tr>
-                <td id="label">Transfer Credits</td>
+                <td class="label">Transfer Credits</td>
                 <td id="obj">10.00</td>
-                <td id="label">Cumulative GPA</td>
+                <td class="label">Cumulative GPA</td>
                 <td id="obj">3.21</td>
             </tr>
         </table>
@@ -128,87 +132,86 @@
                 <th colspan="3">Degree in Bachelor of Arts</th>
             </tr>
             <tr>
-                <td>A minimum of 120 credits is required.</td>
-                <td id="stillNeeded">Still Needed:</td>
-                <td>A minimum of 120 credits is required. You have 69 credits applied to your degree. You still need
-                    51
-                    additional credits.</td>
-            </tr>
-            <tr>
-                <td colspan="3">A minimum of 30 credits must be taken in residence.</td>
-                <!-- <td id="stillNeeded"></td>
-                <td></td> -->
-            </tr>
-            <tr>
-                <td>Liberal Arts/Scrience Requirement</td>
-                <td id="stillNeeded">Still Needed:</td>
-                <td>You still need 21 additional Liberal Arts/Science credits. Please see your advisor if you have
-                    any
-                    questions.</td>
-            </tr>
-            <tr>
-                <td colspan="3">
+                <td colspan="3" id="notes">
                     NOTE: If you have an exemption, waiver or substitution on your official transcript that is not
                     applying to your DegreeWorks worksheet, please email regweb@hunter.cuny.edu to confirm receipt
-                    and
-                    processing.
-                    A minimum of 90 credits in Liberal Arts/Science is required for this degree. You have taken 69
-                    credits.
+                    and processing. Please see your advisor if you have any questions.
                 </td>
             </tr>
             <tr>
-                <td colspan="3">Overall GPA Requirement Met</td>
+                <td class="label">A minimum of 120 credits is required.</td>
+                <td id="stillNeeded">Still Needed:</td>
+                <td>
+                    A minimum of 120 credits is required. You have X# credits applied to your degree. You still need
+                    Y# additional credits.
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3" class="label">A minimum of 30 credits must be taken in residence.</td>
                 <!-- <td id="stillNeeded"></td>
                 <td></td> -->
             </tr>
             <tr>
-                <td colspan="3">CUNY Skills Assessment Tests</td>
+                <td class="label">Liberal Arts/Scrience Requirement</td>
+                <td id="stillNeeded">Still Needed:</td>
+                <td>
+                    A minimum of 90 credits in Liberal Arts/Science is required for this degree. You have taken X#
+                    credits. You still need Y# additional Liberal Arts/Science credits. 
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3" class="label">Overall GPA Requirement Met</td>
                 <!-- <td id="stillNeeded"></td>
                 <td></td> -->
             </tr>
             <tr>
-                <td>CUNY Common Core</td>
+                <td colspan="3" class="label">CUNY Skills Assessment Tests</td>
+                <!-- <td id="stillNeeded"></td>
+                <td></td> -->
+            </tr>
+            <tr>
+                <td class="label">CUNY Common Core</td>
                 <td id="stillNeeded">Still Needed:</td>
                 <td><a href="#">See Hunter Core: CUNY Common Core section</a></td>
             </tr>
             <tr>
-                <td>Hunter Focus: 12 credits required</td>
+                <td class="label">Hunter Focus: 12 credits required</td>
                 <td id="stillNeeded">Still Needed:</td>
                 <td><a href="#">See Hunter Focus (12)-Foreign Lang./Concentrated Study section</a></td>
             </tr>
             <tr>
-                <td>Writing Requirement</td>
+                <td class="label">Writing Requirement</td>
                 <td id="stillNeeded">Still Needed:</td>
                 <td><a href="#">See Writing Requirement section</a></td>
             </tr>
             <tr>
-                <td>Pluralism & Diversity Requirement</td>
+                <td class="label">Pluralism & Diversity Requirement</td>
                 <td id="stillNeeded">Still Needed:</td>
                 <td><a href="#">See Pluralism & Diversity Requirement section</a></td>
             </tr>
             <tr>
-                <td>Major Requirements</td>
+                <td class="label">Major Requirements</td>
                 <td id="stillNeeded">Still Needed:</td>
                 <td><a href="#">See Major in Computer Science section</a></td>
             </tr>
             <tr>
-                <td colspan="3">Minor Optional</td>
+                <td colspan="3" class="label">Minor Optional</td>
                 <!-- <td id="stillNeeded"></td>
                 <td></td> -->
             </tr>
             <tr>
-                <td colspan="3">
+                <td colspan="3" id="notes">
                     NOTE: As of Spring 2009 the minor is optional for most B.A. students. Students wishing to
-                    declare a
-                    minor after Spring 2009 must contact the minor department for approval.
+                    declare a minor after Spring 2009 must contact the minor department for approval.
                 </td>
             </tr>
             <tr>
-                <td>APPLICATION FOR GRADUATION REMINDER</td>
+                <td class="label">APPLICATION FOR GRADUATION REMINDER</td>
                 <td id="stillNeeded">Still Needed:</td>
-                <td>You must officially apply to graduate by logging into CUNYfirst, via your Student Center. Keep
-                    in
-                    mind that this field will always remain unchecked. </td>
+                <td>
+                    You must officially apply to graduate by logging into CUNYfirst, via your Student Center. Keep
+                    in mind that this field will always remain unchecked.
+                </td>
             </tr>
 
             <!-- CUNY Skills Assessment Tests -->
@@ -216,28 +219,25 @@
                 <th colspan="3">CUNY Skills Assessment Tests</th>
             </tr>
             <tr>
-                <td colspan="3">
+                <td colspan="3" id="notes">
                     NOTE FROM TESTING CENTER: There are two math courses with no prerequisites that can be used
-                    towards
-                    the Common Core's Math & Quantitative Reasoning (MQR) WITHOUT taking the Mathematics Placement
-                    Test
-                    (MPT): MATH 100 and MATH 102. Math requirements can vary by major so, if you have any questions,
-                    see
-                    your academic advisor prior to registration.
+                    towards the Common Core's Math & Quantitative Reasoning (MQR) WITHOUT taking the Mathematics Placement
+                    Test (MPT): MATH 100 and MATH 102. Math requirements can vary by major so, if you have any questions,
+                    see your academic advisor prior to registration.
                 </td>
             </tr>
             <tr>
-                <td colspan="3">CUNY Math Test Proficient</td>
+                <td colspan="3" class="label">CUNY Math Test Proficient</td>
                 <!-- <td id="stillNeeded"></td>
                 <td></td> -->
             </tr>
             <tr>
-                <td colspan="3">CUNY Reading Test Proficient</td>
+                <td colspan="3" class="label">CUNY Reading Test Proficient</td>
                 <!-- <td id="stillNeeded"></td>
                 <td></td> -->
             </tr>
             <tr>
-                <td colspan="3">CUNY Writing Test Proficient</td>
+                <td colspan="3" class="label">CUNY Writing Test Proficient</td>
                 <!-- <td id="stillNeeded"></td>
                 <td></td> -->
             </tr>
@@ -247,30 +247,76 @@
                 <th colspan="3">Hunter Core: CUNY Common Core</th>
             </tr>
             <tr>
-                <td>Unmet conditions for this set of requirements:</td>
+                <td class="label">Unmet conditions for this set of requirements:</td>
                 <td colspan="2">
-                    30 credits are required for the CUNY Common Core. You currently have 21, you still need 9 more
+                    30 credits are required for the CUNY Common Core. You currently have X#, you still need Y# more
                     credits.
                 </td>
             </tr>
             <tr>
-                <td colspan="3">
+                <td colspan="3" id="notes">
                     CHEM 120LC and CHEM 121LB must both be taken to apply towards Life & Physical Sciences or
                     Scientific
                     World.
                 </td>
             </tr>
             <tr>
-                <td colspan="3">
+                <td colspan="3" class="label">Requried Core</td>
+            </tr>
+            <tr>
+                <td class="label" id="underSub">English Composition 1</td>
+                <td id="stillNeeded">Still Needed:</td>
+                <td>**List of classes that fulfill this requirement**</td>
+            </tr>
+            <tr>
+                <td class="label" id="underSub">English Composition 2</td>
+                <td id="stillNeeded">Still Needed:</td>
+                <td>**List of classes that fulfill this requirement**</td>
+            </tr>
+            <tr>
+                <td class="label" id="underSub">Mathematical and Quantitative Reasoning</td>
+                <td id="stillNeeded">Still Needed:</td>
+                <td>**List of classes that fulfill this requirement**</td>
+            </tr>
+            <tr>
+                <td class="label" id="underSub">Life & Physical Sciences</td>
+                <td id="stillNeeded">Still Needed:</td>
+                <td>**List of classes that fulfill this requirement**</td>
+            </tr>
+            <tr>
+                <td class="label" colspan="3">Flexible Common Core</td>
+            </tr>
+            <tr>
+                <td class="label" id="underSub">World Cultures and Global Issues</td>
+                <td id="stillNeeded">Still Needed:</td>
+                <td>**List of classes that fulfill this requirement**</td>
+            </tr>
+            <tr>
+                <td class="label" id="underSub">U.S. Experiences in Its Diversity</td>
+                <td id="stillNeeded">Still Needed:</td>
+                <td>**List of classes that fulfill this requirement**</td>
+            </tr>
+            <tr>
+                <td class="label" id="underSub">Creative Expression</td>
+                <td id="stillNeeded">Still Needed:</td>
+                <td>**List of classes that fulfill this requirement**</td>
+            </tr>
+            <tr>
+                <td colspan="3" id="notes">
                     For Individual and Society: This category will contain two areas and students must take one
                     course
                     from each area. The two areas are: Social Science and Humanities, Cultures & Ideas.
                 </td>
             </tr>
             <tr>
-                <td>Template</td>
-                <td id="stillNeeded"></td>
-                <td></td>
+                <td class="label" id="underSub">Individual and Society</td>
+                <td id="stillNeeded">Still Needed:</td>
+                <td>**List of classes that fulfill this requirement**</td>
+            </tr>
+            <tr>
+                <td class="label" id="underSub">Scientific World</td>
+                <td id="stillNeeded">Still Needed:</td>
+                <td>**List of classes that fulfill this requirement**</td>
             </tr>
 
             <!-- Hunter Focus (12) - Foreign Language / Concentrated Study -->
@@ -278,7 +324,7 @@
                 <th colspan="3">Hunter Focus (12) - Foreign Language / Concentrated Study</th>
             </tr>
             <tr>
-                <td>Template</td>
+                <td class="label">Template</td>
                 <td id="stillNeeded"></td>
                 <td></td>
             </tr>
@@ -288,7 +334,7 @@
                 <th colspan="3">Writing Requirement</th>
             </tr>
             <tr>
-                <td>Template</td>
+                <td class="label">Template</td>
                 <td id="stillNeeded"></td>
                 <td></td>
             </tr>
@@ -298,7 +344,7 @@
                 <th colspan="3">Pluralism & Diversity Requirement</th>
             </tr>
             <tr>
-                <td>Template</td>
+                <td class="label">Template</td>
                 <td id="stillNeeded"></td>
                 <td></td>
             </tr>
@@ -308,7 +354,7 @@
                 <th colspan="3">Major in Computer Science</th>
             </tr>
             <tr>
-                <td>Template</td>
+                <td class="label">Template</td>
                 <td id="stillNeeded"></td>
                 <td></td>
             </tr>
