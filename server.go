@@ -62,13 +62,13 @@ func retrieveCourseData(course_id int) (Course) {
 	var req_f string
 	var credits int64
 	var desc string
-	// qtext := fmt.Sprintf("SELECT DISTINCT * FROM courses WHERE course_id LIKE %d", course_id)
+	qtext := fmt.Sprintf("SELECT DISTINCT * FROM courses WHERE course_id LIKE %d", course_id)
 	rows := database.QueryRow(qtext).Scan(&id, &name, &dep, &cid, &prereq, &req_f, &credits, &desc)
 	if rows != nil {
 		log.Fatal(rows)
 	}
 	c := Course{id, name, dep, cid, prereq, req_f, credits, desc}
-	fmt.Println(c)
+	// fmt.Println(c)
 	return c
 }
 
