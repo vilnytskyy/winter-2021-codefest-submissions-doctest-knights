@@ -68,7 +68,7 @@ func retrieveCourseData(course_id int) (Course) {
 		log.Fatal(rows)
 	}
 	c := Course{id, name, dep, cid, prereq, req_f, credits, desc}
-	fmt.Println(c)
+	// fmt.Println(c)
 	return c
 }
 
