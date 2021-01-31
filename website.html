@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- link to the css stylesheet -->
-    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="./static/style.css">
 
     <!-- link to the js script -->
-    <script src="/static/script.js"></script>
+    <script src="./static/script.js"></script>
 
     <!-- wensite title -->
     <title>DegreeWorks+</title>
@@ -48,13 +48,34 @@
                 <th>Last Audit</th>
             </tr>
             <tr>
-                <td id="ID"><input type="number" readonly value="23000001"></td>
-                <td id="Name"><input type="text" readonly value="Raboy, Nick"></td>
-                <td id="Degree"><input type="text" readonly value="BA"></td>
-                <td id="Major"><input type="text" readonly value="U Computer Science"></td>
-                <td id="School"><input type="text" readonly value="U"></td>
-                <td id="Year"><input type="text" readonly value="U-SOPH"></td>
-                <td id="Audit"><input type="date" readonly value="2021-01-24"></td>
+                <td>
+                    <!-- <label for="id">Student ID Number</label> -->
+                    <input type="number" id="id" readonly value="23000001">
+                </td>
+                <td>
+                    <!-- <label for="name">Student Name</label> -->
+                    <input type="text" id="name" readonly value="Raboy, Nick">
+                </td>
+                <td>
+                    <!-- <label for="degree">Degree</label> -->
+                    <input type="text" id="degree" readonly value="BA">
+                </td>
+                <td>
+                    <!-- <label for="major">Major</label> -->
+                    <input type="text" id="major" readonly value="U Computer Science">
+                </td>
+                <td>
+                    <!-- <label for="school">School</label> -->
+                    <input type="text" id="school" readonly value="U">
+                </td>
+                <td>
+                    <!-- <label for="year">Student Class Level</label> -->
+                    <input type="text" id="year" readonly value="U-SOPH">
+                </td>
+                <td>
+                    <!-- <label for="audit">Last Audit</label> -->
+                    <input type="date" id="audit" readonly value="2021-01-24">
+                </td>
             </tr>
         </table>
         <!-- <h1>Bar</h1> -->
@@ -133,7 +154,7 @@
             </tr>
             <tr>
                 <td colspan="3" id="notes">
-                    NOTE: If you have an exemption, waiver or substitution on your official transcript that is not
+                    If you have an exemption, waiver or substitution on your official transcript that is not
                     applying to your DegreeWorks worksheet, please email regweb@hunter.cuny.edu to confirm receipt
                     and processing. Please see your advisor if you have any questions.
                 </td>
@@ -201,7 +222,7 @@
             </tr>
             <tr>
                 <td colspan="3" id="notes">
-                    NOTE: As of Spring 2009 the minor is optional for most B.A. students. Students wishing to
+                    As of Spring 2009 the minor is optional for most B.A. students. Students wishing to
                     declare a minor after Spring 2009 must contact the minor department for approval.
                 </td>
             </tr>
@@ -220,7 +241,7 @@
             </tr>
             <tr>
                 <td colspan="3" id="notes">
-                    NOTE FROM TESTING CENTER: There are two math courses with no prerequisites that can be used
+                    There are two math courses with no prerequisites that can be used
                     towards the Common Core's Math & Quantitative Reasoning (MQR) WITHOUT taking the Mathematics Placement
                     Test (MPT): MATH 100 and MATH 102. Math requirements can vary by major so, if you have any questions,
                     see your academic advisor prior to registration.
@@ -247,7 +268,7 @@
                 <th colspan="3">Hunter Core: CUNY Common Core</th>
             </tr>
             <tr>
-                <td class="label">Unmet conditions for this set of requirements:</td>
+                <td class="label" id="unmet">Unmet conditions for this set of requirements:</td>
                 <td colspan="2">
                     30 credits are required for the CUNY Common Core. You currently have X#, you still need Y# more
                     credits.
