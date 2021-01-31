@@ -65,16 +65,15 @@ body {
 }
 
 .topnav #studentInfo {
-    table-layout: fixed;
+    /* table-layout: fixed; */
     width: 100%;
     background-color: white;
     color: #696969;
     font-size: 14px;
     border-bottom: 1px solid black;
-}
-
-.topnav input{
     text-align: center;
+    /* padding: top right bottom left */
+    padding: 0px 10px 0px 10px;
 }
 
 /* Stack Overflow code to center numbers
@@ -85,27 +84,31 @@ input[type='number']::-webkit-outer-spin-button {
     display: none;
 }
 
-.topnav #ID input{
+.topnav input {
+    text-align: center;
+}
+
+.topnav input#id {
     width: 75px;
 }
 
-.topnav #Name input{
+.topnav input#name {
     width: 150px;
 }
 
-.topnav #Degree input{
+.topnav input#degree {
     width: 20px;
 }
 
-.topnav #Major input{
+.topnav input#major {
     width: 150px;
 }
 
-.topnav #School input{
+.topnav input#school {
     width: 10px;
 }
 
-.topnav #Year input{
+.topnav input#year {
     width: 70px;
 }
 
@@ -117,7 +120,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
     display: none;
 }
 
-.topnav #Audit input{
+.topnav input#audit {
     width: 100px;
 }
 
@@ -195,8 +198,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 #studentView td.label {
     background-color: #9fd6fab9;
-    /* For testing purposes */
-    /* color: red; */
+    width: 15%;
 }
 
 #studentView td#obj {
@@ -215,6 +217,8 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 #reqs {
     width: 100%;
+    border-collapse: separate;
+    border-spacing: 0px 3px;
 }
 
 #reqs th {
@@ -240,14 +244,21 @@ input[type=date]::-webkit-calendar-picker-indicator {
     /* border-collapse: collapse; */
 }
 
+#reqs td#unmet {
+    white-space: nowrap;
+}
+
 #reqs td#stillNeeded {
     color: red;
+    white-space: nowrap;
+    padding-right: 0px;
 }
 
 #reqs td#notes {
     /* padding: top right bottom left */
-    padding: 5px 20px 5px 20px;
+    padding: 5px 20px 5px 10px;
     background-color: #81b6da75;
+    border-left: 10px solid #81b6dade;
 }
 
 #reqs td#underSub {
