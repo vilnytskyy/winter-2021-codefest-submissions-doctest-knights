@@ -44,13 +44,60 @@ async function retrieveCourseData(id) {
     return response.json();
 };
 
+async function retrieveRequirementData(id) {
+    console.log(id);
+    var req;
+    const response = await fetch("/requirements", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: id,
+    });
+    return response.json();
+};
+
+async function retrieveCoursesTaken(id) {
+    console.log(id);
+    var req;
+    const response = await fetch("/courses_taken", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: id,
+    });
+    return response.json();
+};
+
+async function retrieveAllCourses() {
+    var req;
+    const response = await fetch("/all_courses", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: 123,
+    });
+    return response.json();
+};
+
 async function postTest() {
-    const s = await retrieveStudentData(23848083)
+    const s = await retrieveStudentData(23848083);
     console.log(s);
     const c = await retrieveCourseData(17);
     console.log(c.credits);
+    const r = await retrieveRequirementData(10);
+    console.log(r);
+    const ct = await retrieveCoursesTaken(23848083);
+    console.log(ct);
+    const ca = await retrieveAllCourses();
+    console.log(ca);
 }
 
+function creditsTowardsRequirement(req_id) {
+    
+}
 function getStudent() {
     var student = document.getElementById("emplid").value;
     document.getElementById("emplid").innerHTML = student;
