@@ -270,6 +270,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
     background-color: #3498DB;
     color: white;
     padding: 16px;
+    margin-right: 30px;
     font-size: 16px;
     border: none;
     cursor: pointer;

@@ -14,7 +14,7 @@
     <title>DegreeWorks+</title>
 </head>
 
-<body onload="postTest()">
+<body onload="initialize()">
 
     <div class="header">
         <table>
@@ -130,13 +130,13 @@
             </tr>
             <tr>
                 <td class="label">Legal Name</td>
-                <td id="obj">Raboy, Nick</td>
+                <td id="sname">Raboy, Nick</td>
                 <td class="label">Academic Standing</td>
                 <td id="obj">Good Academic Standing (GST)</td>
             </tr>
             <tr>
                 <td class="label">ID</td>
-                <td id="obj">23000001</td>
+                <td id="sid">23000001</td>
                 <td class="label">Student Groups</td>
                 <td id="obj">**Groups**</td>
             </tr>
@@ -144,7 +144,7 @@
                 <td class="label">Transfer Credits</td>
                 <td id="obj">10.00</td>
                 <td class="label">Cumulative GPA</td>
-                <td id="obj">3.21</td>
+                <td id="sgpa">3.21</td>
             </tr>
         </table>
         <table id="reqs">
@@ -163,8 +163,8 @@
                 <td class="label">A minimum of 120 credits is required.</td>
                 <td id="stillNeeded">Still Needed:</td>
                 <td>
-                    A minimum of 120 credits is required. You have X# credits applied to your degree. You still need
-                    Y# additional credits.
+                    A minimum of 120 credits is required. You have <span id="cred"> </span> credits applied to your degree. You still need
+                    <span id="credn"> </span> additional credits.
                 </td>
             </tr>
             <tr>
@@ -285,24 +285,19 @@
                 <td colspan="3" class="label">Requried Core</td>
             </tr>
             <tr>
-                <td class="label" id="underSub">English Composition 1</td>
+                <td class="label" id="underSub">English Requirement</td>
                 <td id="stillNeeded">Still Needed:</td>
-                <td>**List of classes that fulfill this requirement**</td>
-            </tr>
-            <tr>
-                <td class="label" id="underSub">English Composition 2</td>
-                <td id="stillNeeded">Still Needed:</td>
-                <td>**List of classes that fulfill this requirement**</td>
+                <td id="2"></td>
             </tr>
             <tr>
                 <td class="label" id="underSub">Mathematical and Quantitative Reasoning</td>
                 <td id="stillNeeded">Still Needed:</td>
-                <td>**List of classes that fulfill this requirement**</td>
+                <td id="3"></td>
             </tr>
             <tr>
                 <td class="label" id="underSub">Life & Physical Sciences</td>
                 <td id="stillNeeded">Still Needed:</td>
-                <td>**List of classes that fulfill this requirement**</td>
+                <td id="4"></td>
             </tr>
             <tr>
                 <td class="label" colspan="3">Flexible Common Core</td>
@@ -310,17 +305,17 @@
             <tr>
                 <td class="label" id="underSub">World Cultures and Global Issues</td>
                 <td id="stillNeeded">Still Needed:</td>
-                <td>**List of classes that fulfill this requirement**</td>
+                <td id="5"</td>
             </tr>
             <tr>
                 <td class="label" id="underSub">U.S. Experiences in Its Diversity</td>
                 <td id="stillNeeded">Still Needed:</td>
-                <td>**List of classes that fulfill this requirement**</td>
+                <td id="6"></td>
             </tr>
             <tr>
                 <td class="label" id="underSub">Creative Expression</td>
                 <td id="stillNeeded">Still Needed:</td>
-                <td>**List of classes that fulfill this requirement**</td>
+                <td id="7"></td>
             </tr>
             <tr>
                 <td colspan="3" id="notes">
@@ -332,12 +327,12 @@
             <tr>
                 <td class="label" id="underSub">Individual and Society</td>
                 <td id="stillNeeded">Still Needed:</td>
-                <td>**List of classes that fulfill this requirement**</td>
+                <td id="8"></td>
             </tr>
             <tr>
                 <td class="label" id="underSub">Scientific World</td>
                 <td id="stillNeeded">Still Needed:</td>
-                <td>**List of classes that fulfill this requirement**</td>
+                <td id="9"></td>
             </tr>
 
             <!-- Hunter Focus (12) - Foreign Language / Concentrated Study -->
@@ -347,7 +342,7 @@
             <tr>
                 <td class="label">Template</td>
                 <td id="stillNeeded"></td>
-                <td></td>
+                <td id="10"></td>
             </tr>
 
             <!-- Writing Requirement -->
@@ -357,7 +352,7 @@
             <tr>
                 <td class="label">Template</td>
                 <td id="stillNeeded"></td>
-                <td></td>
+                <td id="11"></td>
             </tr>
 
             <!-- Pluralism & Diversity Requirement -->
@@ -377,7 +372,7 @@
             <tr>
                 <td class="label">Template</td>
                 <td id="stillNeeded"></td>
-                <td></td>
+                <td id="17"></td>
             </tr>
         </table>
 

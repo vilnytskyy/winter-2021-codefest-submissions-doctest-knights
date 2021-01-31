@@ -16,7 +16,6 @@ function toggleNav() {
     main.style.marginRight = main.style.marginRight === "250px" ? '0' : '250px';
 }
 async function retrieveStudentData(id) {
-    console.log(id);
     const response = await fetch("/transaction", {
         method: "POST",
         headers: {
@@ -32,7 +31,6 @@ async function retrieveStudentData(id) {
 // functions courtsey of Hammad for getStudent and drop down menu
 
 async function retrieveCourseData(id) {
-    console.log(id);
     var course;
     const response = await fetch("/courses", {
         method: "POST",
@@ -45,7 +43,6 @@ async function retrieveCourseData(id) {
 };
 
 async function retrieveRequirementData(id) {
-    console.log(id);
     var req;
     const response = await fetch("/requirements", {
         method: "POST",
@@ -58,7 +55,6 @@ async function retrieveRequirementData(id) {
 };
 
 async function retrieveCoursesTaken(id) {
-    console.log(id);
     var req;
     const response = await fetch("/courses_taken", {
         method: "POST",
@@ -95,17 +91,120 @@ async function postTest() {
     console.log(ca);
 }
 
-function creditsTowardsRequirement(req_id) {
-    
+async function displayStudentData(id) {
+    s = await retrieveStudentData(id);
+    idf = document.getElementById('id');
+    ids = document.getElementById('sid');
+    ids.innerHTML = s.student_id;
+    idf.setAttribute('value', s.student_id);
+    n = document.getElementById('name');
+    n2 = document.getElementById('sname');
+    n2.innerHTML = s.name;
+    n.setAttribute('value', s.name);
+    maj = document.getElementById('major');
+    maj.setAttribute('value', 'Computer Science');
+    gp = document.getElementById('sgpa');
+    gp.innerHTML = s.overall_gpa;
+
+    cr = document.getElementById('cred');
+    cr.innerHTML = s.credits;
+
+    cr2 = document.getElementById('credn');
+    cr2.innerHTML = 120 - parseInt(s.credits);
 }
+
+async function courseTaken(c_id, s_id) {
+    courses = await retrieveCoursesTaken(s_id);
+    //console.log(courses);
+    //console.log(typeof courses[i].course_id);
+    //console.log(typeof c_id);
+    for (i = 0; i < courses.length; i++) {
+        //console.log(courses[i].course_id.trim() + "|||||" + c_id.trim());
+        if (courses[i].course_id.trim() === c_id.trim()) {
+            try {
+                if (courses[i].in_progress.trim() === '1')
+                    return "t";
+                else
+                    return "p";
+            }
+            catch(err){ return "p"; }
+        }
+    }
+    return "n";
+}
+
+async function addButtonsByCourse(course, id, s_id) {
+    var color;
+    var t = await courseTaken(course.course_id, s_id);
+    console.log(t);
+    if (t == 't')
+        color = "#3498DB";
+    else if (t == 'p')
+        color = "#66ff66";
+    else
+        color = "#ff3300";
+    console.log(color);
+    var req = document.getElementById(id);
+    var btn = document.createElement('div');
+    btn.className = "dropdown";
+    var btn2 = document.createElement('button');
+    btn2.className ='dropbtn';
+    btn2.style.backgroundColor = color;
+    btn2.innerHTML = course.department + " " + course.course_number;
+    btn2.addEventListener('click', function() {
+        myFunction(course.name)
+    });
+    var btn3 = document.createElement('div');
+    btn3.id = "myDropdown" + course.name;
+    btn3.className = "dropdown-content";
+    var btn4 = document.createElement('a');
+    btn4.href ='#';
+    btn4.innerHTML = course.name;
+    var btn5 = document.createElement('p');
+    btn5.innerHTML = course.description;
+    btn4.appendChild(btn5);
+    btn3.appendChild(btn4);
+    btn2.appendChild(btn3);
+    btn.appendChild(btn2);
+    req.appendChild(btn);
+}
+
+async function displayAllButtons(s_id) {
+    courses = await retrieveAllCourses();
+    for (i = 2; i < 11; i++)
+    {
+        for (j = 0; j < courses.length; j++)
+        {
+            if (courses[j].requirement_fulfilled.length > 2)
+            {
+                if (courses[j].requirement_fulfilled.split(',').includes(i.toString()))
+                    addButtonsByCourse(courses[j], i.toString(), s_id);
+            }
+            else if (courses[j].requirement_fulfilled == i.toString())
+                addButtonsByCourse(courses[j], i.toString(), s_id);
+        }
+    }
+}
+
+async function initialize()
+{
+    c = await retrieveCourseData(17);
+    c2 = await retrieveCourseData(12);
+    displayStudentData(23848083);
+    displayAllButtons(23848083);
+}
+
+
 function getStudent() {
     var student = document.getElementById("emplid").value;
     document.getElementById("emplid").innerHTML = student;
     document.querySelector("body > table.toplevel.table_default > tbody > tr:nth-child(3) > td.block_n2_and_content > table > tbody > tr:nth-child(2) > td.block_content_outer > table > tbody > tr > td > table:nth-child(10) > tbody > tr:nth-child(3) > td > a");
 }
 
-function myFunction() {
-    document.getElementById("myDropdown").classList.toggle("show");
+function myFunction(id) {
+    str = "myDropdown" + id;
+    console.log(str);
+    document.getElementById(str).classList.toggle("show");
 }
 
 // Close the dropdown if the user clicks outside of it

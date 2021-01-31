@@ -25,14 +25,14 @@ type Student struct {
 }
 
 type Course struct {
-	Course_id int64               `json:"student_id,string,omitempty"`
+	Course_id int64               `json:"course_id,string,omitempty"`
 	Name string                   `json:"name,omitempty"`
 	Department string             `json:"department,omitempty"`
 	Course_number int64           `json:"course_number,string,omitempty"`
 	Prereqs string                `json:"prereqs,omitempty"`
 	Requirement_fulfilled string  `json:"requirement_fulfilled,omitempty"`
 	Credits int64                 `json:"credits,string,omitempty"`
-	Description string            `json:"major_gpades,omitempty"`
+	Description string            `json:"description,omitempty"`
 }
 
 type Requirement struct {
@@ -45,9 +45,10 @@ type Requirement struct {
 type Course_Taken struct {
 	Student_id int64           `json:"student_id,string,omitempty"`
 	Course_id int64            `json:"course_id,string,omitempty"`
-	In_progress int64          `json:"in_progress_id,string,omitempty"`
+	In_progress int64          `json:"in_progress,string,omitempty"`
 	Grade string               `json:"grade,omitempty"`
 }
+
 
 func retrieveStudentData(student_id int) (Student) {
 	var id int64
