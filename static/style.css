@@ -217,6 +217,8 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 #reqs {
     width: 100%;
+    border-collapse: separate;
+    border-spacing: 0px 3px;
 }
 
 #reqs th {
