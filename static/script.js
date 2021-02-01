@@ -133,17 +133,37 @@ async function courseTaken(c_id, s_id) {
     return "n";
 }
 
+async function retrievePrerequisites(course_id) {
+    var c = await retrieveCourseData(parseInt(course_id));
+    var courses = [];
+    if (typeof c.prereqs == 'undefined')
+        return courses;
+    var prqs = c.prereqs.split(',');
+    //console.log(prqs);
+    for (i = 0; i < prqs.length; i++)
+    {
+        if (prqs[i] == -1 || prqs[i].length > 15)
+            continue;
+        var c2 = await retrieveCourseData(parseInt(prqs[i].trim()));
+        courses.push(c2);
+    }
+    return courses;
+}
+
 async function addButtonsByCourse(course, id, s_id) {
     var color;
-    var t = await courseTaken(course.course_id, s_id);
-    console.log(t);
+    var taken = "#99ff99"
+    var taking = "#3498DB"
+    var ntaken = "#ff5c33"
+    var t = await courseTaken(course.course_id.trim(), s_id);
+    //console.log(t);
     if (t == 't')
-        color = "#3498DB";
+        color = taking;
     else if (t == 'p')
-        color = "#66ff66";
+        color = taken;
     else
-        color = "#ff3300";
-    console.log(color);
+        color = ntaken;
+    //console.log(color);
     var req = document.getElementById(id);
     var btn = document.createElement('div');
     btn.className = "dropdown";
@@ -160,8 +180,20 @@ async function addButtonsByCourse(course, id, s_id) {
     var btn4 = document.createElement('a');
     btn4.href ='#';
     btn4.innerHTML = course.name;
+
+    var prereqs = await retrievePrerequisites(course.course_id);
+    var prestr = "";
+    //console.log(prereqs);
+    for (i = 0; i < prereqs.length; i++) {
+        prestr += prereqs[i].department + " " + prereqs[i].course_number;
+        if (i != prereqs.length-1)
+            prestr += ', ';
+    }
     var btn5 = document.createElement('p');
     btn5.innerHTML = course.description;
+    var btn6 = document.createElement('p');
+    btn6.innerHTML = 'Pre-requisites: ' + prestr;
+    btn4.appendChild(btn6)
     btn4.appendChild(btn5);
     btn3.appendChild(btn4);
     btn2.appendChild(btn3);
