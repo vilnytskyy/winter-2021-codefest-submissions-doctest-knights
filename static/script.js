@@ -114,7 +114,7 @@ async function displayStudentData(id) {
 }
 
 async function courseTaken(c_id, s_id) {
-    courses = await retrieveCoursesTaken(s_id);
+    var courses = await retrieveCoursesTaken(s_id);
     //console.log(courses);
     //console.log(typeof courses[i].course_id);
     //console.log(typeof c_id);
@@ -199,31 +199,57 @@ async function addButtonsByCourse(course, id, s_id) {
     btn2.appendChild(btn3);
     btn.appendChild(btn2);
     req.appendChild(btn);
+    console.log(req);
+}
+
+function setRequirementFulfilled(req_id) {
+    str = "stillNeeded" + req_id.toString();
+    console.log(str);
+    var ele = document.getElementById(str);
+    ele.style.color = "#99ff99"
+    ele.innerHTML = 'Requirement Fulfilled!'
 }
 
 async function displayAllButtons(s_id) {
-    courses = await retrieveAllCourses();
-    for (i = 2; i < 11; i++)
+    courses2 = await retrieveAllCourses();
+    console.log(courses2);
+    for (k = 2; k <= 11; k++)
     {
-        for (j = 0; j < courses.length; j++)
+        req = await retrieveRequirementData(k);
+        credits = req.credits_required;
+        //console.log(credits);
+        for (j = 0; j < courses2.length; j++)
         {
-            if (courses[j].requirement_fulfilled.length > 2)
+            console.log(courses2[j]);
+            if (courses2[j].requirement_fulfilled.length > 2)
             {
-                if (courses[j].requirement_fulfilled.split(',').includes(i.toString()))
-                    addButtonsByCourse(courses[j], i.toString(), s_id);
+                if (courses2[j].requirement_fulfilled.split(',').includes(k.toString()))
+                {
+                    await addButtonsByCourse(courses2[j], k.toString(), s_id);
+                    var s = await courseTaken(courses2[j].course_id, s_id);
+                    if (s == 't' || s == 'p')
+                        credits -= courses2[j].credits;
+                }
             }
-            else if (courses[j].requirement_fulfilled == i.toString())
-                addButtonsByCourse(courses[j], i.toString(), s_id);
+            else if (courses2[j].requirement_fulfilled == k.toString())
+            {
+                await addButtonsByCourse(courses2[j], k.toString(), s_id);
+                var s = await courseTaken(courses2[j].course_id, s_id);
+                if (s == 't' || s == 'p')
+                    credits -= courses2[j].credits;
+            }
+            if (credits <= 0)
+                await setRequirementFulfilled(k.toString());
         }
     }
 }
 
 async function initialize()
 {
-    c = await retrieveCourseData(17);
-    c2 = await retrieveCourseData(12);
-    displayStudentData(23848083);
-    displayAllButtons(23848083);
+    //c = await retrieveCourseData(17);
+    //c2 = await retrieveCourseData(12);
+    await displayStudentData(23848083);
+    await displayAllButtons(23848083);
 }
 
 
@@ -235,7 +261,7 @@ function getStudent() {
 
 function myFunction(id) {
     str = "myDropdown" + id;
-    console.log(str);
+    //console.log(str);
     document.getElementById(str).classList.toggle("show");
 }
 

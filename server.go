@@ -80,7 +80,7 @@ func retrieveRequirementData(req_id int) (Requirement) {
 	}
 
 	r := Requirement{id, name, pr, cr}
-	fmt.Println(r)
+	//fmt.Println(r)
 	return r
 }
 
@@ -120,7 +120,7 @@ func retrieveCoursesTaken(student_id int) ([]Course_Taken) {
 			In_progress: inp,
 			Grade: g,
 		})
-		fmt.Println(courses)
+		//fmt.Println(courses)
 	}
 	return courses
 }
@@ -150,7 +150,7 @@ func retrieveAllCourses() ([]Course) {
 			Credits: credits,
 			Description: desc,
 		})
-		//fmt.Println(courses)
+		fmt.Println(courses)
 	}
 	return courses
 }
