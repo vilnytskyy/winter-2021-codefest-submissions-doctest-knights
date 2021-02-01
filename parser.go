@@ -29,18 +29,25 @@ type Department struct {
 	Parent_requirement int   `json:"parent_requirement,string,omitempty"`
 	Credits_required int     `json:"credits_required,string,omitempty"`
 }
+
+type Courses2 struct {
+	Student_id int
+	Course_id int
+	In_progress int
+	Grade string
+}
 func main() {
-	csvFile, _ := os.Open("department.csv")
+	csvFile, _ := os.Open("courses_taken.csv")
 	database, err := sql.Open("sqlite3", "./degree.db")
-	//statement, _ := database.Prepare("DROP TABLE courses")
-	// statement.Exec()
-	statement, _ := database.Prepare("CREATE TABLE IF NOT EXISTS requirements (requirement_id INTEGER, name TEXT, parent_requirement INTEGER, credits_required INTEGER)")
+	statement, _ := database.Prepare("DROP TABLE courses_taken")
+	statement.Exec()
+	statement, _ = database.Prepare("CREATE TABLE IF NOT EXISTS courses_taken (student_id INTEGER, course_id INTEGER, in_progress INTEGER, grade TEXT)")
 	statement.Exec()
 	if err != nil {
 		log.Panic(err)
 	}
 	reader := csv.NewReader(bufio.NewReader(csvFile))
-	var courses []Department
+	var courses []Courses2
 
 	for {
 		line, error := reader.Read()
@@ -48,38 +55,40 @@ func main() {
 			break
 		} else if error != nil {
             log.Fatal(error)
-        } else if line[0] == "requirement_id" {
+        } else if line[0] == "student_Id" {
 			continue
 		}
 		cid, _ := strconv.Atoi(line[0])
-		cn, _ := strconv.Atoi(line[2])
-		cr, _ := strconv.Atoi(line[3])
-        courses = append(courses, Department{
-            Requirement_id: cid,
-            Name:  line[1],
-            Parent_requirement: cn,
-			Credits_required: cr,
+		cn, _ := strconv.Atoi(line[1])
+		cr, _ := strconv.Atoi(line[2])
+        courses = append(courses, Courses2{
+            Student_id: cid,
+            Course_id:  cn,
+            In_progress: cr,
+			Grade: line[3],
         })
 	}
 
-	statement, _ = database.Prepare("INSERT INTO requirements (requirement_id, name, parent_requirement, credits_required) VALUES (?, ?, ?, ?)")
+	statement, _ = database.Prepare("INSERT INTO courses_taken (student_id, course_id, in_progress, grade) VALUES (?, ?, ?, ?)")
 	for _, course := range courses {
-		statement.Exec(course.Requirement_id, course.Name, course.Parent_requirement, course.Credits_required)
-		/*fmt.Println(course.Requirement_id)
-		fmt.Println(course.Name)
-		fmt.Println(course.Parent_requirement)
-		fmt.Println(course.Credits_required)
+		statement.Exec(course.Student_id, course.Course_id, course.In_progress, course.Grade)
+		/*fmt.Println(course.Student_id)
+		fmt.Println(course.Course_id)
+		fmt.Println(course.In_progress)
+		fmt.Println(course.Grade)
 		fmt.Println(course.Prereqs)
 		fmt.Println(course.Requirement_fulfilled)
 		fmt.Println(course.Credits)
 		fmt.Println(course.Description)*/
 	}
-	rows, _ := database.Query("SELECT DISTINCT name, credits_required FROM requirements")
-	var dep string
+	rows, _ := database.Query("SELECT student_id, course_id, in_progress, grade FROM courses_taken")
+	var dep int
 	var cn int
+	var inp int
+	var g string
 	for rows.Next() {
-        rows.Scan(&dep, &cn)
-		fmt.Println(dep + " " + strconv.Itoa(cn))
+        rows.Scan(&dep, &cn, &inp, &g)
+		fmt.Println(strconv.Itoa(dep) + " " + strconv.Itoa(cn) + " " + strconv.Itoa(inp) + " " + g)
     }
 
 }
