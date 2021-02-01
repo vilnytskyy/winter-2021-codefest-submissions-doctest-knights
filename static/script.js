@@ -142,7 +142,7 @@ async function retrievePrerequisites(course_id) {
     //console.log(prqs);
     for (i = 0; i < prqs.length; i++)
     {
-        if (prqs[i] == -1 || prqs[i].length > 15)
+        if (prqs[i] == -1 || prqs[i].length > 10)
             continue;
         var c2 = await retrieveCourseData(parseInt(prqs[i].trim()));
         courses.push(c2);
@@ -213,8 +213,10 @@ function setRequirementFulfilled(req_id) {
 async function displayAllButtons(s_id) {
     courses2 = await retrieveAllCourses();
     console.log(courses2);
-    for (k = 2; k <= 11; k++)
+    for (k = 2; k <= 17; k++)
     {
+        if (k == 12)
+            continue;
         req = await retrieveRequirementData(k);
         credits = req.credits_required;
         //console.log(credits);
@@ -240,6 +242,8 @@ async function displayAllButtons(s_id) {
             }
             if (credits <= 0)
                 await setRequirementFulfilled(k.toString());
+            //else if (j == courses2.length-1)
+                
         }
     }
 }
