@@ -393,24 +393,29 @@ input[type=date]::-webkit-calendar-picker-indicator {
 }
   
 .dropdown {
-    position: relative;
-    display: inline-block;
+    /* position: static; */
+    display: inline;
+    width: 100%;
 }
   
 .dropdown-content {
     display: none;
     position: absolute;
     background-color: #f1f1f1;
-    width: fit-content;
-    overflow: auto;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    /* width: 25%; */
+    /* overflow: auto; */
+    box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.5);
     z-index: 10000;
 }
   
 .dropdown-content a {
     color: black;
-    padding: 12px 16px;
-    text-decoration: none;
+    text-align: left;
+    /* padding: top right bottom left */
+    padding: 5px;
+    text-align: justify;
+    /* text-justify:  */
+    border: 2px outset "black";
     display: block;
 }
   
