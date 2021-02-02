@@ -151,6 +151,12 @@ async function retrievePrerequisites(course_id) {
 }
 
 async function addButtonsByCourse(course, id, s_id) {
+    var req = document.getElementById(id);
+    if (req == null)
+    {
+        console.log("ERROR" + id);
+        return 'no';
+    }
     var color;
     var taken = "#99ff99"
     var taking = "#3498DB"
@@ -164,7 +170,6 @@ async function addButtonsByCourse(course, id, s_id) {
     else
         color = ntaken;
     //console.log(color);
-    var req = document.getElementById(id);
     var btn = document.createElement('div');
     btn.className = "dropdown";
     var btn2 = document.createElement('button');
@@ -172,14 +177,14 @@ async function addButtonsByCourse(course, id, s_id) {
     btn2.style.backgroundColor = color;
     btn2.innerHTML = course.department + " " + course.course_number;
     btn2.addEventListener('click', function() {
-        myFunction(course.name)
+        myFunction(course.name + id)
     });
     var btn3 = document.createElement('div');
-    btn3.id = "myDropdown" + course.name;
+    btn3.id = "myDropdown" + course.name + id;
     btn3.className = "dropdown-content";
     var btn4 = document.createElement('a');
     btn4.href ='#';
-    btn4.innerHTML = course.name;
+    btn4.innerHTML = course.name + " (" + course.credits + " cr)";
 
     var prereqs = await retrievePrerequisites(course.course_id);
     var prestr = "";
@@ -192,14 +197,17 @@ async function addButtonsByCourse(course, id, s_id) {
     var btn5 = document.createElement('p');
     btn5.innerHTML = course.description;
     var btn6 = document.createElement('p');
-    btn6.innerHTML = 'Pre-requisites: ' + prestr;
+    if (prestr != "")
+        btn6.innerHTML = 'Pre-requisites: ' + prestr;
     btn4.appendChild(btn6)
     btn4.appendChild(btn5);
     btn3.appendChild(btn4);
     btn2.appendChild(btn3);
     btn.appendChild(btn2);
     req.appendChild(btn);
-    console.log(req);
+    if (color == ntaken)
+        return 'no';
+    //console.log(req);
 }
 
 function setRequirementFulfilled(req_id) {
@@ -210,10 +218,20 @@ function setRequirementFulfilled(req_id) {
     ele.innerHTML = 'Requirement Fulfilled!'
 }
 
+async function displayCSbuttons(s_id) {
+    courses3 = await retrieveAllCourses();
+    for (l = 0; l < courses3.length; l++)
+    {
+        var s =await addButtonsByCourse(courses3[l], "c" + courses3[l].course_id.toString(), s_id);
+        if (s != 'no')
+            setRequirementFulfilled("c" + courses3[l].course_id.toString());
+    }
+}
+
 async function displayAllButtons(s_id) {
     courses2 = await retrieveAllCourses();
-    console.log(courses2);
-    for (k = 2; k <= 17; k++)
+    //console.log(courses2);
+    for (k = 2; k <= 16; k++)
     {
         if (k == 12)
             continue;
@@ -222,7 +240,7 @@ async function displayAllButtons(s_id) {
         //console.log(credits);
         for (j = 0; j < courses2.length; j++)
         {
-            console.log(courses2[j]);
+            //console.log(courses2[j]);
             if (courses2[j].requirement_fulfilled.length > 2)
             {
                 if (courses2[j].requirement_fulfilled.split(',').includes(k.toString()))
@@ -243,7 +261,6 @@ async function displayAllButtons(s_id) {
             if (credits <= 0)
                 await setRequirementFulfilled(k.toString());
             //else if (j == courses2.length-1)
-                
         }
     }
 }
@@ -254,6 +271,7 @@ async function initialize()
     //c2 = await retrieveCourseData(12);
     await displayStudentData(23848083);
     await displayAllButtons(23848083);
+    await displayCSbuttons(23848083);
 }
 
 
@@ -262,11 +280,23 @@ function getStudent() {
     document.getElementById("emplid").innerHTML = student;
     document.querySelector("body > table.toplevel.table_default > tbody > tr:nth-child(3) > td.block_n2_and_content > table > tbody > tr:nth-child(2) > td.block_content_outer > table > tbody > tr > td > table:nth-child(10) > tbody > tr:nth-child(3) > td > a");
 }
+function checkVisible(elm) {
+    var rect = elm.getBoundingClientRect();
+    console.log(rect);
+    var viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
+    return !(rect.bottom < 0 || rect.top - viewHeight >= 0);
+}
 
 function myFunction(id) {
     str = "myDropdown" + id;
     //console.log(str);
-    document.getElementById(str).classList.toggle("show");
+    var ele = document.getElementById(str)
+    if (!checkVisible(ele))
+    {
+        console.log('hi');
+        ele.classList.style.bottom = '500px';
+    }
+    ele.classList.toggle("show");
 }
 
 // Close the dropdown if the user clicks outside of it
