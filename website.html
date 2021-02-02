@@ -14,7 +14,7 @@
     <title>DegreeWorks+</title>
 </head>
 
-<body onload="initialize()">
+<body onload="formRefreshStopper();">
 
     <div class="header">
         <table>
@@ -63,12 +63,16 @@
             </tr>
             <tr>
                 <td class="norb" id="id">
-                    <!-- <label for="id">Student ID Number</label> -->
-                    <input type="number" id="id" readonly value="23000001">
+                  <!-- <label for="id">Student ID Number</label> -->
+                  <form onsubmit="initialize();", id="sidform">
+                    <input type="number" id="sid2">
+                    <input type="submit" style="display: none">
+                  </form>
+
                 </td>
                 <td id="name">
                     <!-- <label for="name">Student Name</label> -->
-                    <input type="text" id="name" readonly value="Raboy, Nick">
+                    <input type="text" id="studentname" readonly value="Raboy, Nick">
                 </td>
                 <!-- <td>|</td> -->
                 <td class="norb" id="degree">
@@ -421,22 +425,22 @@
             </tr>
             <tr>
                 <td class="label">Elementary I</td>
-                <td id="stillNeeded"></td>
+                <td id="stillNeededc34"></td>
                 <td id="c34"></td>
             </tr>
             <tr>
                 <td class="label">Elementary II</td>
-                <td id="stillNeeded"></td>
+                <td id="stillNeededc35"></td>
                 <td id="c35"></td>
             </tr>
             <tr>
                 <td class="label">Intermediate I</td>
-                <td id="stillNeeded10"></td>
+                <td id="stillNeededc36"></td>
                 <td id="c36"></td>
             </tr>
             <tr>
                 <td class="label">Intermediate II</td>
-                <td id="stillNeeded"></td>
+                <td id="stillNeededc37"></td>
                 <td id="c37"></td>
             </tr>
             <tr>

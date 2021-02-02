@@ -99,6 +99,8 @@ async function displayStudentData(id) {
     idf.setAttribute('value', s.student_id);
     n = document.getElementById('name');
     n2 = document.getElementById('sname');
+    n3 = document.getElementById('studentname');
+    n3.value = s.name;
     n2.innerHTML = s.name;
     n.setAttribute('value', s.name);
     maj = document.getElementById('major');
@@ -208,6 +210,8 @@ async function addButtonsByCourse(course, id, s_id) {
     req.appendChild(btn);
     if (color == ntaken)
         return 'no';
+    if (color == taking)
+        return 't';
     //console.log(req);
 }
 
@@ -220,25 +224,52 @@ function setRequirementFulfilled(req_id) {
     ele.innerHTML = 'Requirement Fulfilled!'
 }
 
+function setRequirementTaking(req_id, cred) {
+    str = "stillNeeded" + req_id.toString();
+    var ele = document.getElementById(str);
+    if (ele === null)
+        return;
+    ele.style.backgroundColor = "rgba(152, 185, 242, 0.7)";
+    ele.style.color = "#000000";
+    if (cred <= 0)
+        ele.innerHTML = 'In progress...';
+    else
+        ele.innerHTML = 'In progress. You need ' + cred + ' more credits upon completion';
+}
+function setRequirementUnFulfilled(req_id) {
+    str = "stillNeeded" + req_id.toString();
+    var ele = document.getElementById(str);
+    if (ele === null)
+        return;
+    ele.style.backgroundColor = "";
+    ele.style.color = "rgba(214, 73, 51, 0.7)";
+    ele.innerHTML = 'Still Needed:'
+}
+
 async function displayCSbuttons(s_id) {
     courses3 = await retrieveAllCourses();
     for (l = 0; l < courses3.length; l++)
     {
-        var s =await addButtonsByCourse(courses3[l], "c" + courses3[l].course_id.toString(), s_id);
-        if (s != 'no')
+        var s = await addButtonsByCourse(courses3[l], "c" + courses3[l].course_id.toString(), s_id);
+        if (s == 'no')
+            setRequirementUnFulfilled("c" + courses3[l].course_id.toString());
+        else if (s == 't')
+            setRequirementTaking("c" + courses3[l].course_id.toString(), 0);
+        else
             setRequirementFulfilled("c" + courses3[l].course_id.toString());
     }
 }
 
 async function displayAllButtons(s_id) {
     courses2 = await retrieveAllCourses();
-    //console.log(courses2);
+    //console.log(courses2
     for (k = 2; k <= 16; k++)
     {
         if (k == 12)
             continue;
         req = await retrieveRequirementData(k);
         credits = req.credits_required;
+        takingCredits = 0;
         //console.log(credits);
         for (j = 0; j < courses2.length; j++)
         {
@@ -247,35 +278,85 @@ async function displayAllButtons(s_id) {
             {
                 if (courses2[j].requirement_fulfilled.split(',').includes(k.toString()))
                 {
-                    await addButtonsByCourse(courses2[j], k.toString(), s_id);
+                    check = await addButtonsByCourse(courses2[j], k.toString(), s_id);
                     var s = await courseTaken(courses2[j].course_id, s_id);
-                    if (s == 't' || s == 'p')
+                    if (s == 'p')
                         credits -= courses2[j].credits;
+                    if (s == 't')
+                        takingCredits += courses2[j].credits;
                 }
             }
             else if (courses2[j].requirement_fulfilled == k.toString())
             {
                 await addButtonsByCourse(courses2[j], k.toString(), s_id);
                 var s = await courseTaken(courses2[j].course_id, s_id);
-                if (s == 't' || s == 'p')
+                if (s == 'p')
                     credits -= courses2[j].credits;
+                if (s == 't')
+                    takingCredits += courses2[j].credits;
             }
             if (credits <= 0)
-                await setRequirementFulfilled(k.toString());
-            //else if (j == courses2.length-1)
+            {
+                var itaken = await setRequirementFulfilled(k.toString());
+            }
+            else if (takingCredits != 0)
+            {
+                setRequirementTaking(k.toString(), credits-takingCredits);
+            }
+        }
+    }
+}
+
+async function cleanReqs() {
+    for (i = 2; i <= 17; i++)
+    {
+        if (i == 12)
+            continue;
+        await setRequirementUnFulfilled(i);
+        str = "";
+        if (i == 17 || i == 10)
+            str += "c";
+        str += i.toString();
+        requ = document.getElementById(str);
+        if (requ !== null)
+        {
+            while (requ.firstChild)
+                requ.removeChild(requ.firstChild);
+        }
+    }
+
+    for (i = 1; i < 50; i++)
+    {
+        setRequirementUnFulfilled("c" + i.toString());
+        requ = document.getElementById("c" + i.toString());
+        if (requ !== null)
+        {
+            while (requ.firstChild)
+                requ.removeChild(requ.firstChild);
         }
     }
 }
 
 async function initialize()
 {
+    var id = document.getElementById("sid2").value;
+    if (id == "")
+        id = 23848083
+    console.log(id);
+    document.getElementById("sid2").value = id;
+    await cleanReqs();
     //c = await retrieveCourseData(17);
     //c2 = await retrieveCourseData(12);
-    await displayStudentData(23848083);
-    await displayAllButtons(23848083);
-    await displayCSbuttons(23848083);
+    await displayStudentData(id);
+    await displayAllButtons(id);
+    await displayCSbuttons(id);
 }
 
+function formRefreshStopper() {
+    var form = document.getElementById("sidform");
+    function handleForm(event) { event.preventDefault(); } 
+    form.addEventListener('submit', handleForm);
+}
 
 function getStudent() {
     var student = document.getElementById("emplid").value;

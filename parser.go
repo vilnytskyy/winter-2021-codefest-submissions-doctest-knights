@@ -3,13 +3,13 @@ package main
 import (
 	_ "github.com/mattn/go-sqlite3"
 	"database/sql"
-    "bufio"
-    "encoding/csv"
+	// "bufio"
+    //"encoding/csv"
     // "encoding/json"
     "fmt"
-    "io"
+    //"io"
     "log"
-    "os"
+    //"os"
 	"strconv"
 )
 type Course struct {
@@ -37,16 +37,19 @@ type Courses2 struct {
 	Grade string
 }
 func main() {
-	csvFile, _ := os.Open("courses_taken.csv")
+	//csvFile, _ := os.Open("courses_taken2.csv")
 	database, err := sql.Open("sqlite3", "./degree.db")
-	statement, _ := database.Prepare("DROP TABLE courses_taken")
-	statement.Exec()
-	statement, _ = database.Prepare("CREATE TABLE IF NOT EXISTS courses_taken (student_id INTEGER, course_id INTEGER, in_progress INTEGER, grade TEXT)")
-	statement.Exec()
-	if err != nil {
+	if (err != nil) {
 		log.Panic(err)
 	}
-	reader := csv.NewReader(bufio.NewReader(csvFile))
+	//statement, _ := database.Prepare("DROP TABLE courses_taken")
+	//statement.Exec()
+	//statement, _ = database.Prepare("CREATE TABLE IF NOT EXISTS courses_taken (student_id INTEGER, course_id INTEGER, in_progress INTEGER, grade TEXT)")
+	//statement.Exec()
+	//if err != nil {
+	//	log.Panic(err)
+	//}
+	/*reader := csv.NewReader(bufio.NewReader(csvFile))
 	var courses []Courses2
 
 	for {
@@ -55,7 +58,7 @@ func main() {
 			break
 		} else if error != nil {
             log.Fatal(error)
-        } else if line[0] == "student_Id" {
+        } else if line[0] == "student_id" {
 			continue
 		}
 		cid, _ := strconv.Atoi(line[0])
@@ -67,11 +70,11 @@ func main() {
             In_progress: cr,
 			Grade: line[3],
         })
-	}
+	}*/
 
-	statement, _ = database.Prepare("INSERT INTO courses_taken (student_id, course_id, in_progress, grade) VALUES (?, ?, ?, ?)")
-	for _, course := range courses {
-		statement.Exec(course.Student_id, course.Course_id, course.In_progress, course.Grade)
+	statement, _ := database.Prepare("INSERT INTO students (student_id, name, major_id, credits, overall_gpa, major_gpa, username, password) VALUES (?, ?, ?, ?, ?, ?, ?, ?)")
+	//for _, course := range courses {
+	statement.Exec(20000014, "Hammad Siddiqui", 1, 69, 3.78, 3.82, "bb", "gg")
 		/*fmt.Println(course.Student_id)
 		fmt.Println(course.Course_id)
 		fmt.Println(course.In_progress)
@@ -80,8 +83,8 @@ func main() {
 		fmt.Println(course.Requirement_fulfilled)
 		fmt.Println(course.Credits)
 		fmt.Println(course.Description)*/
-	}
-	rows, _ := database.Query("SELECT student_id, course_id, in_progress, grade FROM courses_taken")
+	//}
+	rows, _ := database.Query("SELECT student_id, credits, major_id, name FROM students")
 	var dep int
 	var cn int
 	var inp int
