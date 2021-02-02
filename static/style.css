@@ -350,11 +350,14 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 /* Style the drop down menu courtsey of Hammad */
 .dropbtn {
-    background-color: #3498DB;
-    color: white;
-    padding: 16px;
-    margin-right: 30px;
-    font-size: 16px;
+    /* background-color: rgba(172, 195, 214, 0.336); */
+    color: rgb(117, 117, 117);
+    font-family: 'Times New Roman', monospace;
+    /* padding: top right bottom left */
+    padding: 0px 5px 0px 5px;
+    /* margin: top right bottom left */
+    margin: 0px 5px 0px 5px;
+    font-size: 15px;
     border: none;
     cursor: pointer;
 }
@@ -372,7 +375,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
     display: none;
     position: absolute;
     background-color: #f1f1f1;
-    min-width: 160px;
+    width: fit-content;
     overflow: auto;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 10000;
