@@ -27,54 +27,79 @@
     </div>
 
     <div class="topnav">
-        <table id="links">
+        <table id="legend">
             <tr>
-                <th><a href="#">CUNYfirst</a></th>
-                <th><a href="#">Pathways</a></th>
-                <th><a href="#">FAQ</a></th>
-                <th><a href="#">Course Schedule</a></th>
-                <th><a href="#">Print</a></th>
-                <th><a href="#">Log Out</a></th>
+                <td id="key">Legend</td>
+                <td id="img">X</td>
+                <td class="label">Complete</td>
+                <td id="img">X</td>
+                <td class="label">Complete except for classes in-progress</td>
+                <td id="img">TR/CR</td>
+                <td class="label">Transfer Class</td>
+                <td id="img">IP</td>
+                <td class="label">In Progress</td>
+                <td id="img">X</td>
+                <td class="label">Not Complete</td>
+                <td id="img">X</td>
+                <td class="label">Nearly complete - see advisor</td>
+                <td id="img">@</td>
+                <td class="label">Any course number</td>
             </tr>
         </table>
         <table id="studentInfo">
             <tr>
-                <th>Student ID Number</th>
-                <th>Student Name</th>
-                <th>Degree</th>
-                <th>Major</th>
-                <th>School</th>
-                <th>Student Class Level</th>
-                <th>Last Audit</th>
+                <th class="norb" id="id">Student ID Number</th>
+                <th id="name">Student Name</th>
+                <!-- <th>|</th> -->
+                <th class="norb" id="degree">Degree</th>
+                <th class="norb" id="major">Major</th>
+                <th class="norb" id="school">School</th>
+                <th id="year">Student Class Level</th>
+                <!-- <th>|</th> -->
+                <th id="audit">Last Audit</th>
+                <th class="norb" id="alinks"><a href="#">CUNYfirst</a></th>
+                <th class="norb" id="blinks"><a href="#">FAQ</a></th>
+                <th class="norb" id="clinks"><a href="#">Pathways</a></th>
             </tr>
             <tr>
-                <td>
+                <td class="norb" id="id">
                     <!-- <label for="id">Student ID Number</label> -->
                     <input type="number" id="id" readonly value="23000001">
                 </td>
-                <td>
+                <td id="name">
                     <!-- <label for="name">Student Name</label> -->
                     <input type="text" id="name" readonly value="Raboy, Nick">
                 </td>
-                <td>
+                <!-- <td>|</td> -->
+                <td class="norb" id="degree">
                     <!-- <label for="degree">Degree</label> -->
                     <input type="text" id="degree" readonly value="BA">
                 </td>
-                <td>
+                <td class="norb" id="major">
                     <!-- <label for="major">Major</label> -->
                     <input type="text" id="major" readonly value="U Computer Science">
                 </td>
-                <td>
+                <td class="norb" id="school">
                     <!-- <label for="school">School</label> -->
                     <input type="text" id="school" readonly value="U">
                 </td>
-                <td>
+                <td id="year">
                     <!-- <label for="year">Student Class Level</label> -->
                     <input type="text" id="year" readonly value="U-SOPH">
                 </td>
-                <td>
+                <!-- <td>|</td> -->
+                <td id="audit">
                     <!-- <label for="audit">Last Audit</label> -->
                     <input type="date" id="audit" readonly value="2021-01-24">
+                </td>
+                <td class="norb" id="alinks">
+                    <a href="#">Course Schedule</a>
+                </td>
+                <td class="norb" id="blinks">
+                    <a href="#">Print</a>
+                </td>
+                <td class="norb" id="clinks">
+                    <a href="#">Log Out</a>
                 </td>
             </tr>
         </table>
@@ -95,28 +120,67 @@
         <!-- <h2>Collapsed Sidebar</h2> -->
 
         <h1>Hunter College</h1>
-        <table id="legend">
+        <!-- In-Progress -->
+        <table id="inProgress">
             <tr>
-                <th colspan="8">Legend</th>
+                <!-- In-Progress: Semester Year-School -->
+                <th colspan="7" id="ipHead">In-Progress: SPRING 2021U</th>
             </tr>
             <tr>
-                <td id="img">X</td>
-                <td class="label">Complete</td>
-                <td id="img">X</td>
-                <td class="label">Complete except for classes in-progress</td>
-                <td id="img">TR/CR</td>
-                <td class="label">Transfer Class</td>
-                <td id="img">IP</td>
-                <td class="label">In Progress</td>
+                <td id="ipHead">Class</td>
+                <td id="ipHead">Section</td>
+                <td id="ipHead">Description</td>
+                <td id="ipHead">Days/Times</td>
+                <td id="ipHead">Room</td>
+                <td id="ipHead">Instructor</td>
+                <td id="ipHead">Credits</td>
             </tr>
             <tr>
-                <td id="img">X</td>
-                <td class="label">Not Complete</td>
-                <td id="img">X</td>
-                <td class="label">Nearly complete - see advisor</td>
-                <td id="img">@</td>
-                <td colspan="3" class="label">Any course number</td>
+                <td class="label">CSCI 26500</td>
+                <td>01</td>
+                <td id="className">Computer Theory I</td>
+                <td>TuFr 9:45AM - 11:00AM</td>
+                <td>Online-Synchronous</td>
+                <td>S. Levitan</td>
+                <td>3</td>
             </tr>
+            <tr>
+                <td class="label">CSCI 26500</td>
+                <td>01</td>
+                <td id="className">Computer Theory I</td>
+                <td>TuFr 9:45AM - 11:00AM</td>
+                <td>Online-Synchronous</td>
+                <td>S. Levitan</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td class="label">CSCI 26500</td>
+                <td>01</td>
+                <td id="className">Computer Theory I</td>
+                <td>TuFr 9:45AM - 11:00AM</td>
+                <td>Online-Synchronous</td>
+                <td>S. Levitan</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td class="label">CSCI 26500</td>
+                <td>01</td>
+                <td id="className">Computer Theory I</td>
+                <td>TuFr 9:45AM - 11:00AM</td>
+                <td>Online-Synchronous</td>
+                <td>S. Levitan</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td class="label">CSCI 26500</td>
+                <td>01</td>
+                <td id="className">Computer Theory I</td>
+                <td>TuFr 9:45AM - 11:00AM</td>
+                <td>Online-Synchronous</td>
+                <td>S. Levitan</td>
+                <td>3</td>
+            </tr>
+            
         </table>
         <table id="studentView">
             <tr>
@@ -124,27 +188,27 @@
             </tr>
             <tr>
                 <td class="label">Preferred Name</td>
-                <td id="obj"></td>
+                <td class="obj"></td>
                 <td class="label"></td>
-                <td id="obj"></td>
+                <td class="obj"></td>
             </tr>
             <tr>
                 <td class="label">Legal Name</td>
-                <td id="sname">Raboy, Nick</td>
+                <td class="obj" id="sname">Raboy, Nick</td>
                 <td class="label">Academic Standing</td>
-                <td id="obj">Good Academic Standing (GST)</td>
+                <td class="obj">Good Academic Standing (GST)</td>
             </tr>
             <tr>
                 <td class="label">ID</td>
-                <td id="sid">23000001</td>
+                <td class="obj" id="sid">23000001</td>
                 <td class="label">Student Groups</td>
-                <td id="obj">**Groups**</td>
+                <td class="obj">**Groups**</td>
             </tr>
             <tr>
                 <td class="label">Transfer Credits</td>
-                <td id="obj">10.00</td>
+                <td class="obj">10.00</td>
                 <td class="label">Cumulative GPA</td>
-                <td id="sgpa">3.21</td>
+                <td class="obj" id="sgpa">3.21</td>
             </tr>
         </table>
         <table id="reqs">
@@ -449,12 +513,113 @@
                 <th colspan="3">Major in Computer Science</th>
             </tr>
             <tr>
-                <td class="label">Template</td>
-                <td id="stillNeeded17"></td>
-                <td id="17"></td>
+                <td class="label" id="unmet">Unmet conditions for this set of requirements:</td>
+                <td colspan="2">
+                    58 credits are required for this major. You currently have X#,  you still need Y# more credits. 
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3" id="notes">
+                    A grade of 'C' or higher is required for all course work. Grades of 'CR' are not allowed with the exception of additional major requirements.
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3" class="label">Required Courses</td>
+            </tr>
+            <tr>
+                <td class="label" id="underSub">Intro to Computer Science</td>
+                <td id="stillNeeded">Still Needed:</td>
+                <td>**List of classes that fulfill this requirement**</td>
+            </tr>
+            <tr>
+                <td class="label" id="underSub">Software Analysis and Design I</td>
+                <td id="stillNeeded">Still Needed:</td>
+                <td>**List of classes that fulfill this requirement**</td>
+            </tr>
+            <tr>
+                <td class="label" id="underSub">Discrete Structures</td>
+                <td id="stillNeeded">Still Needed:</td>
+                <td>**List of classes that fulfill this requirement**</td>
+            </tr>
+            <tr>
+                <td class="label" id="underSub">Computer Architecture I</td>
+                <td id="stillNeeded">Still Needed:</td>
+                <td>**List of classes that fulfill this requirement**</td>
+            </tr>
+            <tr>
+                <td class="label" id="underSub">Software Design & Analysis II</td>
+                <td id="stillNeeded">Still Needed:</td>
+                <td>**List of classes that fulfill this requirement**</td>
+            </tr>
+            <tr>
+                <td class="label" id="underSub">Computer Architecture II</td>
+                <td id="stillNeeded">Still Needed:</td>
+                <td>**List of classes that fulfill this requirement**</td>
+            </tr>
+            <tr>
+                <td class="label" id="underSub">Computer Theory I</td>
+                <td id="stillNeeded">Still Needed:</td>
+                <td>**List of classes that fulfill this requirement**</td>
+            </tr>
+            <tr>
+                <td class="label" id="underSub">Software Design & Analysis III</td>
+                <td id="stillNeeded">Still Needed:</td>
+                <td>**List of classes that fulfill this requirement**</td>
+            </tr>
+            <tr>
+                <td class="label" id="underSub">Operating Systems</td>
+                <td id="stillNeeded">Still Needed:</td>
+                <td>**List of classes that fulfill this requirement**</td>
+            </tr>
+            <tr>
+                <td class="label" id="underSub">Advanced Applications: Capstone Course</td>
+                <td id="stillNeeded">Still Needed:</td>
+                <td>**List of classes that fulfill this requirement**</td>
+            </tr>
+            <tr>
+                <td colspan="3" id="notes">
+                    Any CSCI courses above 13600 can be applied toward the Free Elective requirement with notable exceptions.<br>
+                    <ul>
+                        <li>No more than 3 credits in CSCI 391, 392, 393 (Independent Study) may be applied.</li>
+                        <li>No more than 9 credits in CSCI 496, 497, 498 (Supervised Research) may be applied.</li>
+                        <li>The following courses CANNOT be applied: CSCI CSCI 120, 121, 132, 133, 181, 182, 183, 232 or 233.</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td class="label">Free Electives</td>
+                <td id="stillNeeded">Still Needed:</td>
+                <td>**List of classes that fulfill this requirement**</td>
+            </tr>
+            <tr>
+                <td colspan="3" id="notes">
+                    Additional courses may be required for the requirements below as needed: MATH 101, 10150, 125, 140. 
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3" class="label">Additional Major Requirements</td>
+            </tr>
+            <tr>
+                <td class="label" id="underSub">Calculus I</td>
+                <td id="stillNeeded">Still Needed:</td>
+                <td>**List of classes that fulfill this requirement**</td>
+            </tr>
+            <tr>
+                <td class="label" id="underSub">Calculus II</td>
+                <td id="stillNeeded">Still Needed:</td>
+                <td>**List of classes that fulfill this requirement**</td>
+            </tr>
+            <tr>
+                <td class="label" id="underSub">Matrix Algebra</td>
+                <td id="stillNeeded">Still Needed:</td>
+                <td>**List of classes that fulfill this requirement**</td>
+            </tr>
+            <tr>
+                <td class="label" id="underSub">Intro to Applied Statistics</td>
+                <td id="stillNeeded">Still Needed:</td>
+                <td>**List of classes that fulfill this requirement**</td>
             </tr>
         </table>
-
         <!-- Dropdown Menu -->
         <!-- <div class="dropdown">
             <button onclick="myFunction()" class="dropbtn">CSCI 135</button>
@@ -466,472 +631,8 @@
             </div>
         </div> -->
     </div>
-
-<div id="thirty"><p>35px</p></div>
-w3schools.comLOG INTHE WORLD'S LARGEST WEB DEVELOPER SITE
-JS Reference
-JS by Category
-JS by Alphabet
-
-JavaScript
-JS Array
-JS Boolean
-JS Classes
-JS Date
-JS Error
-JS Global
-JS JSON
-JS Math
-JS Number
-JS Operators
-JS RegExp
-JS Statements
-JS String
-
-HTML DOM
-DOM Attributes
-DOM Document
-DOM Element
-DOM Events
-DOM Event Objects
-DOM HTMLCollection
-DOM Location
-DOM Navigator
-DOM Screen
-DOM Style
-alignContent
-alignItems
-alignSelf
-animation
-animationDelay
-animationDirection
-animationDuration
-animationFillMode
-animationIterationCount
-animationName
-animationTimingFunction
-animationPlayState
-background
-backgroundAttachment
-backgroundColor
-backgroundImage
-backgroundPosition
-backgroundRepeat
-backgroundClip
-backgroundOrigin
-backgroundSize
-backfaceVisibility
-border
-borderBottom
-borderBottomColor
-borderBottomLeftRadius
-borderBottomRightRadius
-borderBottomStyle
-borderBottomWidth
-borderCollapse
-borderColor
-borderImage
-borderImageOutset
-borderImageRepeat
-borderImageSlice
-borderImageSource
-borderImageWidth
-borderLeft
-borderLeftColor
-borderLeftStyle
-borderLeftWidth
-borderRadius
-borderRight
-borderRightColor
-borderRightStyle
-borderRightWidth
-borderSpacing
-borderStyle
-borderTop
-borderTopColor
-borderTopLeftRadius
-borderTopRightRadius
-borderTopStyle
-borderTopWidth
-borderWidth
-bottom
-boxShadow
-boxSizing
-captionSide
-caretColor
-clear
-clip
-color
-columnCount
-columnFill
-columnGap
-columnRule
-columnRuleColor
-columnRuleStyle
-columnRuleWidth
-columns
-columnSpan
-columnWidth
-counterIncrement
-counterReset
-cursor
-direction
-display
-emptyCells
-filter
-flex
-flexBasis
-flexDirection
-flexFlow
-flexGrow
-flexShrink
-flexWrap
-cssFloat
-font
-fontFamily
-fontSize
-fontStyle
-fontVariant
-fontWeight
-fontSizeAdjust
-height
-isolation
-justifyContent
-left
-letterSpacing
-lineHeight
-listStyle
-listStyleImage
-listStylePosition
-listStyleType
-margin
-marginBottom
-marginLeft
-marginRight
-marginTop
-maxHeight
-maxWidth
-minHeight
-minWidth
-objectFit
-objectPosition
-opacity
-order
-orphans
-outline
-outlineColor
-outlineOffset
-outlineStyle
-outlineWidth
-overflow
-overflowX
-overflowY
-padding
-paddingBottom
-paddingLeft
-paddingRight
-paddingTop
-pageBreakAfter
-pageBreakBefore
-pageBreakInside
-perspective
-perspectiveOrigin
-position
-quotes
-resize
-right
-scrollBehavior
-tableLayout
-tabSize
-textAlign
-textAlignLast
-textDecoration
-textDecorationColor
-textDecorationLine
-textDecorationStyle
-textIndent
-textOverflow
-textShadow
-textTransform
-top
-transform
-transformOrigin
-transformStyle
-transition
-transitionProperty
-transitionDuration
-transitionTimingFunction
-transitionDelay
-unicodeBidi
-userSelect
-verticalAlign
-visibility
-width
-wordBreak
-wordSpacing
-wordWrap
-widows
-zIndex
-DOM Window
-
-Web APIs
-API Console
-API Geolocation
-API History
-API Storage
-
-HTML Objects
-<a>
-<abbr>
-<address>
-<area>
-<article>
-<aside>
-<audio>
-<b>
-<base>
-<bdo>
-<blockquote>
-<body>
-<br>
-<button>
-<canvas>
-<caption>
-<cite>
-<code>
-<col>
-<colgroup>
-<datalist>
-<dd>
-<del>
-<details>
-<dfn>
-<dialog>
-<div>
-<dl>
-<dt>
-<em>
-<embed>
-<fieldset>
-<figcaption>
-<figure>
-<footer>
-<form>
-<head>
-<header>
-<h1> - <h6>
-<hr>
-<html>
-<i>
-<iframe>
-<img>
-<ins>
-<input> button
-<input> checkbox
-<input> color
-<input> date
-<input> datetime
-<input> datetime-local
-<input> email
-<input> file
-<input> hidden
-<input> image
-<input> month
-<input> number
-<input> password
-<input> radio
-<input> range
-<input> reset
-<input> search
-<input> submit
-<input> text
-<input> time
-<input> url
-<input> week
-<kbd>
-<label>
-<legend>
-<li>
-<link>
-<map>
-<mark>
-<menu>
-<menuitem>
-<meta>
-<meter>
-<nav>
-<object>
-<ol>
-<optgroup>
-<option>
-<output>
-<p>
-<param>
-<pre>
-<progress>
-<q>
-<s>
-<samp>
-<script>
-<section>
-<select>
-<small>
-<source>
-<span>
-<strong>
-<style>
-<sub>
-<summary>
-<sup>
-<table>
-<tbody>
-<td>
-<tfoot>
-<th>
-<thead>
-<tr>
-<textarea>
-<time>
-<title>
-<track>
-<u>
-<ul>
-<var>
-<video>
-<p>
-Other References
-CSSStyleDeclaration
-JS Conversion
-
-
-
-Style color Property
-
-Example
-Set the text-color for different elements:
-
-document.getElementById("myH2").style.color = "#ff0000";
-document.getElementById("myP").style.color = "magenta";
-document.getElementById("myP2").style.color = "blue";
-document.getElementById("myDiv").style.color = "lightblue";
-Definition and Usage
-The color property sets or returns the color of the text.
-
-Browser Support
-Property					
-color	Yes	Yes	Yes	Yes	Yes
-Syntax
-Return the color property:
-
-object.style.color
-Set the color property:
-
-object.style.color = "color|initial|inherit"
-Property Values
-Value	Description
-color	Specifies the color of the text. Look at CSS Color Values for a complete list of possible color values
-initial	Sets this property to its default value. Read about initial
-inherit	Inherits this property from its parent element. Read about inherit
-Technical Details
-Default Value:	not specified 
-Return Value:	A String, representing the text-color of an element
-CSS Version	CSS1
-More Examples
-Example
-Return the text-color of a <p> element:
-
-alert(document.getElementById("myP").style.color);
-Related Pages
-CSS tutorial: CSS Text
-
-CSS reference: color property
-
-
-COLOR PICKER
-colorpicker
-LIKE US
-  
-Get your
-certification today!
-
- 
-HOW TO
-Tabs
-Dropdowns
-Accordions
-Side Navigation
-Top Navigation
-Modal Boxes
-Progress Bars
-Parallax
-Login Form
-HTML Includes
-Google Maps
-Range Sliders
-Tooltips
-Slideshow
-Filter List
-Sort List
-Certificates
-Top Tutorials
-HTML Tutorial
-CSS Tutorial
-JavaScript Tutorial
-How To Tutorial
-SQL Tutorial
-Python Tutorial
-W3.CSS Tutorial
-Bootstrap Tutorial
-PHP Tutorial
-Java Tutorial
-C++ Tutorial
-jQuery Tutorial
-Top References
-HTML Reference
-CSS Reference
-JavaScript Reference
-SQL Reference
-Python Reference
-W3.CSS Reference
-Bootstrap Reference
-PHP Reference
-HTML Colors
-Java Reference
-Angular Reference
-jQuery Reference
-Top Examples
-HTML Examples
-CSS Examples
-JavaScript Examples
-How To Examples
-SQL Examples
-Python Examples
-W3.CSS Examples
-Bootstrap Examples
-PHP Examples
-Java Examples
-XML Examples
-jQuery Examples
-Web Certificates
-HTML Certificate
-CSS Certificate
-JavaScript Certificate
-SQL Certificate
-Python Certificate
-PHP Certificate
-Bootstrap Certificate
-XML Certificate
-jQuery Certificate
-W3Schools is optimized for learning and training. Examples might be simplified to improve reading and learning. Tutorials, references, and examples are constantly reviewed to avoid errors, but we cannot warrant full correctness of all content. While using W3Schools, you agree to have read and accepted our terms of use, cookie and privacy policy.
-
-Copyright 1999-2021 by Refsnes Data. All Rights Reserved.
-W3Schools is Powered by W3.CSS.
-
-W3Schools.com
-</p>
-
-    <footer class="footer">Presented by: Asllan Alija Vasyl Ilnytskyy, and Hammad Siddiqui</footer>
-
+    <div id="thirty"><p>35px</p></div>
+    <footer class="footer">Presented by: Asllan Alija, Vasyl Ilnytskyy, and Hammad Siddiqui</footer>
 </body>
 
 </html>
