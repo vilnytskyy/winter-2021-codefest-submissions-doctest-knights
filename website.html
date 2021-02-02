@@ -27,54 +27,79 @@
     </div>
 
     <div class="topnav">
-        <table id="links">
+        <table id="legend">
             <tr>
-                <th><a href="#">CUNYfirst</a></th>
-                <th><a href="#">Pathways</a></th>
-                <th><a href="#">FAQ</a></th>
-                <th><a href="#">Course Schedule</a></th>
-                <th><a href="#">Print</a></th>
-                <th><a href="#">Log Out</a></th>
+                <td id="key">Legend</td>
+                <td id="img">X</td>
+                <td class="label">Complete</td>
+                <td id="img">X</td>
+                <td class="label">Complete except for classes in-progress</td>
+                <td id="img">TR/CR</td>
+                <td class="label">Transfer Class</td>
+                <td id="img">IP</td>
+                <td class="label">In Progress</td>
+                <td id="img">X</td>
+                <td class="label">Not Complete</td>
+                <td id="img">X</td>
+                <td class="label">Nearly complete - see advisor</td>
+                <td id="img">@</td>
+                <td class="label">Any course number</td>
             </tr>
         </table>
         <table id="studentInfo">
             <tr>
-                <th>Student ID Number</th>
-                <th>Student Name</th>
-                <th>Degree</th>
-                <th>Major</th>
-                <th>School</th>
-                <th>Student Class Level</th>
-                <th>Last Audit</th>
+                <th class="norb" id="id">Student ID Number</th>
+                <th id="name">Student Name</th>
+                <!-- <th>|</th> -->
+                <th class="norb" id="degree">Degree</th>
+                <th class="norb" id="major">Major</th>
+                <th class="norb" id="school">School</th>
+                <th id="year">Student Class Level</th>
+                <!-- <th>|</th> -->
+                <th id="audit">Last Audit</th>
+                <th class="norb" id="alinks"><a href="#">CUNYfirst</a></th>
+                <th class="norb" id="blinks"><a href="#">FAQ</a></th>
+                <th class="norb" id="clinks"><a href="#">Pathways</a></th>
             </tr>
             <tr>
-                <td>
+                <td class="norb" id="id">
                     <!-- <label for="id">Student ID Number</label> -->
                     <input type="number" id="id" readonly value="23000001">
                 </td>
-                <td>
+                <td id="name">
                     <!-- <label for="name">Student Name</label> -->
                     <input type="text" id="name" readonly value="Raboy, Nick">
                 </td>
-                <td>
+                <!-- <td>|</td> -->
+                <td class="norb" id="degree">
                     <!-- <label for="degree">Degree</label> -->
                     <input type="text" id="degree" readonly value="BA">
                 </td>
-                <td>
+                <td class="norb" id="major">
                     <!-- <label for="major">Major</label> -->
                     <input type="text" id="major" readonly value="U Computer Science">
                 </td>
-                <td>
+                <td class="norb" id="school">
                     <!-- <label for="school">School</label> -->
                     <input type="text" id="school" readonly value="U">
                 </td>
-                <td>
+                <td id="year">
                     <!-- <label for="year">Student Class Level</label> -->
                     <input type="text" id="year" readonly value="U-SOPH">
                 </td>
-                <td>
+                <!-- <td>|</td> -->
+                <td id="audit">
                     <!-- <label for="audit">Last Audit</label> -->
                     <input type="date" id="audit" readonly value="2021-01-24">
+                </td>
+                <td class="norb" id="alinks">
+                    <a href="#">Course Schedule</a>
+                </td>
+                <td class="norb" id="blinks">
+                    <a href="#">Print</a>
+                </td>
+                <td class="norb" id="clinks">
+                    <a href="#">Log Out</a>
                 </td>
             </tr>
         </table>
@@ -95,28 +120,67 @@
         <!-- <h2>Collapsed Sidebar</h2> -->
 
         <h1>Hunter College</h1>
-        <table id="legend">
+        <!-- In-Progress -->
+        <table id="inProgress">
             <tr>
-                <th colspan="8">Legend</th>
+                <!-- In-Progress: Semester Year-School -->
+                <th colspan="7" id="ipHead">In-Progress: SPRING 2021U</th>
             </tr>
             <tr>
-                <td id="img">X</td>
-                <td class="label">Complete</td>
-                <td id="img">X</td>
-                <td class="label">Complete except for classes in-progress</td>
-                <td id="img">TR/CR</td>
-                <td class="label">Transfer Class</td>
-                <td id="img">IP</td>
-                <td class="label">In Progress</td>
+                <td id="ipHead">Class</td>
+                <td id="ipHead">Section</td>
+                <td id="ipHead">Description</td>
+                <td id="ipHead">Days/Times</td>
+                <td id="ipHead">Room</td>
+                <td id="ipHead">Instructor</td>
+                <td id="ipHead">Credits</td>
             </tr>
             <tr>
-                <td id="img">X</td>
-                <td class="label">Not Complete</td>
-                <td id="img">X</td>
-                <td class="label">Nearly complete - see advisor</td>
-                <td id="img">@</td>
-                <td colspan="3" class="label">Any course number</td>
+                <td class="label">CSCI 26500</td>
+                <td>01</td>
+                <td id="className">Computer Theory I</td>
+                <td>TuFr 9:45AM - 11:00AM</td>
+                <td>Online-Synchronous</td>
+                <td>S. Levitan</td>
+                <td>3</td>
             </tr>
+            <tr>
+                <td class="label">CSCI 26500</td>
+                <td>01</td>
+                <td id="className">Computer Theory I</td>
+                <td>TuFr 9:45AM - 11:00AM</td>
+                <td>Online-Synchronous</td>
+                <td>S. Levitan</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td class="label">CSCI 26500</td>
+                <td>01</td>
+                <td id="className">Computer Theory I</td>
+                <td>TuFr 9:45AM - 11:00AM</td>
+                <td>Online-Synchronous</td>
+                <td>S. Levitan</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td class="label">CSCI 26500</td>
+                <td>01</td>
+                <td id="className">Computer Theory I</td>
+                <td>TuFr 9:45AM - 11:00AM</td>
+                <td>Online-Synchronous</td>
+                <td>S. Levitan</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td class="label">CSCI 26500</td>
+                <td>01</td>
+                <td id="className">Computer Theory I</td>
+                <td>TuFr 9:45AM - 11:00AM</td>
+                <td>Online-Synchronous</td>
+                <td>S. Levitan</td>
+                <td>3</td>
+            </tr>
+            
         </table>
         <table id="studentView">
             <tr>
@@ -124,27 +188,27 @@
             </tr>
             <tr>
                 <td class="label">Preferred Name</td>
-                <td id="obj"></td>
+                <td class="obj"></td>
                 <td class="label"></td>
-                <td id="obj"></td>
+                <td class="obj"></td>
             </tr>
             <tr>
                 <td class="label">Legal Name</td>
-                <td id="sname">Raboy, Nick</td>
+                <td class="obj" id="sname">Raboy, Nick</td>
                 <td class="label">Academic Standing</td>
-                <td id="obj">Good Academic Standing (GST)</td>
+                <td class="obj">Good Academic Standing (GST)</td>
             </tr>
             <tr>
                 <td class="label">ID</td>
-                <td id="sid">23000001</td>
+                <td class="obj" id="sid">23000001</td>
                 <td class="label">Student Groups</td>
-                <td id="obj">**Groups**</td>
+                <td class="obj">**Groups**</td>
             </tr>
             <tr>
                 <td class="label">Transfer Credits</td>
-                <td id="obj">10.00</td>
+                <td class="obj">10.00</td>
                 <td class="label">Cumulative GPA</td>
-                <td id="sgpa">3.21</td>
+                <td class="obj" id="sgpa">3.21</td>
             </tr>
         </table>
         <table id="reqs">
@@ -304,7 +368,7 @@
             <tr>
                 <td class="label" id="underSub">World Cultures and Global Issues</td>
                 <td id="stillNeeded">Still Needed:</td>
-                <td id="5"</td>
+                <td id="5"></td>
             </tr>
             <tr>
                 <td class="label" id="underSub">U.S. Experiences in Its Diversity</td>
@@ -449,12 +513,113 @@
                 <th colspan="3">Major in Computer Science</th>
             </tr>
             <tr>
-                <td class="label">Template</td>
-                <td id="stillNeeded"></td>
-                <td id="17"></td>
+                <td class="label" id="unmet">Unmet conditions for this set of requirements:</td>
+                <td colspan="2">
+                    58 credits are required for this major. You currently have X#,  you still need Y# more credits. 
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3" id="notes">
+                    A grade of 'C' or higher is required for all course work. Grades of 'CR' are not allowed with the exception of additional major requirements.
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3" class="label">Required Courses</td>
+            </tr>
+            <tr>
+                <td class="label" id="underSub">Intro to Computer Science</td>
+                <td id="stillNeeded">Still Needed:</td>
+                <td>**List of classes that fulfill this requirement**</td>
+            </tr>
+            <tr>
+                <td class="label" id="underSub">Software Analysis and Design I</td>
+                <td id="stillNeeded">Still Needed:</td>
+                <td>**List of classes that fulfill this requirement**</td>
+            </tr>
+            <tr>
+                <td class="label" id="underSub">Discrete Structures</td>
+                <td id="stillNeeded">Still Needed:</td>
+                <td>**List of classes that fulfill this requirement**</td>
+            </tr>
+            <tr>
+                <td class="label" id="underSub">Computer Architecture I</td>
+                <td id="stillNeeded">Still Needed:</td>
+                <td>**List of classes that fulfill this requirement**</td>
+            </tr>
+            <tr>
+                <td class="label" id="underSub">Software Design & Analysis II</td>
+                <td id="stillNeeded">Still Needed:</td>
+                <td>**List of classes that fulfill this requirement**</td>
+            </tr>
+            <tr>
+                <td class="label" id="underSub">Computer Architecture II</td>
+                <td id="stillNeeded">Still Needed:</td>
+                <td>**List of classes that fulfill this requirement**</td>
+            </tr>
+            <tr>
+                <td class="label" id="underSub">Computer Theory I</td>
+                <td id="stillNeeded">Still Needed:</td>
+                <td>**List of classes that fulfill this requirement**</td>
+            </tr>
+            <tr>
+                <td class="label" id="underSub">Software Design & Analysis III</td>
+                <td id="stillNeeded">Still Needed:</td>
+                <td>**List of classes that fulfill this requirement**</td>
+            </tr>
+            <tr>
+                <td class="label" id="underSub">Operating Systems</td>
+                <td id="stillNeeded">Still Needed:</td>
+                <td>**List of classes that fulfill this requirement**</td>
+            </tr>
+            <tr>
+                <td class="label" id="underSub">Advanced Applications: Capstone Course</td>
+                <td id="stillNeeded">Still Needed:</td>
+                <td>**List of classes that fulfill this requirement**</td>
+            </tr>
+            <tr>
+                <td colspan="3" id="notes">
+                    Any CSCI courses above 13600 can be applied toward the Free Elective requirement with notable exceptions.<br>
+                    <ul>
+                        <li>No more than 3 credits in CSCI 391, 392, 393 (Independent Study) may be applied.</li>
+                        <li>No more than 9 credits in CSCI 496, 497, 498 (Supervised Research) may be applied.</li>
+                        <li>The following courses CANNOT be applied: CSCI CSCI 120, 121, 132, 133, 181, 182, 183, 232 or 233.</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td class="label">Free Electives</td>
+                <td id="stillNeeded">Still Needed:</td>
+                <td>**List of classes that fulfill this requirement**</td>
+            </tr>
+            <tr>
+                <td colspan="3" id="notes">
+                    Additional courses may be required for the requirements below as needed: MATH 101, 10150, 125, 140. 
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3" class="label">Additional Major Requirements</td>
+            </tr>
+            <tr>
+                <td class="label" id="underSub">Calculus I</td>
+                <td id="stillNeeded">Still Needed:</td>
+                <td>**List of classes that fulfill this requirement**</td>
+            </tr>
+            <tr>
+                <td class="label" id="underSub">Calculus II</td>
+                <td id="stillNeeded">Still Needed:</td>
+                <td>**List of classes that fulfill this requirement**</td>
+            </tr>
+            <tr>
+                <td class="label" id="underSub">Matrix Algebra</td>
+                <td id="stillNeeded">Still Needed:</td>
+                <td>**List of classes that fulfill this requirement**</td>
+            </tr>
+            <tr>
+                <td class="label" id="underSub">Intro to Applied Statistics</td>
+                <td id="stillNeeded">Still Needed:</td>
+                <td>**List of classes that fulfill this requirement**</td>
             </tr>
         </table>
-
         <!-- Dropdown Menu -->
         <!-- <div class="dropdown">
             <button onclick="myFunction()" class="dropbtn">CSCI 135</button>
@@ -468,7 +633,7 @@
     </div>
 
     <div id="thirty"><p>35px</p></div>
-    <footer class="footer">Presented by: Asllan Alija Vasyl Ilnytskyy, and Hammad Siddiqui</footer>
+    <footer class="footer">Presented by: Asllan Alija, Vasyl Ilnytskyy, and Hammad Siddiqui</footer>
 
 </body>
 
