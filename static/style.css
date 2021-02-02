@@ -331,7 +331,33 @@ input[type=date]::-webkit-calendar-picker-indicator {
     white-space: nowrap;
 }
 
-#reqs td#stillNeeded {
+#reqs td#sn,
+      td#sn2,
+      td#sn3,
+      td#sn4,
+      td#sn5,
+      td#sn6,
+      td#sn7,
+      td#sn8,
+      td#sn9,
+      td#sn11,
+      td#sn13,
+      td#sn14,
+      td#sn15,
+      td#sn16,
+      td#snc1,
+      td#snc2,
+      td#snc3,
+      td#snc5,
+      td#snc6,
+      td#snc9,
+      td#snc10,
+      td#snc11,
+      td#snc15,
+      td#snc34,
+      td#snc35,
+      td#snc36,
+      td#snc37 {
     color: red;
     white-space: nowrap;
     padding-right: 0px;
