@@ -16,634 +16,635 @@
 
 <body onload="formRefreshStopper();">
 
-    <div class="header">
-        <table>
-            <tr>
-                <th id="left">Hunter|CUNY</th>
-                <th id="mid">I Can't Believe It's Not DegreeWorks!</th>
-                <th id="right">DegreeWorks+</th>
-            </tr>
-        </table>
+    <div class="wrapper">
+        <div class="header">
+            <table>
+                <tr>
+                    <th id="left">Hunter|CUNY</th>
+                    <th id="mid">I Can't Believe It's Not DegreeWorks!</th>
+                    <th id="right">DegreeWorks+</th>
+                </tr>
+            </table>
+        </div>
+
+        <div class="topnav">
+            <table id="legend">
+                <tr>
+                    <td id="key">Legend</td>
+                    <td id="img">X</td>
+                    <td class="label">Complete</td>
+                    <td id="img">X</td>
+                    <td class="label">Complete except for classes in-progress</td>
+                    <td id="img">TR/CR</td>
+                    <td class="label">Transfer Class</td>
+                    <td id="img">IP</td>
+                    <td class="label">In Progress</td>
+                    <td id="img">X</td>
+                    <td class="label">Not Complete</td>
+                    <td id="img">X</td>
+                    <td class="label">Nearly complete - see advisor</td>
+                    <td id="img">@</td>
+                    <td class="label">Any course number</td>
+                </tr>
+            </table>
+            <table id="studentInfo">
+                <tr>
+                    <th class="norb" id="id">Student ID Number</th>
+                    <th id="name">Student Name</th>
+                    <!-- <th>|</th> -->
+                    <th class="norb" id="degree">Degree</th>
+                    <th class="norb" id="major">Major</th>
+                    <th class="norb" id="school">School</th>
+                    <th id="year">Student Class Level</th>
+                    <!-- <th>|</th> -->
+                    <th id="audit">Last Audit</th>
+                    <th class="norb" id="alinks"><a href="#">CUNYfirst</a></th>
+                    <th class="norb" id="blinks"><a href="#">FAQ</a></th>
+                    <th class="norb" id="clinks"><a href="#">Pathways</a></th>
+                </tr>
+                <tr>
+                    <td class="norb" id="id">
+                    <!-- <label for="id">Student ID Number</label> -->
+                    <form onsubmit="initialize();", id="sidform">
+                        <input type="number" id="sid2">
+                        <input type="submit" style="display: none">
+                    </form>
+
+                    </td>
+                    <td id="name">
+                        <!-- <label for="name">Student Name</label> -->
+                        <input type="text" id="studentname" readonly value="Raboy, Nick">
+                    </td>
+                    <!-- <td>|</td> -->
+                    <td class="norb" id="degree">
+                        <!-- <label for="degree">Degree</label> -->
+                        <input type="text" id="degree" readonly value="BA">
+                    </td>
+                    <td class="norb" id="major">
+                        <!-- <label for="major">Major</label> -->
+                        <input type="text" id="major" readonly value="U Computer Science">
+                    </td>
+                    <td class="norb" id="school">
+                        <!-- <label for="school">School</label> -->
+                        <input type="text" id="school" readonly value="U">
+                    </td>
+                    <td id="year">
+                        <!-- <label for="year">Student Class Level</label> -->
+                        <input type="text" id="year" readonly value="U-SOPH">
+                    </td>
+                    <!-- <td>|</td> -->
+                    <td id="audit">
+                        <!-- <label for="audit">Last Audit</label> -->
+                        <input type="date" id="audit" readonly value="2021-01-24">
+                    </td>
+                    <td class="norb" id="alinks">
+                        <a href="#">Course Schedule</a>
+                    </td>
+                    <td class="norb" id="blinks">
+                        <a href="#">Print</a>
+                    </td>
+                    <td class="norb" id="clinks">
+                        <a href="#">Log Out</a>
+                    </td>
+                </tr>
+            </table>
+            <!-- <h1>Bar</h1> -->
+        </div>
+
+        <!-- Collapseable Sidebar courtsey of W3Schools -->
+        <div id="mySidebar" class="sidebar">
+            <!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Clients</a>
+            <a href="#">Contact</a> -->
+        </div>
+
+        <div class="main">
+            <!-- <button class="openbtn" onclick="toggleNav()">☰ Sidebar</button> -->
+            <!-- <h2>Collapsed Sidebar</h2> -->
+
+            <h1>Hunter College</h1>
+            <!-- In-Progress -->
+            <table id="inProgress">
+                <tr>
+                    <!-- In-Progress: Semester Year-School -->
+                    <th colspan="7" id="ipHead">In-Progress: SPRING 2021U</th>
+                </tr>
+                <tr>
+                    <td id="ipHead">Class</td>
+                    <td id="ipHead">Section</td>
+                    <td id="ipHead">Description</td>
+                    <td id="ipHead">Days/Times</td>
+                    <td id="ipHead">Room</td>
+                    <td id="ipHead">Instructor</td>
+                    <td id="ipHead">Credits</td>
+                </tr>
+                <tr>
+                    <td class="label">CSCI 26500</td>
+                    <td>01</td>
+                    <td id="className">Computer Theory I</td>
+                    <td>TuFr 9:45AM - 11:00AM</td>
+                    <td>Online-Synchronous</td>
+                    <td>S. Levitan</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td class="label">CSCI 26500</td>
+                    <td>01</td>
+                    <td id="className">Computer Theory I</td>
+                    <td>TuFr 9:45AM - 11:00AM</td>
+                    <td>Online-Synchronous</td>
+                    <td>S. Levitan</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td class="label">CSCI 26500</td>
+                    <td>01</td>
+                    <td id="className">Computer Theory I</td>
+                    <td>TuFr 9:45AM - 11:00AM</td>
+                    <td>Online-Synchronous</td>
+                    <td>S. Levitan</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td class="label">CSCI 26500</td>
+                    <td>01</td>
+                    <td id="className">Computer Theory I</td>
+                    <td>TuFr 9:45AM - 11:00AM</td>
+                    <td>Online-Synchronous</td>
+                    <td>S. Levitan</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td class="label">CSCI 26500</td>
+                    <td>01</td>
+                    <td id="className">Computer Theory I</td>
+                    <td>TuFr 9:45AM - 11:00AM</td>
+                    <td>Online-Synchronous</td>
+                    <td>S. Levitan</td>
+                    <td>3</td>
+                </tr>
+                
+            </table>
+            <table id="studentView">
+                <tr>
+                    <th colspan="4">Student View</th>
+                </tr>
+                <tr>
+                    <td class="label">Preferred Name</td>
+                    <td class="obj"></td>
+                    <td class="label"></td>
+                    <td class="obj"></td>
+                </tr>
+                <tr>
+                    <td class="label">Legal Name</td>
+                    <td class="obj" id="sname">Raboy, Nick</td>
+                    <td class="label">Academic Standing</td>
+                    <td class="obj">Good Academic Standing (GST)</td>
+                </tr>
+                <tr>
+                    <td class="label">ID</td>
+                    <td class="obj" id="sid">23000001</td>
+                    <td class="label">Student Groups</td>
+                    <td class="obj">**Groups**</td>
+                </tr>
+                <tr>
+                    <td class="label">Transfer Credits</td>
+                    <td class="obj">10.00</td>
+                    <td class="label">Cumulative GPA</td>
+                    <td class="obj" id="sgpa">3.21</td>
+                </tr>
+            </table>
+            <table id="reqs">
+                <!-- Degree in Bachelor of Arts -->
+                <tr>
+                    <th colspan="3">Degree in Bachelor of Arts</th>
+                </tr>
+                <tr>
+                    <td colspan="3" id="notes">
+                        If you have an exemption, waiver or substitution on your official transcript that is not
+                        applying to your DegreeWorks worksheet, please email regweb@hunter.cuny.edu to confirm receipt
+                        and processing. Please see your advisor if you have any questions.
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">A minimum of 120 credits is required.</td>
+                    <td id="sn">Still Needed</td>
+                    <td>
+                        A minimum of 120 credits is required. You have <span id="cred"> </span> credits applied to your degree. You still need
+                        <span id="credn"> </span> additional credits.
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3" class="label">A minimum of 30 credits must be taken in residence.</td>
+                    <!-- <td id="sn"></td>
+                    <td></td> -->
+                </tr>
+                <tr>
+                    <td class="label">Liberal Arts/Scrience Requirement</td>
+                    <td id="sn">Still Needed</td>
+                    <td>
+                        A minimum of 90 credits in Liberal Arts/Science is required for this degree. You have taken X#
+                        credits. You still need Y# additional Liberal Arts/Science credits.
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3" class="label">Overall GPA Requirement Met</td>
+                    <!-- <td id="sn"></td>
+                    <td></td> -->
+                </tr>
+                <tr>
+                    <td colspan="3" class="label">CUNY Skills Assessment Tests</td>
+                    <!-- <td id="sn"></td>
+                    <td></td> -->
+                </tr>
+                <tr>
+                    <td class="label">CUNY Common Core</td>
+                    <td id="sn">Still Needed</td>
+                    <td><a href="#">See Hunter Core: CUNY Common Core section</a></td>
+                </tr>
+                <tr>
+                    <td class="label">Hunter Focus</td>
+                    <td id="sn">Still Needed</td>
+                    <td><a href="#">See Hunter Focus (12)-Foreign Lang./Concentrated Study section</a></td>
+                </tr>
+                <tr>
+                    <td class="label">Writing Requirement</td>
+                    <td id="sn">Still Needed</td>
+                    <td><a href="#">See Writing Requirement section</a></td>
+                </tr>
+                <tr>
+                    <td class="label">Pluralism & Diversity Requirement</td>
+                    <td id="sn">Still Needed</td>
+                    <td><a href="#">See Pluralism & Diversity Requirement section</a></td>
+                </tr>
+                <tr>
+                    <td class="label">Major Requirements</td>
+                    <td id="sn">Still Needed</td>
+                    <td><a href="#">See Major in Computer Science section</a></td>
+                </tr>
+                <tr>
+                    <td colspan="3" class="label">Minor Optional</td>
+                    <!-- <td id="sn"></td>
+                    <td></td> -->
+                </tr>
+                <tr>
+                    <td colspan="3" id="notes">
+                        As of Spring 2009 the minor is optional for most B.A. students. Students wishing to
+                        declare a minor after Spring 2009 must contact the minor department for approval.
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">APPLICATION FOR GRADUATION REMINDER</td>
+                    <td id="sn">Still Needed</td>
+                    <td>
+                        You must officially apply to graduate by logging into CUNYfirst, via your Student Center. Keep
+                        in mind that this field will always remain unchecked.
+                    </td>
+                </tr>
+
+                <!-- CUNY Skills Assessment Tests -->
+                <tr>
+                    <th colspan="3">CUNY Skills Assessment Tests</th>
+                </tr>
+                <tr>
+                    <td colspan="3" id="notes">
+                        There are two math courses with no prerequisites that can be used
+                        towards the Common Core's Math & Quantitative Reasoning (MQR) WITHOUT taking the Mathematics Placement
+                        Test (MPT): MATH 100 and MATH 102. Math requirements can vary by major so, if you have any questions,
+                        see your academic advisor prior to registration.
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3" class="label">CUNY Math Test Proficient</td>
+                    <!-- <td id="sn"></td>
+                    <td></td> -->
+                </tr>
+                <tr>
+                    <td colspan="3" class="label">CUNY Reading Test Proficient</td>
+                    <!-- <td id="sn"></td>
+                    <td></td> -->
+                </tr>
+                <tr>
+                    <td colspan="3" class="label">CUNY Writing Test Proficient</td>
+                    <!-- <td id="sn"></td>
+                    <td></td> -->
+                </tr>
+
+                <!-- Hunter Core: CUNY Common Core -->
+                <tr>
+                    <th colspan="3">Hunter Core: CUNY Common Core</th>
+                </tr>
+                <tr>
+                    <td class="label" id="unmet">Unmet conditions for this set of requirements:</td>
+                    <td colspan="2">
+                        30 credits are required for the CUNY Common Core. You currently have X#, you still need Y# more
+                        credits.
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3" id="notes">
+                        CHEM 120LC and CHEM 121LB must both be taken to apply towards Life & Physical Sciences or
+                        Scientific World.
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3" class="label">Requried Core</td>
+                </tr>
+                <tr>
+                    <td class="label" id="underSub">English Requirement</td>
+                    <td id="sn2">Still Needed</td>
+                    <td id="2"></td>
+                </tr>
+                <tr>
+                    <td class="label" id="underSub">Mathematical and Quantitative Reasoning</td>
+                    <td id="sn3">Still Needed</td>
+                    <td id="3"></td>
+                </tr>
+                <tr>
+                    <td class="label" id="underSub">Life & Physical Sciences</td>
+                    <td id="sn4">Still Needed</td>
+                    <td id="4"></td>
+                </tr>
+                <tr>
+                    <td class="label" colspan="3">Flexible Common Core</td>
+                </tr>
+                <tr>
+                    <td class="label" id="underSub">World Cultures and Global Issues</td>
+                    <td id="sn5">Still Needed</td>
+                    <td id="5"></td>
+                </tr>
+                <tr>
+                    <td class="label" id="underSub">U.S. Experiences in Its Diversity</td>
+                    <td id="sn6">Still Needed</td>
+                    <td id="6"></td>
+                </tr>
+                <tr>
+                    <td class="label" id="underSub">Creative Expression</td>
+                    <td id="sn7">Still Needed</td>
+                    <td id="7"></td>
+                </tr>
+                <tr>
+                    <td colspan="3" id="notes">
+                        For Individual and Society: This category will contain two areas and students must take one
+                        course
+                        from each area. The two areas are: Social Science and Humanities, Cultures & Ideas.
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label" id="underSub">Individual and Society</td>
+                    <td id="sn8">Still Needed</td>
+                    <td id="8"></td>
+                </tr>
+                <tr>
+                    <td class="label" id="underSub">Scientific World</td>
+                    <td id="sn9">Still Needed</td>
+                    <td id="9">
+                    </td>
+                </tr>
+
+                <!-- Hunter Focus (12) - Foreign Language / Concentrated Study -->
+                <tr>
+                    <th colspan="3">Hunter Focus (12) - Foreign Language / Concentrated Study</th>
+                </tr>
+                <tr>
+                    <td class="label" id="unmet">Unmet conditions for this set of requirements:</td>
+                    <td colspan="2">
+                        12 credits are required. You currently have X#,  you still need Y# more credits.
+                    </td>
+                </tr>
+                <tr id="notes">
+                    <td class="label" id="notes">
+                        List of Languages Offered at Hunter:
+                    </td>
+                    <td colspan="2">
+                        <h class="label">Africana and Puerto Rican/Latino Studies: </h>Swahili and Yoruba.<br>
+                        <h class="label">Classical and Oriental Studies: </h>Arabic, Chinese, Greek, Hebrew, Japanese, Latin, Polish, Russian, and German. <br>
+                        <h class="label">Romance Languages: </h>French, Italian, Spanish, and Portuguese.<br>
+                    </td>
+                    <!-- <tr>Bruh</tr> -->
+                </tr>
+                <tr>
+                    <td class="label">Elementary I</td>
+                    <td id="snc34">Still Needed</td>
+                    <td id="c34"></td>
+                </tr>
+                <tr>
+                    <td class="label">Elementary II</td>
+                    <td id="snc35">Still Needed</td>
+                    <td id="c35"></td>
+                </tr>
+                <tr>
+                    <td class="label">Intermediate I</td>
+                    <td id="snc36">Still Needed</td>
+                    <td id="c36"></td>
+                </tr>
+                <tr>
+                    <td class="label">Intermediate II</td>
+                    <td id="snc37">Still Needed</td>
+                    <td id="c37"></td>
+                </tr>
+                <tr>
+                    <td colspan="3" id="notes">
+                        As of Fall 2017, language 10100 courses do not apply towards the Flexible Core; only towards the Hunter Focus, Foreign Language requirement.
+                        <br>
+                        IMPORTANT REMINDER: When a Focus Concentrated Study (FS) is needed, courses applied toward FS cannot share with Major 1.
+                        <br>
+                        Hunter Focus must be completed by courses in residence (completed at Hunter). 
+                    </td>
+                </tr>
+
+                <!-- Writing Requirement -->
+                <tr>
+                    <th colspan="3">Writing Requirement</th>
+                </tr>
+                <tr>
+
+                    <td class="label" id="unmet">Unmet conditions for this set of requirements:</td>
+                    <td colspan="2">
+                        9 credits of Writing Intensive Courses are required. You currently have X#,  you still need Y# more credits.
+                    </td>
+                </tr>
+                <td colspan="3" id="notes">
+                    Writing Intensive (WI) is SECTION specific, so it's important to confirm prior to enrollment that a course will apply to this requirement.  After you enroll and the course appears in DegreeWorks, if it is not applying below, then you are not in a WI Section. REMINDER: WI must be completed at Hunter; transferred courses do not apply.
+                </td>
+                <tr>
+                    <td class="label">Writing Requirement: 3 Classes, WI sections</td>
+                    <td id="sn11">Still Needed</td>
+                    <td id="11"></td>
+                </tr>
+
+                <!-- Pluralism & Diversity Requirement -->
+                <tr>
+                    <th colspan="3">Pluralism & Diversity Requirement</th>
+                </tr>
+                <tr>
+                    <td class="label" id="unmet">Unmet conditions for this set of requirements:</td>
+                    <td colspan="2">
+                        12 credits of Pluralism & Diversity Courses are required. You currently have X#,  you still need Y# more credits. 
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3" class="label">Pluralism & Diversity</td>
+                </tr>
+                <tr>
+                    <td class="label" id="underSub">Group A: Non-European Societies</td>
+                    <td id="sn13">Still Needed</td>
+                    <td id="13"></td>
+                </tr>
+                <tr>
+                    <td class="label" id="underSub">Group B: Groups in the U.S.A.</td>
+                    <td id="sn14">Still Needed</td>
+                    <td id="14"></td>
+                </tr>
+                <tr>
+                    <td colspan="3" id="notes">
+                        BIOL 100 and 102 or 160 may satisfy either Group C or Group D  only if both courses are taken at Hunter. NOTE: Courses listed after the word 'Except' cannot be used on the rule.
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label" id="underSub">Group C: Women, Gender & Sexual Orientation</td>
+                    <td id="sn15">Still Needed</td>
+                    <td id="15"></td>
+                </tr>
+                <tr>
+                    <td class="label" id="underSub">Group D: European Societies</td>
+                    <td id="sn16">Still Needed</td>
+                    <td id="16"></td>
+                </tr>
+
+                <!-- Major in Computer Science -->
+                <tr>
+                    <th colspan="3">Major in Computer Science</th>
+                </tr>
+                <tr>
+                    <td class="label" id="unmet">Unmet conditions for this set of requirements:</td>
+                    <td colspan="2">
+                        58 credits are required for this major. You currently have X#,  you still need Y# more credits. 
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3" id="notes">
+                        A grade of 'C' or higher is required for all course work. Grades of 'CR' are not allowed with the exception of additional major requirements.
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3" class="label">Required Courses</td>
+                </tr>
+                <tr>
+                    <td class="label" id="underSub">Intro to Computer Science</td>
+                    <td id="snc1">Still Needed</td>
+                    <td id="c1"></td>
+                </tr>
+                <tr>
+                    <td class="label" id="underSub">Software Analysis and Design I</td>
+                    <td id="snc2">Still Needed</td>
+                    <td id="c2"></td>
+                </tr>
+                <tr>
+                    <td class="label" id="underSub">Discrete Structures</td>
+                    <td id="snc3">Still Needed</td>
+                    <td id="c3"></td>
+                </tr>
+                <tr>
+                    <td class="label" id="underSub">Computer Architecture I</td>
+                    <td id="snc8">Still Needed</td>
+                    <td id="c8"></td>
+                </tr>
+                <tr>
+                    <td class="label" id="underSub">Software Design & Analysis II</td>
+                    <td id="snc5">Still Needed</td>
+                    <td id="c5"></td>
+                </tr>
+                <tr>
+                    <td class="label" id="underSub">Computer Architecture II</td>
+                    <td id="snc11">Still Needed</td>
+                    <td id="c11"></td>
+                </tr>
+                <tr>
+                    <td class="label" id="underSub">Computer Theory I</td>
+                    <td id="snc6">Still Needed</td>
+                    <td id="c6"></td>
+                </tr>
+                <tr>
+                    <td class="label" id="underSub">Software Design & Analysis III</td>
+                    <td id="snc10">Still Needed</td>
+                    <td id="c10"></td>
+                </tr>
+                <tr>
+                    <td class="label" id="underSub">Operating Systems</td>
+                    <td id="snc9">Still Needed</td>
+                    <td id="c9"></td>
+                </tr>
+                <tr>
+                    <td class="label" id="underSub">Advanced Applications: Capstone Course</td>
+                    <td id="snc15">Still Needed</td>
+                    <td id="c15"></td>
+                </tr>
+                <tr>
+                    <td colspan="3" id="notes">
+                        Any CSCI courses above 13600 can be applied toward the Free Elective requirement with notable exceptions.<br>
+                        <ul>
+                            <li>No more than 3 credits in CSCI 391, 392, 393 (Independent Study) may be applied.</li>
+                            <li>No more than 9 credits in CSCI 496, 497, 498 (Supervised Research) may be applied.</li>
+                            <li>The following courses CANNOT be applied CSCI CSCI 120, 121, 132, 133, 181, 182, 183, 232 or 233.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">Free Electives</td>
+                    <td id="sn">Still Needed</td>
+                    <td id="ce">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3" id="notes">
+                        Additional courses may be required for the requirements below as needed MATH 101, 10150, 125, 140. 
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3" class="label">Additional Major Requirements</td>
+                </tr>
+                <tr>
+                    <td class="label" id="underSub">Calculus I</td>
+                    <td id="snc4">Still Needed</td>
+                    <td id="c4"></td>
+                </tr>
+                <tr>
+                    <td class="label" id="underSub">Calculus II</td>
+                    <td id="snc7">Still Needed</td>
+                    <td id="c7"></td>
+                </tr>
+                <tr>
+                    <td class="label" id="underSub">Matrm Algebra</td>
+                    <td id="snc13">Still Needed</td>
+                    <td id="c13"></td>
+                </tr>
+                <tr>
+                    <td class="label" id="underSub">Intro to Applied Statistics</td>
+                    <td id="snc12">Still Needed</td>
+                    <td id="c12"></td>
+                </tr>
+            </table>
+            <!-- Dropdown Menu -->
+            <!--<div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn">CSCI 135</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="#">CSCI 135 info blah blah blah blah blah blah blah blah blah
+                        <p> Reqs: blah blah</p>
+                        <p> Credits: 3</p>
+                    </a>
+                </div>
+            </div> -->
+        </div>
+        <!-- <p>Collapsible Set:</p>
+            <button type="button" class="collapsible">Open Section 1</button>
+            <div class="content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div> -->
+        <div id="xtra"></div>
     </div>
-
-    <div class="topnav">
-        <table id="legend">
-            <tr>
-                <td id="key">Legend</td>
-                <td id="img">X</td>
-                <td class="label">Complete</td>
-                <td id="img">X</td>
-                <td class="label">Complete except for classes in-progress</td>
-                <td id="img">TR/CR</td>
-                <td class="label">Transfer Class</td>
-                <td id="img">IP</td>
-                <td class="label">In Progress</td>
-                <td id="img">X</td>
-                <td class="label">Not Complete</td>
-                <td id="img">X</td>
-                <td class="label">Nearly complete - see advisor</td>
-                <td id="img">@</td>
-                <td class="label">Any course number</td>
-            </tr>
-        </table>
-        <table id="studentInfo">
-            <tr>
-                <th class="norb" id="id">Student ID Number</th>
-                <th id="name">Student Name</th>
-                <!-- <th>|</th> -->
-                <th class="norb" id="degree">Degree</th>
-                <th class="norb" id="major">Major</th>
-                <th class="norb" id="school">School</th>
-                <th id="year">Student Class Level</th>
-                <!-- <th>|</th> -->
-                <th id="audit">Last Audit</th>
-                <th class="norb" id="alinks"><a href="#">CUNYfirst</a></th>
-                <th class="norb" id="blinks"><a href="#">FAQ</a></th>
-                <th class="norb" id="clinks"><a href="#">Pathways</a></th>
-            </tr>
-            <tr>
-                <td class="norb" id="id">
-                  <!-- <label for="id">Student ID Number</label> -->
-                  <form onsubmit="initialize();", id="sidform">
-                    <input type="number" id="sid2">
-                    <input type="submit" style="display: none">
-                  </form>
-
-                </td>
-                <td id="name">
-                    <!-- <label for="name">Student Name</label> -->
-                    <input type="text" id="studentname" readonly value="Raboy, Nick">
-                </td>
-                <!-- <td>|</td> -->
-                <td class="norb" id="degree">
-                    <!-- <label for="degree">Degree</label> -->
-                    <input type="text" id="degree" readonly value="BA">
-                </td>
-                <td class="norb" id="major">
-                    <!-- <label for="major">Major</label> -->
-                    <input type="text" id="major" readonly value="U Computer Science">
-                </td>
-                <td class="norb" id="school">
-                    <!-- <label for="school">School</label> -->
-                    <input type="text" id="school" readonly value="U">
-                </td>
-                <td id="year">
-                    <!-- <label for="year">Student Class Level</label> -->
-                    <input type="text" id="year" readonly value="U-SOPH">
-                </td>
-                <!-- <td>|</td> -->
-                <td id="audit">
-                    <!-- <label for="audit">Last Audit</label> -->
-                    <input type="date" id="audit" readonly value="2021-01-24">
-                </td>
-                <td class="norb" id="alinks">
-                    <a href="#">Course Schedule</a>
-                </td>
-                <td class="norb" id="blinks">
-                    <a href="#">Print</a>
-                </td>
-                <td class="norb" id="clinks">
-                    <a href="#">Log Out</a>
-                </td>
-            </tr>
-        </table>
-        <!-- <h1>Bar</h1> -->
-    </div>
-
-    <!-- Collapseable Sidebar courtsey of W3Schools -->
-    <div id="mySidebar" class="sidebar">
-        <!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-        <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Clients</a>
-        <a href="#">Contact</a> -->
-    </div>
-
-    <div class="main">
-        <!-- <button class="openbtn" onclick="toggleNav()">☰ Sidebar</button> -->
-        <!-- <h2>Collapsed Sidebar</h2> -->
-
-        <h1>Hunter College</h1>
-        <!-- In-Progress -->
-        <table id="inProgress">
-            <tr>
-                <!-- In-Progress: Semester Year-School -->
-                <th colspan="7" id="ipHead">In-Progress: SPRING 2021U</th>
-            </tr>
-            <tr>
-                <td id="ipHead">Class</td>
-                <td id="ipHead">Section</td>
-                <td id="ipHead">Description</td>
-                <td id="ipHead">Days/Times</td>
-                <td id="ipHead">Room</td>
-                <td id="ipHead">Instructor</td>
-                <td id="ipHead">Credits</td>
-            </tr>
-            <tr>
-                <td class="label">CSCI 26500</td>
-                <td>01</td>
-                <td id="className">Computer Theory I</td>
-                <td>TuFr 9:45AM - 11:00AM</td>
-                <td>Online-Synchronous</td>
-                <td>S. Levitan</td>
-                <td>3</td>
-            </tr>
-            <tr>
-                <td class="label">CSCI 26500</td>
-                <td>01</td>
-                <td id="className">Computer Theory I</td>
-                <td>TuFr 9:45AM - 11:00AM</td>
-                <td>Online-Synchronous</td>
-                <td>S. Levitan</td>
-                <td>3</td>
-            </tr>
-            <tr>
-                <td class="label">CSCI 26500</td>
-                <td>01</td>
-                <td id="className">Computer Theory I</td>
-                <td>TuFr 9:45AM - 11:00AM</td>
-                <td>Online-Synchronous</td>
-                <td>S. Levitan</td>
-                <td>3</td>
-            </tr>
-            <tr>
-                <td class="label">CSCI 26500</td>
-                <td>01</td>
-                <td id="className">Computer Theory I</td>
-                <td>TuFr 9:45AM - 11:00AM</td>
-                <td>Online-Synchronous</td>
-                <td>S. Levitan</td>
-                <td>3</td>
-            </tr>
-            <tr>
-                <td class="label">CSCI 26500</td>
-                <td>01</td>
-                <td id="className">Computer Theory I</td>
-                <td>TuFr 9:45AM - 11:00AM</td>
-                <td>Online-Synchronous</td>
-                <td>S. Levitan</td>
-                <td>3</td>
-            </tr>
-            
-        </table>
-        <table id="studentView">
-            <tr>
-                <th colspan="4">Student View</th>
-            </tr>
-            <tr>
-                <td class="label">Preferred Name</td>
-                <td class="obj"></td>
-                <td class="label"></td>
-                <td class="obj"></td>
-            </tr>
-            <tr>
-                <td class="label">Legal Name</td>
-                <td class="obj" id="sname">Raboy, Nick</td>
-                <td class="label">Academic Standing</td>
-                <td class="obj">Good Academic Standing (GST)</td>
-            </tr>
-            <tr>
-                <td class="label">ID</td>
-                <td class="obj" id="sid">23000001</td>
-                <td class="label">Student Groups</td>
-                <td class="obj">**Groups**</td>
-            </tr>
-            <tr>
-                <td class="label">Transfer Credits</td>
-                <td class="obj">10.00</td>
-                <td class="label">Cumulative GPA</td>
-                <td class="obj" id="sgpa">3.21</td>
-            </tr>
-        </table>
-        <table id="reqs">
-            <!-- Degree in Bachelor of Arts -->
-            <tr>
-                <th colspan="3">Degree in Bachelor of Arts</th>
-            </tr>
-            <tr>
-                <td colspan="3" id="notes">
-                    If you have an exemption, waiver or substitution on your official transcript that is not
-                    applying to your DegreeWorks worksheet, please email regweb@hunter.cuny.edu to confirm receipt
-                    and processing. Please see your advisor if you have any questions.
-                </td>
-            </tr>
-            <tr>
-                <td class="label">A minimum of 120 credits is required.</td>
-                <td id="sn">Still Needed:</td>
-                <td>
-                    A minimum of 120 credits is required. You have <span id="cred"> </span> credits applied to your degree. You still need
-                    <span id="credn"> </span> additional credits.
-                </td>
-            </tr>
-            <tr>
-                <td colspan="3" class="label">A minimum of 30 credits must be taken in residence.</td>
-                <!-- <td id="sn"></td>
-                <td></td> -->
-            </tr>
-            <tr>
-                <td class="label">Liberal Arts/Scrience Requirement</td>
-                <td id="sn">Still Needed:</td>
-                <td>
-                    A minimum of 90 credits in Liberal Arts/Science is required for this degree. You have taken X#
-                    credits. You still need Y# additional Liberal Arts/Science credits.
-                </td>
-            </tr>
-            <tr>
-                <td colspan="3" class="label">Overall GPA Requirement Met</td>
-                <!-- <td id="sn"></td>
-                <td></td> -->
-            </tr>
-            <tr>
-                <td colspan="3" class="label">CUNY Skills Assessment Tests</td>
-                <!-- <td id="sn"></td>
-                <td></td> -->
-            </tr>
-            <tr>
-                <td class="label">CUNY Common Core</td>
-                <td id="sn">Still Needed:</td>
-                <td><a href="#">See Hunter Core: CUNY Common Core section</a></td>
-            </tr>
-            <tr>
-                <td class="label">Hunter Focus</td>
-                <td id="sn">Still Needed:</td>
-                <td><a href="#">See Hunter Focus (12)-Foreign Lang./Concentrated Study section</a></td>
-            </tr>
-            <tr>
-                <td class="label">Writing Requirement</td>
-                <td id="sn">Still Needed:</td>
-                <td><a href="#">See Writing Requirement section</a></td>
-            </tr>
-            <tr>
-                <td class="label">Pluralism & Diversity Requirement</td>
-                <td id="sn">Still Needed:</td>
-                <td><a href="#">See Pluralism & Diversity Requirement section</a></td>
-            </tr>
-            <tr>
-                <td class="label">Major Requirements</td>
-                <td id="sn">Still Needed:</td>
-                <td><a href="#">See Major in Computer Science section</a></td>
-            </tr>
-            <tr>
-                <td colspan="3" class="label">Minor Optional</td>
-                <!-- <td id="sn"></td>
-                <td></td> -->
-            </tr>
-            <tr>
-                <td colspan="3" id="notes">
-                    As of Spring 2009 the minor is optional for most B.A. students. Students wishing to
-                    declare a minor after Spring 2009 must contact the minor department for approval.
-                </td>
-            </tr>
-            <tr>
-                <td class="label">APPLICATION FOR GRADUATION REMINDER</td>
-                <td id="sn">Still Needed:</td>
-                <td>
-                    You must officially apply to graduate by logging into CUNYfirst, via your Student Center. Keep
-                    in mind that this field will always remain unchecked.
-                </td>
-            </tr>
-
-            <!-- CUNY Skills Assessment Tests -->
-            <tr>
-                <th colspan="3">CUNY Skills Assessment Tests</th>
-            </tr>
-            <tr>
-                <td colspan="3" id="notes">
-                    There are two math courses with no prerequisites that can be used
-                    towards the Common Core's Math & Quantitative Reasoning (MQR) WITHOUT taking the Mathematics Placement
-                    Test (MPT): MATH 100 and MATH 102. Math requirements can vary by major so, if you have any questions,
-                    see your academic advisor prior to registration.
-                </td>
-            </tr>
-            <tr>
-                <td colspan="3" class="label">CUNY Math Test Proficient</td>
-                <!-- <td id="sn"></td>
-                <td></td> -->
-            </tr>
-            <tr>
-                <td colspan="3" class="label">CUNY Reading Test Proficient</td>
-                <!-- <td id="sn"></td>
-                <td></td> -->
-            </tr>
-            <tr>
-                <td colspan="3" class="label">CUNY Writing Test Proficient</td>
-                <!-- <td id="sn"></td>
-                <td></td> -->
-            </tr>
-
-            <!-- Hunter Core: CUNY Common Core -->
-            <tr>
-                <th colspan="3">Hunter Core: CUNY Common Core</th>
-            </tr>
-            <tr>
-                <td class="label" id="unmet">Unmet conditions for this set of requirements:</td>
-                <td colspan="2">
-                    30 credits are required for the CUNY Common Core. You currently have X#, you still need Y# more
-                    credits.
-                </td>
-            </tr>
-            <tr>
-                <td colspan="3" id="notes">
-                    CHEM 120LC and CHEM 121LB must both be taken to apply towards Life & Physical Sciences or
-                    Scientific World.
-                </td>
-            </tr>
-            <tr>
-                <td colspan="3" class="label">Requried Core</td>
-            </tr>
-            <tr>
-                <td class="label" id="underSub">English Requirement</td>
-                <td id="sn2">Still Needed:</td>
-                <td id="2"></td>
-            </tr>
-            <tr>
-                <td class="label" id="underSub">Mathematical and Quantitative Reasoning</td>
-                <td id="sn3">Still Needed:</td>
-                <td id="3"></td>
-            </tr>
-            <tr>
-                <td class="label" id="underSub">Life & Physical Sciences</td>
-                <td id="sn4">Still Needed:</td>
-                <td id="4"></td>
-            </tr>
-            <tr>
-                <td class="label" colspan="3">Flexible Common Core</td>
-            </tr>
-            <tr>
-                <td class="label" id="underSub">World Cultures and Global Issues</td>
-                <td id="sn5">Still Needed:</td>
-                <td id="5"></td>
-            </tr>
-            <tr>
-                <td class="label" id="underSub">U.S. Experiences in Its Diversity</td>
-                <td id="sn6">Still Needed:</td>
-                <td id="6"></td>
-            </tr>
-            <tr>
-                <td class="label" id="underSub">Creative Expression</td>
-                <td id="sn7">Still Needed:</td>
-                <td id="7"></td>
-            </tr>
-            <tr>
-                <td colspan="3" id="notes">
-                    For Individual and Society: This category will contain two areas and students must take one
-                    course
-                    from each area. The two areas are: Social Science and Humanities, Cultures & Ideas.
-                </td>
-            </tr>
-            <tr>
-                <td class="label" id="underSub">Individual and Society</td>
-                <td id="sn8">Still Needed:</td>
-                <td id="8"></td>
-            </tr>
-            <tr>
-                <td class="label" id="underSub">Scientific World</td>
-                <td id="sn9">Still Needed:</td>
-                <td id="9"></td>
-            </tr>
-
-            <!-- Hunter Focus (12) - Foreign Language / Concentrated Study -->
-            <tr>
-                <th colspan="3">Hunter Focus (12) - Foreign Language / Concentrated Study</th>
-            </tr>
-            <tr>
-                <td class="label" id="unmet">Unmet conditions for this set of requirements:</td>
-                <td colspan="2">
-                    12 credits are required. You currently have X#,  you still need Y# more credits.
-                </td>
-            </tr>
-            <tr id="notes">
-                <td class="label">
-                    List of Languages Offered at Hunter:
-                </td>
-                <td colspan="2">
-                    <h class="label">Africana and Puerto Rican/Latino Studies: </h>Swahili and Yoruba.<br>
-                    <h class="label">Classical and Oriental Studies: </h>Arabic, Chinese, Greek, Hebrew, Japanese, Latin, Polish, Russian, and German. <br>
-                    <h class="label">Romance Languages: </h>French, Italian, Spanish, and Portuguese.<br>
-                </td>
-                <!-- <tr>Bruh</tr> -->
-            </tr>
-            <tr>
-                <td class="label">Elementary I</td>
-                <td id="snc34"></td>
-                <td id="c34"></td>
-            </tr>
-            <tr>
-                <td class="label">Elementary II</td>
-
-                <td id="snc35"></td>
-                <td id="c35"></td>
-            </tr>
-            <tr>
-                <td class="label">Intermediate I</td>
-
-                <td id="snc36"></td>
-                <td id="c36"></td>
-            </tr>
-            <tr>
-                <td class="label">Intermediate II</td>
-
-                <td id="snc37"></td>
-                <td id="c37"></td>
-            </tr>
-            <tr>
-                <td colspan="3" id="notes">
-                    As of Fall 2017, language 10100 courses do not apply towards the Flexible Core; only towards the Hunter Focus, Foreign Language requirement.
-                    <br>
-                    IMPORTANT REMINDER: When a Focus Concentrated Study (FS) is needed, courses applied toward FS cannot share with Major 1.
-                    <br>
-                    Hunter Focus must be completed by courses in residence (completed at Hunter). 
-                </td>
-            </tr>
-
-            <!-- Writing Requirement -->
-            <tr>
-                <th colspan="3">Writing Requirement</th>
-            </tr>
-            <tr>
-
-                <td class="label" id="unmet">Unmet conditions for this set of requirements:</td>
-                <td colspan="2">
-                    9 credits of Writing Intensive Courses are required. You currently have X#,  you still need Y# more credits.
-                </td>
-            </tr>
-            <td colspan="3" id="notes">
-                Writing Intensive (WI) is SECTION specific, so it's important to confirm prior to enrollment that a course will apply to this requirement.  After you enroll and the course appears in DegreeWorks, if it is not applying below, then you are not in a WI Section. REMINDER: WI must be completed at Hunter; transferred courses do not apply.
-            </td>
-            <tr>
-                <td class="label">Writing Requirement: 3 Classes, WI sections</td>
-                <td id="sn11">Still Needed:</td>
-                <td id="11"></td>
-            </tr>
-
-            <!-- Pluralism & Diversity Requirement -->
-            <tr>
-                <th colspan="3">Pluralism & Diversity Requirement</th>
-            </tr>
-            <tr>
-                <td class="label" id="unmet">Unmet conditions for this set of requirements:</td>
-                <td colspan="2">
-                    12 credits of Pluralism & Diversity Courses are required. You currently have X#,  you still need Y# more credits. 
-                </td>
-            </tr>
-            <tr>
-                <td colspan="3" class="label">Pluralism & Diversity</td>
-            </tr>
-            <tr>
-                <td class="label" id="underSub">Group A: Non-European Societies</td>
-                <td id="sn13">Still Needed:</td>
-                <td id="13"></td>
-            </tr>
-            <tr>
-                <td class="label" id="underSub">Group B: Groups in the U.S.A.</td>
-                <td id="sn14">Still Needed:</td>
-                <td id="14"></td>
-            </tr>
-            <tr id="notes">
-                <td colspan="3" id="notes">
-                    BIOL 100 and 102 or 160 may satisfy either Group C or Group D  only if both courses are taken at Hunter. NOTE: Courses listed after the word 'Except' cannot be used on the rule.
-                </td>
-            </tr>
-            <tr>
-                <td class="label" id="underSub">Group C: Women, Gender & Sexual Orientation</td>
-                <td id="sn15">Still Needed:</td>
-                <td id="15"></td>
-            </tr>
-            <tr>
-                <td class="label" id="underSub">Group D: European Societies</td>
-                <td id="sn16">Still Needed:</td>
-                <td id="16"></td>
-            </tr>
-
-            <!-- Major in Computer Science -->
-            <tr>
-                <th colspan="3">Major in Computer Science</th>
-            </tr>
-            <tr>
-                <td class="label" id="unmet">Unmet conditions for this set of requirements:</td>
-                <td colspan="2">
-                    58 credits are required for this major. You currently have X#,  you still need Y# more credits. 
-                </td>
-            </tr>
-            <tr>
-                <td colspan="3" id="notes">
-                    A grade of 'C' or higher is required for all course work. Grades of 'CR' are not allowed with the exception of additional major requirements.
-                </td>
-            </tr>
-            <tr>
-                <td colspan="3" class="label">Required Courses</td>
-            </tr>
-            <tr>
-                <td class="label" id="underSub">Intro to Computer Science</td>
-                <td id="snc1">Still Needed:</td>
-                <td id="c1"></td>
-            </tr>
-            <tr>
-                <td class="label" id="underSub">Software Analysis and Design I</td>
-                <td id="snc2">Still Needed:</td>
-                <td id="c2"></td>
-            </tr>
-            <tr>
-                <td class="label" id="underSub">Discrete Structures</td>
-                <td id="snc3">Still Needed:</td>
-                <td id="c3"></td>
-            </tr>
-            <tr>
-                <td class="label" id="underSub">Computer Architecture I</td>
-                <td id="snc8">Still Needed:</td>
-                <td id="c8"></td>
-            </tr>
-            <tr>
-                <td class="label" id="underSub">Software Design & Analysis II</td>
-                <td id="snc5">Still Needed:</td>
-                <td id="c5"></td>
-            </tr>
-            <tr>
-                <td class="label" id="underSub">Computer Architecture II</td>
-                <td id="snc11">Still Needed:</td>
-                <td id="c11"></td>
-            </tr>
-            <tr>
-                <td class="label" id="underSub">Computer Theory I</td>
-                <td id="snc6">Still Needed:</td>
-                <td id="c6"></td>
-            </tr>
-            <tr>
-                <td class="label" id="underSub">Software Design & Analysis III</td>
-                <td id="snc10">Still Needed:</td>
-                <td id="c10"></td>
-            </tr>
-            <tr>
-                <td class="label" id="underSub">Operating Systems</td>
-                <td id="snc9">Still Needed:</td>
-                <td id="c9"></td>
-            </tr>
-            <tr>
-                <td class="label" id="underSub">Advanced Applications: Capstone Course</td>
-                <td id="snc15">Still Needed:</td>
-                <td id="c15"></td>
-            </tr>
-            <tr>
-                <td colspan="3" id="notes">
-                    Any CSCI courses above 13600 can be applied toward the Free Elective requirement with notable exceptions.<br>
-                    <ul>
-                        <li>No more than 3 credits in CSCI 391, 392, 393 (Independent Study) may be applied.</li>
-                        <li>No more than 9 credits in CSCI 496, 497, 498 (Supervised Research) may be applied.</li>
-                        <li>The following courses CANNOT be applied: CSCI CSCI 120, 121, 132, 133, 181, 182, 183, 232 or 233.</li>
-                    </ul>
-                </td>
-            </tr>
-            <tr>
-                <td class="label">Free Electives</td>
-                <td id="sn">Still Needed:</td>
-                <td id="ce"></td>
-            </tr>
-            <tr>
-                <td colspan="3" id="notes">
-                    Additional courses may be required for the requirements below as needed: MATH 101, 10150, 125, 140. 
-                </td>
-            </tr>
-            <tr>
-                <td colspan="3" class="label">Additional Major Requirements</td>
-            </tr>
-            <tr>
-                <td class="label" id="underSub">Calculus I</td>
-                <td id="snc4">Still Needed:</td>
-                <td id="c4"></td>
-            </tr>
-            <tr>
-                <td class="label" id="underSub">Calculus II</td>
-                <td id="snc7">Still Needed:</td>
-                <td id="c7"></td>
-            </tr>
-            <tr>
-                <td class="label" id="underSub">Matrix Algebra</td>
-                <td id="snc13">Still Needed:</td>
-                <td id="c13"></td>
-            </tr>
-            <tr>
-                <td class="label" id="underSub">Intro to Applied Statistics</td>
-                <td id="snc12">Still Needed:</td>
-                <td id="c12"></td>
-            </tr>
-            <tr>
-                <td class="label" id="underSub"></td>
-                <td id="snc12"></td>
-                <td></td>
-            </tr>
-        </table>
-        <!-- Dropdown Menu -->
-        <!--<div class="dropdown">
-            <button onclick="myFunction()" class="dropbtn">CSCI 135</button>
-            <div id="myDropdown" class="dropdown-content">
-                <a href="#">CSCI 135 info blah blah blah blah blah blah blah blah blah
-                    <p> Reqs: blah blah</p>
-                    <p> Credits: 3</p>
-                </a>
-            </div>
-        </div> -->
-    </div>
-    <div id="thirty"><p>35px</p></div>
     <footer class="footer">Presented by: Asllan Alija, Vasyl Ilnytskyy, and Hammad Siddiqui</footer>
 </body>
 
