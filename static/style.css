@@ -39,6 +39,10 @@ body {
 }
 
 /* Style the top navigation bar */
+div.topnav {
+    border: 0px;
+}
+
 .topnav {
     overflow: hidden;
     /* clear: both; */
@@ -65,7 +69,7 @@ body {
     text-align: left;
     color: rgb(110, 145, 177);
     font-weight: bold;
-    border-right: 2px groove black;
+    border-right: 3px solid  rgb(29, 58, 131);
 }
 
 #legend td#img {
@@ -86,7 +90,7 @@ body {
     color: rgb(29, 58, 131);
     font-size: 14px;
     background-color: #cac9c9;
-    border: 1px outset white;
+    border: 2px outset white;
     /* margin: top right bottom left */
     margin: 0px -5px 0px -5px;
 }
@@ -97,17 +101,17 @@ body {
     background-color: white;
     color: #696969;
     font-size: 14px;
-    border-bottom: 2px groove black;
+    border-bottom: 3px solid  rgb(29, 58, 131);
     text-align: center;
     border-collapse: collapse;
 }
 
 .topnav #studentInfo th {
-    border-top: 2px groove black;
+    border-top: 3px solid  rgb(29, 58, 131);
 }
 
 .topnav #studentInfo th, .topnav #studentInfo td {
-    border-right: 2px groove black;
+    border-right: 3px solid  rgb(29, 58, 131);
     /* padding: top right bottom left */
     padding: 2px 10px 2px 10px;
 }
@@ -223,12 +227,14 @@ input[type=date]::-webkit-calendar-picker-indicator {
     background-color: white;
     padding: 0px 16px 0px 16px;
     /* margin: top right bottom left */
-    /* margin: 0px -10px 0px -10px; */
+    /* margin: 0px 0px 33px 0px; */
     /* text-align: center; */
     /* position: -webkit-sticky;
     position: sticky; */
     top: 0px;
     z-index: 0;
+    border-right: 3px solid  rgb(29, 58, 131);
+    border-left: 3px solid  rgb(29, 58, 131);
 }
 
 .main h1 {
@@ -321,11 +327,14 @@ input[type=date]::-webkit-calendar-picker-indicator {
     /* padding: top right bottom left */
     padding: 5px 10px 5px 10px;
     font-size: 15px;
+    margin-bottom: 500px;
     /* font-weight: bold; */
     /* width: 100%; */
     /* table-layout: fixed; */
     /* border-collapse: collapse; */
 }
+
+
 
 #reqs td#unmet {
     white-space: nowrap;
@@ -348,19 +357,28 @@ input[type=date]::-webkit-calendar-picker-indicator {
       td#snc1,
       td#snc2,
       td#snc3,
+      td#snc4,
       td#snc5,
       td#snc6,
+      td#snc7,
+      td#snc8,
       td#snc9,
       td#snc10,
       td#snc11,
+      td#snc12,
+      td#snc13,
       td#snc15,
       td#snc34,
       td#snc35,
       td#snc36,
       td#snc37 {
-    color: red;
-    white-space: nowrap;
-    padding-right: 0px;
+    text-align: center;
+    background-color: #E77478;
+    color: black;
+    border-left: 3px solid white;
+    border-right: 3px solid white;
+    /* padding: top right bottom left */
+    padding: 0px 5px 0px 5px;
 }
 
 #reqs #notes {
@@ -370,8 +388,16 @@ input[type=date]::-webkit-calendar-picker-indicator {
     border-left: 10px solid #81b6dade;
 }
 
+#reqs td.label#notes {
+    border-left: 10px solid #81b6dade;
+}
+
 #reqs td#underSub {
     padding-left: 20px;
+}
+
+.open {
+    margin-bottom: 500px;
 }
 
 /* Style the drop down menu courtsey of Hammad */
@@ -382,30 +408,39 @@ input[type=date]::-webkit-calendar-picker-indicator {
     /* padding: top right bottom left */
     padding: 0px 5px 0px 5px;
     /* margin: top right bottom left */
-    margin: 0px 5px 0px 5px;
+    margin: 2px;
     font-size: 15px;
     border: none;
     cursor: pointer;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+    border: 2px solid white;
+    /* overflow: visible !important; */
 }
 
-.dropbtn:hover, .dropbtn:focus {
-    background-color: #2980B9;
+.dropbtn:focus {
+    border: 2px outset white;
 }
 
 .dropdown {
     /* position: static; */
     display: inline;
-    width: 100%;
+    /* width: 100%; */
+    /* margin-bottom: 10px; */
 }
 
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f1f1f1;
-    /* width: 25%; */
-    /* overflow: auto; */
-    box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.5);
-    z-index: 10000;
+    background-color: #dde6ee;
+    max-width: 400px;
+    z-index: 11;
+    /* margin: top right bottom left */
+    margin: 4px 0px 0px -7px;
+    border: 2px outset white;
+    max-height: 500px;
+    /* overflow-y: visible; */
 }
 
 .dropdown-content a {
@@ -413,15 +448,35 @@ input[type=date]::-webkit-calendar-picker-indicator {
     text-align: left;
     /* padding: top right bottom left */
     padding: 5px;
-    text-align: justify;
+    /* text-align: justify; */
     /* text-justify:  */
-    border: 2px outset "black";
     display: block;
 }
 
-.dropdown a:hover {background-color: #ddd;}
-
 .show {display: block;}
+
+.collapsible {
+    background-color: #777;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+}
+  
+.active, .collapsible:hover {
+    background-color: #555;
+}
+  
+.content {
+    padding: 0 18px;
+    display: none;
+    overflow: visible;
+    background-color: #f1f1f1;
+}
 
 /* Collapseable Sidebar courtsey of W3Schools */
 .sidebar {
@@ -480,23 +535,38 @@ input[type=date]::-webkit-calendar-picker-indicator {
     .sidebar a {font-size: 18px;}
 }
 
-div#thirty {
-    font-size: 12px;
-    color: black;
+.wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -35px;
+}
+
+div#xtra {
+    height: 35px;
+    border-right: 3px solid  rgb(29, 58, 131);
+    border-left: 3px solid  rgb(29, 58, 131);
+    z-index: 0;
 }
 
 /* Style the footer */
 .footer {
     position: fixed;
-    bottom: 0;
+    bottom: -2px;
     width: 100%;
+    height: 20px;
+    line-height: 20px;
+    /* z-index: 10; */
     background-color: rgb(110, 145, 177);
     /* padding: top right bottom left */
-    padding: 10px 10px 10px 10px;
+    padding: 5px 0px 5px 0px;
     /* margin: top right bottom left */
-    /* margin: -5px 0px -5px 0px; */
+    /* margin: 1px; */
+    /* overflow: auto; */
     text-align: center;
     color: white;
     font-size: 15px;
+    border: 3px solid  rgb(29, 58, 131);
+    border-bottom: 0px;
     /* text-decoration: overline; */
 }
