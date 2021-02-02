@@ -152,9 +152,9 @@ async function retrievePrerequisites(course_id) {
 
 async function addButtonsByCourse(course, id, s_id) {
     var color;
-    var taken = "#99ff99"
-    var taking = "#3498DB"
-    var ntaken = "#ff5c33"
+    var taken = "rgba(12, 202, 74, 0.7)"
+    var taking = "rgba(152, 185, 242, 0.7)"
+    var ntaken = "rgba(214, 73, 51, 0.7)"
     var t = await courseTaken(course.course_id.trim(), s_id);
     //console.log(t);
     if (t == 't')
@@ -170,6 +170,7 @@ async function addButtonsByCourse(course, id, s_id) {
     var btn2 = document.createElement('button');
     btn2.className ='dropbtn';
     btn2.style.backgroundColor = color;
+    btn2.style.color = "black";
     btn2.innerHTML = course.department + " " + course.course_number;
     btn2.addEventListener('click', function() {
         myFunction(course.name)
@@ -206,7 +207,8 @@ function setRequirementFulfilled(req_id) {
     str = "stillNeeded" + req_id.toString();
     console.log(str);
     var ele = document.getElementById(str);
-    ele.style.color = "#99ff99"
+    ele.style.backgroundColor = "rgba(12, 202, 74, 0.7)"
+    ele.style.color = "black"
     ele.innerHTML = 'Requirement Fulfilled!'
 }
 
