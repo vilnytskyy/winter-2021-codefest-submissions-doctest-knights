@@ -212,11 +212,12 @@ async function addButtonsByCourse(course, id, s_id) {
 }
 
 function setRequirementFulfilled(req_id) {
-    str = "stillNeeded" + req_id.toString();
+    str = "sn" + req_id.toString();
     console.log(str);
     var ele = document.getElementById(str);
     ele.style.backgroundColor = "rgba(12, 202, 74, 0.7)"
     ele.style.color = "black"
+    ele.style.whiteSpace = "nowrap"
     ele.innerHTML = 'Requirement Fulfilled!'
 }
 
