@@ -51,17 +51,44 @@ body {
     position: sticky;
     top: 0px;
     z-index: 1;
+    background-color: white;
 }
 
-.topnav #links {
+#legend {
+    border-collapse: collapse;
     width: 100%;
-    background-color: white;
+    font-size: 15px;
+}
+
+#legend td#key {
+    /* border: 1px solid black; */
+    text-align: left;
+    color: rgb(110, 145, 177);
+    font-weight: bold;
+    border-right: 2px groove black;
+}
+
+#legend td#img {
+    text-align: right;
+    padding-right: 0px;
+    color: blue;
+    width: 2%;
+}
+
+#legend td {
+    text-align: left;
+    background-color: rgba(172, 195, 214, 0.336);
+    /* padding: top right bottom left */
+    padding: 5px 10px 5px 5px;
+}
+
+#alinks, #blinks, #clinks {
     color: rgb(29, 58, 131);
     font-size: 14px;
-}
-
-.topnav #links tr {
     background-color: #cac9c9;
+    border: 1px outset white;
+    /* margin: top right bottom left */
+    margin: 0px -5px 0px -5px;
 }
 
 .topnav #studentInfo {
@@ -70,10 +97,63 @@ body {
     background-color: white;
     color: #696969;
     font-size: 14px;
-    border-bottom: 1px solid black;
+    border-bottom: 2px groove black;
     text-align: center;
+    border-collapse: collapse;
+}
+
+.topnav #studentInfo th {
+    border-top: 2px groove black;
+}
+
+.topnav #studentInfo th, .topnav #studentInfo td {
+    border-right: 2px groove black;
     /* padding: top right bottom left */
-    padding: 0px 10px 0px 10px;
+    padding: 2px 10px 2px 10px;
+}
+
+.topnav #studentInfo .norb {
+    border-right: 0px;
+}
+
+.topnav #studentInfo th#id {
+    width: 12%;
+}
+
+.topnav #studentInfo th#name {
+    width: 15%;
+}
+
+.topnav #studentInfo th#degree {
+    width: 5%;
+}
+
+.topnav #studentInfo th#major {
+    width: 15%;
+}
+
+.topnav #studentInfo th#school {
+    width: 5%;
+}
+
+.topnav #studentInfo th#year {
+    width: 12%;
+}
+
+.topnav #studentInfo th#audit {
+    width: 10%;
+}
+
+.topnav #studentInfo th#alinks {
+    width: 11%;
+}
+
+.topnav #studentInfo th#blinks {
+    width: 6%;
+}
+
+.topnav #studentInfo th#clinks {
+    width: 10%;
 }
 
 /* Stack Overflow code to center numbers
@@ -163,33 +243,20 @@ input[type=date]::-webkit-calendar-picker-indicator {
     color: rgb(117, 117, 117);
 }
 
-#legend {
-    border-collapse: collapse;
+#inProgress {
     width: 100%;
 }
 
-#legend th {
-    border-top: 1px solid rgb(110, 145, 177);
-    border-bottom: 1px solid rgb(110, 145, 177);
-    /* border: 1px solid black; */
+#inProgress th#ipHead, #inProgress td#ipHead {
+    background-color: rgb(91, 120, 145);
+    color: white;
     text-align: left;
-    /* width: 100%; */
     /* padding: top right bottom left */
     padding: 5px 10px 5px 10px;
-    color: rgb(110, 145, 177);
 }
 
-#legend td#img {
-    text-align: right;
-    padding-right: 0px;
-    color: blue;
-}
-
-#legend td {
-    background-color: rgba(172, 195, 214, 0.336);
-    /* padding: top right bottom left */
-    padding: 5px 10px 5px 5px;
-    font-size: 15px;
+#inProgress td#className {
+    white-space: nowrap;
 }
 
 #studentView {
@@ -211,7 +278,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
     width: 15%;
 }
 
-#studentView td#obj {
+#studentView td.obj {
     background-color: #f1f0f0bd;
 }
 
@@ -231,6 +298,12 @@ input[type=date]::-webkit-calendar-picker-indicator {
     border-spacing: 0px 3px;
 }
 
+#reqs ul {
+    /* margin: top right bottom left */
+    margin: 0px 0px 0px -15px;
+    font-weight: bold;
+}
+
 #reqs th {
     background-color: rgb(91, 120, 145);
     color: white;
@@ -241,7 +314,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
     /* table-layout: fixed; */
 }
 
-#reqs td {
+#reqs td , #inProgress td{
     background-color: rgba(172, 195, 214, 0.336);
     color: rgb(117, 117, 117);
     text-align: left;
