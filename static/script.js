@@ -160,9 +160,9 @@ async function addButtonsByCourse(course, id, s_id) {
         return 'no';
     }
     var color;
-    var taken = "rgba(12, 202, 74, 0.7)"
-    var taking = "rgba(152, 185, 242, 0.7)"
-    var ntaken = "rgba(214, 73, 51, 0.7)"
+    var taken = "#5CAD96"
+    var taking = "#9FC3F9"
+    var ntaken = "#E77478"
     var t = await courseTaken(course.course_id.trim(), s_id);
     //console.log(t);
     if (t == 't')
@@ -186,8 +186,9 @@ async function addButtonsByCourse(course, id, s_id) {
     btn3.id = "myDropdown" + course.name + id;
     btn3.className = "dropdown-content";
     var btn4 = document.createElement('a');
-    btn4.href ='#';
-    btn4.innerHTML = course.name + " (" + course.credits + " cr)";
+    // btn4.href ='#';
+    btn4.innerHTML = course.name + " (" + course.credits + " CR)";
+    btn4.style.backgroundColor = color;
 
     var prereqs = await retrievePrerequisites(course.course_id);
     var prestr = "";
@@ -219,9 +220,9 @@ function setRequirementFulfilled(req_id) {
     str = "sn" + req_id.toString();
     console.log(str);
     var ele = document.getElementById(str);
-    ele.style.backgroundColor = "rgba(12, 202, 74, 0.7)"
+    ele.style.backgroundColor = "#5CAD96"
     ele.style.color = "black"
-    ele.style.whiteSpace = "nowrap"
+    // ele.style.whiteSpace = "nowrap"
     ele.innerHTML = 'Requirement Fulfilled!'
 }
 
@@ -230,7 +231,7 @@ function setRequirementTaking(req_id, cred) {
     var ele = document.getElementById(str);
     if (ele === null)
         return;
-    ele.style.backgroundColor = "rgba(152, 185, 242, 0.7)";
+    ele.style.backgroundColor = "#9FC3F9";
     ele.style.color = "#000000";
     if (cred <= 0)
         ele.innerHTML = 'In progress...';
@@ -242,9 +243,9 @@ function setRequirementUnFulfilled(req_id) {
     var ele = document.getElementById(str);
     if (ele === null)
         return;
-    ele.style.backgroundColor = "";
-    ele.style.color = "rgba(214, 73, 51, 0.7)";
-    ele.innerHTML = 'Still Needed:'
+    ele.style.backgroundColor = "#E77478";
+    ele.style.color = "black";
+    ele.innerHTML = 'Still Needed'
 }
 
 async function displayCSbuttons(s_id) {
@@ -392,6 +393,20 @@ window.onclick = function (event) {
             var openDropdown = dropdowns[i];
             if (openDropdown.classList.contains('show')) {
                 openDropdown.classList.remove('show');
+            }
+        }
+    }
+}
+
+window.onclick = function (event) {
+    if (!event.target.matches('.collapsible')) {
+        var collapsible = document.getElementsByClassName("content");
+        var i;
+        for (i = 0; i < collapsible.length; i++) {
+            var openColl = collapsible[i];
+            if (openColl.classList.contains('show')) 
+            {
+                openColl.classList.remove('show');
             }
         }
     }
