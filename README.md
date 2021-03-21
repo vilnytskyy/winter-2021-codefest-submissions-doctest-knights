@@ -5,15 +5,11 @@
 ### Project Description
 Do you ever go on DegreeWorks and think the site could benefit from some polishing? Look no further as the Doctest Knights bring you DegreeWorks+, an overhauled DegreeWorks experience packed with features that help you plan your college education with greater efficiency.
 
-![DW+1](https://github.com/vilnytskyy/winter-2021-codefest-submissions-doctest-knights/tree/main/website-ss/DW%2B1.jpg)<br>
-
-![DW+2](https://github.com/vilnytskyy/winter-2021-codefest-submissions-doctest-knights/tree/main/website-ss/DW%2B2.jpg)<br>
-
-![DW+3](https://github.com/vilnytskyy/winter-2021-codefest-submissions-doctest-knights/tree/main/website-ss/DW%2B3.jpg)<br>
-
-![DW+4](https://github.com/vilnytskyy/winter-2021-codefest-submissions-doctest-knights/tree/main/website-ss/DW%2B4.jpg)<br>
-
-![DW+5](https://github.com/vilnytskyy/winter-2021-codefest-submissions-doctest-knights/tree/main/website-ss/DW%2B5.jpg)<br>
+![DW+1](https://user-images.githubusercontent.com/50253042/111891125-c06f9480-89c6-11eb-8a81-364f6080c28e.jpg)
+![DW+2](https://user-images.githubusercontent.com/50253042/111891127-c06f9480-89c6-11eb-8bd6-c39d92d04814.jpg)
+![DW+3](https://user-images.githubusercontent.com/50253042/111891128-c06f9480-89c6-11eb-8d67-c370cefd4383.jpg)
+![DW+4](https://user-images.githubusercontent.com/50253042/111891129-c1082b00-89c6-11eb-8eb1-43455db2dfbd.jpg)
+![DW+5](https://user-images.githubusercontent.com/50253042/111891130-c1082b00-89c6-11eb-8582-672ce86f08bb.jpg)
 
 # Team Info
 ### Team name: Doctest Knights
