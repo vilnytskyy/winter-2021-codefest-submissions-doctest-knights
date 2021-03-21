@@ -5,6 +5,16 @@
 ### Project Description
 Do you ever go on DegreeWorks and think the site could benefit from some polishing? Look no further as the Doctest Knights bring you DegreeWorks+, an overhauled DegreeWorks experience packed with features that help you plan your college education with greater efficiency.
 
+![DW+1](DW+1.png)<br>
+
+![DW+2](DW+2.png)<br>
+
+![DW+3](DW+3.png)<br>
+
+![DW+4](DW+4.png)<br>
+
+![DW+5](DW+5.png)<br>
+
 # Team Info
 ### Team name: Doctest Knights
 ### Team members (format: GitHub username, last name, first name):
