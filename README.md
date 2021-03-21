@@ -5,15 +5,15 @@
 ### Project Description
 Do you ever go on DegreeWorks and think the site could benefit from some polishing? Look no further as the Doctest Knights bring you DegreeWorks+, an overhauled DegreeWorks experience packed with features that help you plan your college education with greater efficiency.
 
-![DW+1](https://github.com/vilnytskyy/winter-2021-codefest-submissions-doctest-knights/blob/website-ss/DW+1.jpg?raw=true)<br>
+![DW+1](https://github.com/vilnytskyy/winter-2021-codefest-submissions-doctest-knights/tree/main/website-ss/DW%2B1.jpg)<br>
 
-![DW+2](https://github.com/vilnytskyy/winter-2021-codefest-submissions-doctest-knights/blob/website-ss/DW+2.jpg?raw=true)<br>
+![DW+2](https://github.com/vilnytskyy/winter-2021-codefest-submissions-doctest-knights/tree/main/website-ss/DW%2B2.jpg)<br>
 
-![DW+3](https://github.com/vilnytskyy/winter-2021-codefest-submissions-doctest-knights/blob/website-ss/DW+3.jpg?raw=true)<br>
+![DW+3](https://github.com/vilnytskyy/winter-2021-codefest-submissions-doctest-knights/tree/main/website-ss/DW%2B3.jpg)<br>
 
-![DW+4](https://github.com/vilnytskyy/winter-2021-codefest-submissions-doctest-knights/blob/website-ss/DW+4.jpg?raw=true)<br>
+![DW+4](https://github.com/vilnytskyy/winter-2021-codefest-submissions-doctest-knights/tree/main/website-ss/DW%2B4.jpg)<br>
 
-![DW+5](https://github.com/vilnytskyy/winter-2021-codefest-submissions-doctest-knights/blob/website-ss/DW+5.jpg?raw=true)<br>
+![DW+5](https://github.com/vilnytskyy/winter-2021-codefest-submissions-doctest-knights/tree/main/website-ss/DW%2B5.jpg)<br>
 
 # Team Info
 ### Team name: Doctest Knights
