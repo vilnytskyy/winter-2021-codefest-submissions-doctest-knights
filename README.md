@@ -5,18 +5,28 @@
 ### Project Description
 Do you ever go on DegreeWorks and think the site could benefit from some polishing? Look no further as the Doctest Knights bring you DegreeWorks+, an overhauled DegreeWorks experience packed with features that help you plan your college education with greater efficiency.
 
-![DW+1](https://user-images.githubusercontent.com/50253042/111891125-c06f9480-89c6-11eb-8a81-364f6080c28e.jpg)
-![DW+2](https://user-images.githubusercontent.com/50253042/111891127-c06f9480-89c6-11eb-8bd6-c39d92d04814.jpg)
-![DW+3](https://user-images.githubusercontent.com/50253042/111891128-c06f9480-89c6-11eb-8d67-c370cefd4383.jpg)
-![DW+4](https://user-images.githubusercontent.com/50253042/111891129-c1082b00-89c6-11eb-8eb1-43455db2dfbd.jpg)
-![DW+5](https://user-images.githubusercontent.com/50253042/111891130-c1082b00-89c6-11eb-8582-672ce86f08bb.jpg)
-
 # Team Info
 ### Team name: Doctest Knights
 ### Team members (format: GitHub username, last name, first name):
 - vilnytskyy, Ilnytskyy, Vasyl
 - asllanalija, Alija, Asllan
 - hasiddiqui2, Siddiqui, Hammad
+
+# DegreeWorks+ in Picture
+![DW+1](https://user-images.githubusercontent.com/50253042/111891125-c06f9480-89c6-11eb-8a81-364f6080c28e.jpg)
+The DegreeWorks+ layout is reminiscent of DegreeWorks. The course schedule brings a hint of CUNYfirst to DegreeWorks+. 
+
+![DW+2](https://user-images.githubusercontent.com/50253042/111891127-c06f9480-89c6-11eb-8bd6-c39d92d04814.jpg)
+Every requirement’s status stands out in vivid colors. Courses you’ve taken, are currently taking, or need to take stand out too.
+
+![DW+3](https://user-images.githubusercontent.com/50253042/111891128-c06f9480-89c6-11eb-8d67-c370cefd4383.jpg)
+When clicked on, each course pops out a window with the course description.
+
+![DW+4](https://user-images.githubusercontent.com/50253042/111891129-c1082b00-89c6-11eb-8eb1-43455db2dfbd.jpg)
+Major requirements, revamped and revitalized, shine in DegreeWorks+.
+
+![DW+5](https://user-images.githubusercontent.com/50253042/111891130-c1082b00-89c6-11eb-8582-672ce86f08bb.jpg)
+Functioning course descriptions save you time!
 
 ### Group info (check all that apply - add an X in the [ ])
 - [X] We are a Daedalus Google Mentorship group
